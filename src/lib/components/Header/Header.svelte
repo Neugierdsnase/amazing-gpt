@@ -11,8 +11,8 @@
 			<label class="swap swap-rotate pr-4">
 				<!-- this hidden checkbox controls the state -->
 				<input type="checkbox" data-toggle-theme="darker,lighter" data-act-class="ACTIVECLASS" />
-				<i class="ph-fill ph-sun swap-on text-3xl" />
-				<i class="ph-fill ph-moon swap-off text-3xl" />
+				<i class="ph-fill ph-sun swap-off text-3xl" />
+				<i class="ph-fill ph-moon swap-on text-3xl" />
 			</label>
 		</div>
 	</div>

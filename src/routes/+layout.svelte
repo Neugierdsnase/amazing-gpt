@@ -20,7 +20,6 @@
 		data-utcoffset="2"
 	></script>
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:site" content="@gptlist" />
 	<meta name="description" content="A curated list of amazing custom GPTs" />
 	<meta property="og:title" content="GPT List" />
 	<meta property="og:description" content="A curated list of amazing custom GPTs" />
