@@ -4,8 +4,10 @@
 	import { flip } from 'svelte/animate';
 	import { fade } from 'svelte/transition';
 
+	export let maxTags: number | undefined = undefined;
 	export let tags: string[] = [];
-	export let activeTags: string[] = [];
+
+	$: activeTags = $filterStore.tags;
 
 	const handleTagClick = (tag: string) => {
 		filterStore.update((store) => {
@@ -17,10 +19,13 @@
 			return store;
 		});
 	};
+
+	$: combinedTags = _.uniq([...activeTags, ...tags]);
+	$: tagsToDisplay = maxTags ? combinedTags.slice(0, maxTags) : combinedTags;
 </script>
 
-<ul class="flex gap-1 flex-wrap">
-	{#each _.uniq([...activeTags, ...tags]) as tag (tag)}
+<ul class="flex gap-1 flex-wrap justify-center">
+	{#each tagsToDisplay as tag (tag)}
 		<li transition:fade animate:flip={{ duration: 350 }}>
 			<button
 				on:click={() => handleTagClick(tag)}

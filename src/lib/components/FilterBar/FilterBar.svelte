@@ -3,10 +3,15 @@
 	import { filterStore } from '$lib/stores/filterStore';
 
 	export let tags: string[] = [];
-	export let activeTags: string[] = [];
+
+	const handleSortDirectionChange = () => {
+		filterStore.update((store) => {
+			return { ...store, desc: !store.desc };
+		});
+	};
 </script>
 
-<div class="navbar py-4 flex justify-between p-4 rounded-t-xl gap-8 bg-base-300 mt-4">
+<div class="flex flex-wrap justify-around gap-8 py-4 p-4 rounded-t-xl bg-base-300 mt-4">
 	<input
 		bind:value={$filterStore.query}
 		class="input input-primary input-bordered input-sm"
@@ -15,7 +20,7 @@
 	/>
 
 	<div class="flex justify-center grow gap-1 h-full bg-base-200 rounded-2xl py-[2px]">
-		<Tags {activeTags} {tags} />
+		<Tags {tags} />
 	</div>
 
 	<div class="flex gap-4">
@@ -25,13 +30,16 @@
 			<option value="name">Name</option>
 		</select>
 
-		<!-- TODO: Make custom toggle component here -->
-		<input
+		<button
 			id="sort-descending"
 			name="sort-descending"
-			type="checkbox"
-			class="toggle toggle-primary toggle-lg"
-			bind:checked={$filterStore.desc}
-		/>
+			on:click={handleSortDirectionChange}
+			class="btn btn-ghost btn-sm"
+		>
+			<i
+				class="ph-bold ph-caret-down transition-transform duration-300"
+				class:rotate-180={$filterStore.desc}
+			/>
+		</button>
 	</div>
 </div>
