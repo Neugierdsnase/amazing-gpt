@@ -13,19 +13,25 @@
 </script>
 
 <svelte:head>
-	<title>A curated List of custom GPTs</title>
+	<title>A curated List of custom GPTs | Amazing GPT</title>
 	<script
 		src="https://cdn.counter.dev/script.js"
 		data-id="577cfaaf-19ed-4ba3-9a0d-62e8ddcebda3"
 		data-utcoffset="2"
 	></script>
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="description" content="A curated list of amazing custom GPTs" />
-	<meta property="og:title" content="GPT List" />
-	<meta property="og:description" content="A curated list of amazing custom GPTs" />
-	<!-- <meta property="og:image" content="https://gptlist.dev/og-image.png" /> -->
-	<!-- <meta property="og:url" content="https://gptlist.dev" /> -->
-	<!-- <meta name="twitter:image" content="https://gptlist.dev/og-image.png" /> -->
+	<meta
+		name="description"
+		content="Explore our extensive, hand-picked collection of custom GPTs, featuring diverse applications of OpenAI's technology for innovative AI solutions."
+	/>
+	<meta property="og:title" content="A curated List of custom GPTs | Amazing GPT" />
+	<meta
+		name="og:description"
+		content="Explore our extensive, hand-picked collection of custom GPTs, featuring diverse applications of OpenAI's technology for innovative AI solutions."
+	/>
+	<meta property="og:image" content="https://i.imgur.com/tbcjBgL.png" />
+	<meta property="og:url" content="https://amazing-gpt.com" />
+	<meta name="twitter:image" content="https://i.imgur.com/ayX62Br.png" />
 	<meta name="tags" content="gpt, list, curated, gpts, openai, ai" />
 	<meta name="twitter:title" content="Curated list of custom GPTs" />
 </svelte:head>

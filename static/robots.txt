@@ -1,0 +1,2 @@
+Sitemap: https://awesome-gpt.com/sitemap.xml
+Sitemap: https://www.awsome-gpt.com/sitemap.xml
