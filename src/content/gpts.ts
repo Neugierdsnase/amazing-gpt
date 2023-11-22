@@ -6,7 +6,7 @@ export const gpts: GPTInfoType[] = [
 		id: isUuid('788188ee-1cbe-4b9e-9316-a7fb8a803dc8'), // Unique identifier, fill in with actual UUID
 		name: 'The Glibatree Art Designer',
 		author: {
-			url: 'glibatree.com',
+			url: 'https://glibatree.com',
 			name: 'Glibatree' // URL of the author, if available
 		},
 		description: 'Use optimized prompts to create beautiful art!',
