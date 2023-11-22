@@ -3,14 +3,14 @@ import type { GPTInfoType } from '../types/gpt';
 
 export const gpts: GPTInfoType[] = [
 	{
-		id: isUuid('788188ee-1cbe-4b9e-9316-a7fb8a803dc8'), // Unique identifier, fill in with actual UUID
+		id: isUuid('788188ee-1cbe-4b9e-9316-a7fb8a803dc8'),
 		name: 'The Glibatree Art Designer',
 		author: {
 			url: 'https://glibatree.com',
-			name: 'Glibatree' // URL of the author, if available
+			name: 'Glibatree'
 		},
 		description: 'Use optimized prompts to create beautiful art!',
-		tags: ['art', 'images', 'midjourney', 'pictures'], // Add relevant tags as strings
+		tags: ['art', 'images', 'midjourney', 'pictures'],
 		added: new Date('2023-11-22').toISOString(),
 		updated: new Date('2023-11-22').toISOString(),
 		url: 'https://chat.openai.com/g/g-7CKojumSX-the-glibatree-art-designer',
@@ -129,7 +129,7 @@ export const gpts: GPTInfoType[] = [
 		name: 'Market Analyst',
 		author: {
 			name: 'Colin Gillingham',
-			url: 'The Glibatree Art Designer' // URL of the author, if available
+			url: 'https://gillingh.am/'
 		},
 		description:
 			'Analyze any chart, instantly. Just paste or upload an image of your chart. Include as many indicators as you want - great way to learn!',
