@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { GPTInfoType } from '../../../types/gpt';
 	import Tags from '../Tags/Tags.svelte';
+	import AuthorSpan from './AuthorSpan.svelte';
 
 	export let element: string = 'article';
 	export let gptInfo: GPTInfoType;
@@ -15,12 +16,10 @@
 	</div>
 
 	<div class="row-start-1 row-span-1 col-start-3 col-span-4 text-xl">
-		<h2 class="font-bold line-clamp-1 leading-none">
+		<h2 class="font-bold line-clamp-1 leading-1">
 			{gptInfo.name}
 		</h2>
-		<a class="text-xs italic" href={gptInfo.author.url} rel="noopener" target="_blank"
-			>- by {gptInfo.author.name}</a
-		>
+		<AuthorSpan author={gptInfo.author} />
 	</div>
 	<p class="row-start-2 row-span-1 col-start-3 col-span-4 pl-4 line-clamp-2 mt-2">
 		{gptInfo.description}
