@@ -326,7 +326,7 @@ export const gpts: GPTInfoType[] = [
 		name: 'Portrait Cartoonator',
 		author: {
 			name: '',
-			url: 'rsugrafx.com'
+			url: 'https://rsugrafx.com/'
 		},
 		description:
 			'Turns your photos into cartoon-style portraits. Just upload a photo, and the app automatically starts.',
@@ -343,7 +343,7 @@ export const gpts: GPTInfoType[] = [
 		name: 'Pawtrait Creator',
 		author: {
 			name: '',
-			url: 'rsugrafx.com'
+			url: 'https://rsugrafx.com/'
 		},
 		description:
 			'Creates cartoon pet portraits. Upload a photo of your pet, type its name, submit it, and watch the magic happen.',
