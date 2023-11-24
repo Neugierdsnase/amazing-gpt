@@ -1,7 +1,7 @@
 import { isUuid } from '$lib/util';
-import type { GPTInfoType } from '../types/gpt';
+import { GPTInfo, type GPTInfoType } from '../types/gpt';
 
-export const gpts: GPTInfoType[] = [
+const gpts: GPTInfoType[] = [
 	{
 		id: isUuid('788188ee-1cbe-4b9e-9316-a7fb8a803dc8'),
 		name: 'The Glibatree Art Designer',
@@ -435,3 +435,8 @@ export const gpts: GPTInfoType[] = [
 			'https://files.oaiusercontent.com/file-Hm9eNsZ7QJvv9cFjwiWIKZ7Q?se=2123-10-22T19%3A31%3A58Z&sp=r&sv=2021-08-06&sr=b&rscc=max-age%3D31536000%2C%20immutable&rscd=attachment%3B%20filename%3Dd00a980f-d3f8-48b4-8169-7f98863ba1e2.png&sig=tFd5kd4XOjhuYTSybTkxZq1uPu5LpMl7PlOf1iC5TwI%3D'
 	}
 ];
+
+export const gptInfos: GPTInfo[] = gpts.map(
+	({ name, author, description, tags, added, updated, id, url, image }) =>
+		new GPTInfo(name, author, description, tags, added, updated, id, url, image)
+);

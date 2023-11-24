@@ -1,9 +1,9 @@
-type SortType = 'name' | 'added' | 'updated';
+type SortType = 'sortName' | 'added' | 'updated';
 
 export type FilterType = {
-  query: string;
-  tags: string[];
-  author: string;
-  sort: SortType;
-  desc: boolean;
+	query: string;
+	tags: string[];
+	author: string;
+	sort: SortType;
+	desc: boolean;
 };

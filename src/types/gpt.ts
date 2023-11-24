@@ -5,8 +5,9 @@ export type AuthorType = {
 	url: string;
 };
 
-export type GPTInfoType = {
+export interface GPTInfoType {
 	name: string;
+	sortName?: string;
 	author: AuthorType;
 	description: string;
 	tags: string[];
@@ -15,4 +16,22 @@ export type GPTInfoType = {
 	id: UuidType;
 	url: string;
 	image: string;
-};
+}
+
+export class GPTInfo implements GPTInfoType {
+	public sortName: string;
+
+	constructor(
+		public name: string,
+		public author: AuthorType,
+		public description: string,
+		public tags: string[],
+		public added: string,
+		public updated: string,
+		public id: UuidType,
+		public url: string,
+		public image: string
+	) {
+		this.sortName = name.toLowerCase().replace(/[^a-z]/g, ''); // Filters out non-alphabetic characters
+	}
+}

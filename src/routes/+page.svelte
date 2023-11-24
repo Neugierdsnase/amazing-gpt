@@ -25,7 +25,9 @@
 			);
 		}
 
-		_.sortBy(filteredStore, sort);
+		console.log(sort);
+		console.log(filteredStore);
+		filteredStore = _.sortBy(filteredStore, sort);
 
 		return desc ? filteredStore.reverse() : filteredStore;
 	});

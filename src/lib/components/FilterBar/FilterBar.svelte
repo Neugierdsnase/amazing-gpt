@@ -3,12 +3,6 @@
 	import { filterStore } from '$lib/stores/filterStore';
 
 	export let tags: string[] = [];
-
-	const handleSortDirectionChange = () => {
-		filterStore.update((store) => {
-			return { ...store, desc: !store.desc };
-		});
-	};
 </script>
 
 <div class="flex flex-wrap justify-around gap-8 py-4 p-4 rounded-t-xl bg-base-300 mt-4">
@@ -27,19 +21,22 @@
 		<select bind:value={$filterStore.sort} class="select select-primary select-sm">
 			<option value="added">Added</option>
 			<option value="updated">Updated</option>
-			<option value="name">Name</option>
+			<option value="sortName">Name</option>
 		</select>
 
-		<button
-			id="sort-descending"
-			name="sort-descending"
-			on:click={handleSortDirectionChange}
-			class="btn btn-ghost btn-sm"
-		>
+		<!-- TODO: This should be a checkbox -->
+		<label for="sort-descending" class="btn btn-ghost btn-sm">
+			<input
+				id="sort-descending"
+				name="sort-descending"
+				class="hidden"
+				type="checkbox"
+				bind:checked={$filterStore.desc}
+			/>
 			<i
 				class="ph-bold ph-caret-down transition-transform duration-300"
 				class:rotate-180={$filterStore.desc}
 			/>
-		</button>
+		</label>
 	</div>
 </div>
