@@ -13,7 +13,7 @@
 			<li
 				transition:fade={{ duration: 200 }}
 				animate:flip={{ duration: 350 }}
-				class="max-w-lg min-w-sm h-64"
+				class="max-w-xl min-w-sm h-64"
 			>
 				<GPTInfoCard gptInfo={item} />
 			</li>

@@ -9,7 +9,7 @@
 
 <svelte:element
 	this={element ?? 'article'}
-	class="grid grid-cols-6 grid-rows-3 bg-primary/10 custom-glass rounded-xl p-4 shadow-xl backdrop-filter backdrop-blur-md"
+	class="grid grid-cols-6 grid-rows-3 bg-primary/10 gap-2 custom-glass rounded-xl p-4 shadow-xl backdrop-filter backdrop-blur-md"
 >
 	<div class="flex justify-center items-center col-start-1 p-4 row-start-1 col-span-2 row-span-3">
 		<img src={gptInfo.image} alt={gptInfo.name} class="mask mask-circle w-full" />

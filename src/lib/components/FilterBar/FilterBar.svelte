@@ -24,7 +24,6 @@
 			<option value="sortName">Name</option>
 		</select>
 
-		<!-- TODO: This should be a checkbox -->
 		<label for="sort-descending" class="btn btn-ghost btn-sm">
 			<input
 				id="sort-descending"
