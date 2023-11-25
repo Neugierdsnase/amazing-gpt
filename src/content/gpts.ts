@@ -384,7 +384,7 @@ const gpts: GPTInfoType[] = [
 		updated: new Date('2023-11-23').toISOString(),
 		url: 'https://chat.openai.com/g/g-y8BV6typ7-permaculture-gpt',
 		image:
-			'https://files.oaiusercontent.com/file-JfnzO7n2gPGaw9PHvFoBs1u4?se=2123-10-16T13%3A30%3A00Z&sp=r&sv=2021-08-06&sr=b&rscc=max-age%3D31536000%2C%20immutable&rscd=attachment%3B%20filename%3Da05973f9-1b0f-4ef1-adc4-ede0df30125f.png&sig=ZwwFiiVUh8DvJY18/NsePn09tOnS8ugPLvhgJ4d3cew%3D'
+			'https://files.oaiusercontent.com/file-Ng2oCJXLK8jvlwDDFO8I92hY?se=2123-10-17T12%3A32%3A44Z&sp=r&sv=2021-08-06&sr=b&rscc=max-age%3D31536000%2C%20immutable&rscd=attachment%3B%20filename%3Db67d4367-862c-40ca-bd5b-60996578acd7.png&sig=3/AjCFo6Wsfuj0cHlmPYi3%2BJnInPh5P3T2sJwWk4EX8%3D'
 	},
 
 	{
