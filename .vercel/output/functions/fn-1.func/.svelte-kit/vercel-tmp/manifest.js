@@ -16,7 +16,13 @@ return {
 			__memo(() => import('../output/server/nodes/1.js'))
 		],
 		routes: [
-			
+			{
+				id: "/sitemap.xml",
+				pattern: /^\/sitemap\.xml\/?$/,
+				params: [],
+				page: null,
+				endpoint: __memo(() => import('../output/server/entries/endpoints/sitemap.xml/_server.ts.js'))
+			}
 		],
 		matchers: async () => {
 			
