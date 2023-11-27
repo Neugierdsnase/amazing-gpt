@@ -1,0 +1,15 @@
+/home/konsti/Projects/amazing-gpt/onboarding/target/debug/deps/markup5ever-13d665ee79c93ff1.rmeta: /home/konsti/.cargo/registry/src/index.crates.io-6f17d22bba15001f/markup5ever-0.11.0/lib.rs /home/konsti/.cargo/registry/src/index.crates.io-6f17d22bba15001f/markup5ever-0.11.0/data/mod.rs /home/konsti/.cargo/registry/src/index.crates.io-6f17d22bba15001f/markup5ever-0.11.0/interface/mod.rs /home/konsti/.cargo/registry/src/index.crates.io-6f17d22bba15001f/markup5ever-0.11.0/interface/tree_builder.rs /home/konsti/.cargo/registry/src/index.crates.io-6f17d22bba15001f/markup5ever-0.11.0/serialize.rs /home/konsti/.cargo/registry/src/index.crates.io-6f17d22bba15001f/markup5ever-0.11.0/util/buffer_queue.rs /home/konsti/.cargo/registry/src/index.crates.io-6f17d22bba15001f/markup5ever-0.11.0/util/smallcharset.rs /home/konsti/Projects/amazing-gpt/onboarding/target/debug/build/markup5ever-67ee1b452f724a7b/out/generated.rs /home/konsti/Projects/amazing-gpt/onboarding/target/debug/build/markup5ever-67ee1b452f724a7b/out/named_entities.rs
+
+/home/konsti/Projects/amazing-gpt/onboarding/target/debug/deps/markup5ever-13d665ee79c93ff1.d: /home/konsti/.cargo/registry/src/index.crates.io-6f17d22bba15001f/markup5ever-0.11.0/lib.rs /home/konsti/.cargo/registry/src/index.crates.io-6f17d22bba15001f/markup5ever-0.11.0/data/mod.rs /home/konsti/.cargo/registry/src/index.crates.io-6f17d22bba15001f/markup5ever-0.11.0/interface/mod.rs /home/konsti/.cargo/registry/src/index.crates.io-6f17d22bba15001f/markup5ever-0.11.0/interface/tree_builder.rs /home/konsti/.cargo/registry/src/index.crates.io-6f17d22bba15001f/markup5ever-0.11.0/serialize.rs /home/konsti/.cargo/registry/src/index.crates.io-6f17d22bba15001f/markup5ever-0.11.0/util/buffer_queue.rs /home/konsti/.cargo/registry/src/index.crates.io-6f17d22bba15001f/markup5ever-0.11.0/util/smallcharset.rs /home/konsti/Projects/amazing-gpt/onboarding/target/debug/build/markup5ever-67ee1b452f724a7b/out/generated.rs /home/konsti/Projects/amazing-gpt/onboarding/target/debug/build/markup5ever-67ee1b452f724a7b/out/named_entities.rs
+
+/home/konsti/.cargo/registry/src/index.crates.io-6f17d22bba15001f/markup5ever-0.11.0/lib.rs:
+/home/konsti/.cargo/registry/src/index.crates.io-6f17d22bba15001f/markup5ever-0.11.0/data/mod.rs:
+/home/konsti/.cargo/registry/src/index.crates.io-6f17d22bba15001f/markup5ever-0.11.0/interface/mod.rs:
+/home/konsti/.cargo/registry/src/index.crates.io-6f17d22bba15001f/markup5ever-0.11.0/interface/tree_builder.rs:
+/home/konsti/.cargo/registry/src/index.crates.io-6f17d22bba15001f/markup5ever-0.11.0/serialize.rs:
+/home/konsti/.cargo/registry/src/index.crates.io-6f17d22bba15001f/markup5ever-0.11.0/util/buffer_queue.rs:
+/home/konsti/.cargo/registry/src/index.crates.io-6f17d22bba15001f/markup5ever-0.11.0/util/smallcharset.rs:
+/home/konsti/Projects/amazing-gpt/onboarding/target/debug/build/markup5ever-67ee1b452f724a7b/out/generated.rs:
+/home/konsti/Projects/amazing-gpt/onboarding/target/debug/build/markup5ever-67ee1b452f724a7b/out/named_entities.rs:
+
+# env-dep:OUT_DIR=/home/konsti/Projects/amazing-gpt/onboarding/target/debug/build/markup5ever-67ee1b452f724a7b/out

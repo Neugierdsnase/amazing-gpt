@@ -433,6 +433,18 @@ const gpts: GPTInfoType[] = [
 		url: 'https://chat.openai.com/g/g-FEPMHxDYx-doublespeak-gpt',
 		image:
 			'https://files.oaiusercontent.com/file-Hm9eNsZ7QJvv9cFjwiWIKZ7Q?se=2123-10-22T19%3A31%3A58Z&sp=r&sv=2021-08-06&sr=b&rscc=max-age%3D31536000%2C%20immutable&rscd=attachment%3B%20filename%3Dd00a980f-d3f8-48b4-8169-7f98863ba1e2.png&sig=tFd5kd4XOjhuYTSybTkxZq1uPu5LpMl7PlOf1iC5TwI%3D'
+	},
+	{
+		id: isUuid('b07687c3-5924-4a4d-8f49-35ba252f76b4'),
+		name: 'Prompt Perfector',
+		author: { name: 'Josh Brent N. Villocido', url: '' },
+		description: 'AI Expert in Refining and Perfecting Prompts',
+		tags: ['prompting', 'prompt engineering'],
+		added: '2023-11-27T17:58:59.326914875+00:00',
+		updated: '2023-11-27T17:58:59.326922483+00:00',
+		url: 'https://chat.openai.com/g/g-jeCEGsoNZ-prompt-perfector',
+		image:
+			'https://files.oaiusercontent.com/file-NvD5XxSfIDk2mgQfsZb2ghyc?se=2123-10-17T11%3A08%3A24Z&sp=r&sv=2021-08-06&sr=b&rscc=max-age%3D31536000%2C%20immutable&rscd=attachment%3B%20filename%3D911375b3-0aff-45a6-80d6-311c261a730d.png&sig=T%2Bq5srM19/BbkVvnXt4Lh6Nv9W380vKWGwEB1r5xV0s%3D'
 	}
 ];
 
