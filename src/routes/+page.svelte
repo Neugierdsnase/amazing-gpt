@@ -5,11 +5,20 @@
 	import { gptStore } from '$lib/stores/gptStore';
 	import { derived } from 'svelte/store';
 	import _ from 'lodash';
+	import { onMount } from 'svelte';
+	import type { GPTInfoType } from '../types/gpt';
 
 	let scrollY = 0;
+	export let data: { gpts: [GPTInfoType[]] };
+
+	onMount(() => {
+		if (_.isEmpty($gptStore)) {
+			gptStore.set(data.gpts && data.gpts.length ? data.gpts[0] : []);
+		}
+	});
 
 	$: gpts = derived([gptStore, filterStore], ([$gptStore, $filterStore]) => {
-		if ($gptStore.length === 0) return [];
+		if ($gptStore && $gptStore.length === 0) return [];
 		const { query, tags, sort, desc } = $filterStore;
 		let filteredStore = $gptStore;
 
@@ -21,7 +30,7 @@
 
 		if (query) {
 			filteredStore = filteredStore.filter((gpt) =>
-				gpt.name.toLowerCase().includes(query.toLowerCase())
+				gpt.name.sort.toLowerCase().includes(query.toLowerCase())
 			);
 		}
 

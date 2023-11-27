@@ -2,7 +2,8 @@
 	import type { AuthorType } from '../../../types/gpt';
 
 	export let author: AuthorType;
-	const { name, url } = author;
+	const name = author?.name;
+	const url = author?.url;
 
 	const removeHttp = (url: string): string => {
 		const regex = /^(https?:\/\/)/;

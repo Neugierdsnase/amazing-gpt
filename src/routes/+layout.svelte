@@ -6,6 +6,7 @@
 	import '@phosphor-icons/web/fill';
 	import { onMount } from 'svelte';
 	import { themeChange } from 'theme-change';
+	import _ from 'lodash';
 
 	onMount(() => {
 		themeChange(false);

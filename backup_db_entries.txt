@@ -1,0 +1,561 @@
+// -------- Query 1 --------
+
+[
+    {
+        "added": "2023-11-30T08:40:44.155258959Z",
+        "author": {
+            "name": "Pietro Schirano",
+            "url": ""
+        },
+        "description": "Creates and hosts beautiful websites",
+        "id": "gpt:g_2Eo3NxuS7_designergpt",
+        "image": "https://files.oaiusercontent.com/file-x4outSHGhQh7YW6b8fqDK26y?se=2123-10-17T05%3A48%3A06Z&sp=r&sv=2021-08-06&sr=b&rscc=max-age%3D31536000%2C%20immutable&rscd=attachment%3B%20filename%3Decd882e5-15b7-4dba-8198-94a8849974f9.png&sig=DAm8CnFD1K9kaX%2BVe6AFBl1Yje0t1MGJKrm/tT4YTFc%3D",
+        "name": {
+            "display": "DesignerGPT",
+            "sort": "designergpt"
+        },
+        "slug": "g-2Eo3NxuS7-designergpt",
+        "tags": [
+            "webdev",
+            "design",
+            "web development",
+            "front end",
+            "hosting"
+        ],
+        "updated": "2023-11-30T08:40:44.155262059Z"
+    },
+    {
+        "added": "2023-11-30T08:40:44.170957044Z",
+        "author": {
+            "name": "glibatree.com",
+            "url": "https://glibatree.com"
+        },
+        "description": "Use optimized prompts to create beautiful art!",
+        "id": "gpt:g_7CKojumSX_the_glibatree_art_designer",
+        "image": "https://files.oaiusercontent.com/file-ckcqbHACy07VMVCDAiDIIFAP?se=2123-10-20T03%3A48%3A04Z&sp=r&sv=2021-08-06&sr=b&rscc=max-age%3D31536000%2C%20immutable&rscd=attachment%3B%20filename%3DDALL%25C2%25B7E%25202023-11-09%252009.24.48%2520-%2520A%2520digital%2520painting%2520of%2520a%2520whimsical%2520tree%2520character%252C%2520its%2520branches%2520are%2520adorned%2520with%2520vibrant%2520rainbow-colored%2520leaves%252C%2520shimmering%2520as%2520if%2520freshly%2520rained%2520on.%2520Th.png&sig=bWlHwWvve27%2BVPn06/msFCH89ykI%2BnfcvuCnV2ZhQ2U%3D",
+        "name": {
+            "display": "The Glibatree Art Designer",
+            "sort": "theglibatreeartdesigner"
+        },
+        "slug": "g-7CKojumSX-the-glibatree-art-designer",
+        "tags": [
+            "art",
+            "design",
+            "images",
+            "image generator"
+        ],
+        "updated": "2023-11-30T08:40:44.170960209Z"
+    },
+    {
+        "added": "2023-11-30T08:40:44.151514199Z",
+        "author": {
+            "name": "rsugrafx.com",
+            "url": "https://rsugrafx.com"
+        },
+        "description": "Turns your photos into cartoon-style portraits. Just upload a photo, and the app\n\t\t\t\t\t\tautomatically starts.",
+        "id": "gpt:g_BVAcMP7wX_portrait_cartoonator",
+        "image": "https://files.oaiusercontent.com/file-W9AKvihAeIk1syTMYsC1aC9u?se=2123-10-21T09%3A34%3A51Z&sp=r&sv=2021-08-06&sr=b&rscc=max-age%3D31536000%2C%20immutable&rscd=attachment%3B%20filename%3Dlogo.png&sig=Nn9ZWpbtFwyhq1nlfFdQjwD21DhppL3No7VRZFoWF8Y%3D",
+        "name": {
+            "display": "Portrait Cartoonator",
+            "sort": "portraitcartoonator"
+        },
+        "slug": "g-BVAcMP7wX-portrait-cartoonator",
+        "tags": [
+            "images",
+            "art",
+            "photos",
+            "image editor"
+        ],
+        "updated": "2023-11-30T08:40:44.151517622Z"
+    },
+    {
+        "added": "2023-11-30T08:40:44.167358953Z",
+        "author": {
+            "name": "prompt-dress.com",
+            "url": "https://prompt-dress.com"
+        },
+        "description": "Checks CSS/JS feature compatibility across browsers.",
+        "id": "gpt:g_DtQrCQOxt_browser_feature_compatibility_assistant",
+        "image": "https://files.oaiusercontent.com/file-PX3ZQrg8R1OQE4Uy81SBy5QZ?se=2123-10-27T12%3A53%3A45Z&sp=r&sv=2021-08-06&sr=b&rscc=max-age%3D31536000%2C%20immutable&rscd=attachment%3B%20filename%3D32838bd5-e2f4-4175-856a-8c12f7fc6c21.png&sig=5GGci3RYLMv1RAEDQpumoMUbXeZhYmzlFEn3sw2Uqdo%3D",
+        "name": {
+            "display": "\n\t\t\t\t\t\tBrowser Feature Compatibility Assistant\n\t\t\t\t\t",
+            "sort": "browserfeaturecompatibilityassistant"
+        },
+        "slug": "g-DtQrCQOxt-browser-feature-compatibility-assistant",
+        "tags": [
+            "webdev",
+            "front end",
+            "web development",
+            "browser"
+        ],
+        "updated": "2023-11-30T08:40:44.167362150Z"
+    },
+    {
+        "added": "2023-11-30T08:40:44.157219411Z",
+        "author": {
+            "name": "Safa Bilici",
+            "url": ""
+        },
+        "description": "not telling lies whilst not telling the truth",
+        "id": "gpt:g_FEPMHxDYx_doublespeak_gpt",
+        "image": "https://files.oaiusercontent.com/file-Hm9eNsZ7QJvv9cFjwiWIKZ7Q?se=2123-10-22T19%3A31%3A58Z&sp=r&sv=2021-08-06&sr=b&rscc=max-age%3D31536000%2C%20immutable&rscd=attachment%3B%20filename%3Dd00a980f-d3f8-48b4-8169-7f98863ba1e2.png&sig=tFd5kd4XOjhuYTSybTkxZq1uPu5LpMl7PlOf1iC5TwI%3D",
+        "name": {
+            "display": "DoubleSpeak GPT",
+            "sort": "doublespeakgpt"
+        },
+        "slug": "g-FEPMHxDYx-doublespeak-gpt",
+        "tags": [
+            "politics",
+            "media",
+            "text generator"
+        ],
+        "updated": "2023-11-30T08:40:44.157222758Z"
+    },
+    {
+        "added": "2023-11-30T08:40:44.153364771Z",
+        "author": {
+            "name": "",
+            "url": ""
+        },
+        "description": "Simulates 911 calls for dispatcher training.",
+        "id": "gpt:g_JjYTt8d1p_dispatch_trainer",
+        "image": "https://files.oaiusercontent.com/file-4JeBm1luXC4B73EBKIrFs1oZ?se=2123-10-21T16%3A48%3A36Z&sp=r&sv=2021-08-06&sr=b&rscc=max-age%3D31536000%2C%20immutable&rscd=attachment%3B%20filename%3D4f290fcd-80d9-42f5-a892-8124c742e61b.png&sig=eIJUb5sOsWD/6H7AEVEJ3%2B0EKHIyo4Z5wHS/e9OWPqQ%3D",
+        "name": {
+            "display": "Dispatch Trainer",
+            "sort": "dispatchtrainer"
+        },
+        "slug": "g-JjYTt8d1p-dispatch-trainer",
+        "tags": [
+            "training",
+            "emergency",
+            "conversation partner"
+        ],
+        "updated": "2023-11-30T08:40:44.153368172Z"
+    },
+    {
+        "added": "2023-11-30T08:40:44.156201749Z",
+        "author": {
+            "name": "Andrew Gao",
+            "url": ""
+        },
+        "description": "Makes you a professional high quality PNG for your business",
+        "id": "gpt:g_Mc4XM2MQP_logo_maker",
+        "image": "https://files.oaiusercontent.com/file-OL42EdwTQ3ZqlwBJqSiepQua?se=2123-10-14T21%3A11%3A07Z&sp=r&sv=2021-08-06&sr=b&rscc=max-age%3D31536000%2C%20immutable&rscd=attachment%3B%20filename%3D540b581d-40a5-4029-80dc-71c9eae7406d.png&sig=6a9vwOkaekscLiSE7AWY7iag1L1iaFXcwOEEx9BFjCk%3D",
+        "name": {
+            "display": "Logo Maker",
+            "sort": "logomaker"
+        },
+        "slug": "g-Mc4XM2MQP-logo-maker",
+        "tags": [
+            "art",
+            "design",
+            "front end",
+            "logo",
+            "image generator"
+        ],
+        "updated": "2023-11-30T08:40:44.156205321Z"
+    },
+    {
+        "added": "2023-11-30T08:40:44.152411494Z",
+        "author": {
+            "name": "natural20.com",
+            "url": "https://natural20.com"
+        },
+        "description": "This searches for the perfect GPT for your use case. Just tell it what you want and it\n\t\t\t\t\t\twill get busy finding the perfect GPT for your need.",
+        "id": "gpt:g_ODDsHkh7I_find_the_perfect_gpt_for_you",
+        "image": "https://files.oaiusercontent.com/file-pT82H2IsJKCPRG5B9rV6CHak?se=2123-10-20T19%3A40%3A50Z&sp=r&sv=2021-08-06&sr=b&rscc=max-age%3D31536000%2C%20immutable&rscd=attachment%3B%20filename%3Dlogo.png&sig=QVP0Mdz5j0LwwwmxudU/EnFYQRwxQ%2BZ/D7KdjG9s%2BWY%3D",
+        "name": {
+            "display": "Find the Perfect GPT for you!",
+            "sort": "findtheperfectgptforyou!"
+        },
+        "slug": "g-ODDsHkh7I-find-the-perfect-gpt-for-you",
+        "tags": [
+            "index",
+            "gpt",
+            "search"
+        ],
+        "updated": "2023-11-30T08:40:44.152414709Z"
+    },
+    {
+        "added": "2023-11-30T08:40:44.166487270Z",
+        "author": {
+            "name": "synlabs.pro",
+            "url": "https://synlabs.pro"
+        },
+        "description": "Expert in matching users with suitable GPTs",
+        "id": "gpt:g_PCGBO2DdD_gpts_matchmaker",
+        "image": "https://files.oaiusercontent.com/file-aBomEOTt7zbEFziQobe33wwY?se=2123-10-21T12%3A23%3A14Z&sp=r&sv=2021-08-06&sr=b&rscc=max-age%3D31536000%2C%20immutable&rscd=attachment%3B%20filename%3Df2b293cc-a024-4df7-9cf7-c421bc94ffe4.png&sig=E0JIEy09ZmfT2xsQvHLaD/ewYdn3IlYmFEFSTYZ%2BR8A%3D",
+        "name": {
+            "display": "GPTs Matchmaker",
+            "sort": "gptsmatchmaker"
+        },
+        "slug": "g-PCGBO2DdD-gpts-matchmaker",
+        "tags": [
+            "index",
+            "gpt",
+            "search"
+        ],
+        "updated": "2023-11-30T08:40:44.166490917Z"
+    },
+    {
+        "added": "2023-11-30T08:40:44.159673753+00:00",
+        "author": {
+            "name": "Natzir Turrado Ruiz",
+            "url": ""
+        },
+        "description": "SEO mentor aligned with Google's best practices",
+        "id": "gpt:g_QqvewXqPt_seo_mentor",
+        "image": "https://files.oaiusercontent.com/file-L9yIY9GqEdDo94onlYwWLP4U?se=2123-10-16T17%3A22%3A21Z&sp=r&sv=2021-08-06&sr=b&rscc=max-age%3D31536000%2C%20immutable&rscd=attachment%3B%20filename%3D6c5af06b-9dc1-480b-90df-57f7d0573ecc.png&sig=ndVjrBKmvk1x2b%2BvqDNu64rQDYOBhP9xQc0g6xlnzu8%3D",
+        "name": {
+            "display": "SEO Mentor",
+            "sort": "seomentor"
+        },
+        "slug": "g-QqvewXqPt-seo-mentor",
+        "tags": [],
+        "updated": "2023-11-30T08:40:44.159677037+00:00"
+    },
+    {
+        "added": "2023-11-30T08:40:44.163465662Z",
+        "author": {
+            "name": "seo.ai",
+            "url": "https://seo.ai"
+        },
+        "description": "Search all public GPTs in one place. Find the best Custom ChatGPTs tailored to your\n\t\t\t\t\t\tneeds. Every day, hundreds of new popular GPTs join our ranks!",
+        "id": "gpt:g_RuhDS8mbd_22_500_best_custom_gpts",
+        "image": "https://files.oaiusercontent.com/file-MgGT6z8XgEqooNX79PZufM5S?se=2123-10-27T22%3A07%3A12Z&sp=r&sv=2021-08-06&sr=b&rscc=max-age%3D31536000%2C%20immutable&rscd=attachment%3B%20filename%3Dbest-gpts.png&sig=MlatxQXK4pU8bZzLY/9zMjlRY2N4FEFOyMM16ZfUVTM%3D",
+        "name": {
+            "display": "22.500+ Best Custom GPTs",
+            "sort": "22.500+bestcustomgpts"
+        },
+        "slug": "g-RuhDS8mbd-22-500-best-custom-gpts",
+        "tags": [
+            "index",
+            "gpt",
+            "search"
+        ],
+        "updated": "2023-11-30T08:40:44.163468869Z"
+    },
+    {
+        "added": "2023-11-30T08:40:44.169081926Z",
+        "author": {
+            "name": "prompt-dress.com",
+            "url": "https://prompt-dress.com"
+        },
+        "description": "Writes JS/TS unit tests for your functions using Vitest instead of Jest.",
+        "id": "gpt:g_VrxA01XiP_unit_test_assistant_for_vitest",
+        "image": "https://files.oaiusercontent.com/file-ycAjAtVaVoeCaMqHr5IghyPR?se=2123-10-24T13%3A53%3A11Z&sp=r&sv=2021-08-06&sr=b&rscc=max-age%3D31536000%2C%20immutable&rscd=attachment%3B%20filename%3D51dff56f-cd2d-475f-9bd3-2cc3018d2d93.png&sig=MZR//lesoRKRBiiIQFvVw8LWuupJYvysnugagRRq1nA%3D",
+        "name": {
+            "display": "Unit Test Assistant for Vitest",
+            "sort": "unittestassistantforvitest"
+        },
+        "slug": "g-VrxA01XiP-unit-test-assistant-for-vitest",
+        "tags": [
+            "web development",
+            "web dev",
+            "front end",
+            "testing"
+        ],
+        "updated": "2023-11-30T08:40:44.169085065Z"
+    },
+    {
+        "added": "2023-11-30T08:40:44.149538029Z",
+        "author": {
+            "name": "rsugrafx.com",
+            "url": "https://rsugrafx.com"
+        },
+        "description": "Creates cartoon pet portraits. Upload a photo of your pet, type its name, submit it, and\n\t\t\t\t\t\twatch the magic happen.",
+        "id": "gpt:g_WYlcscE2T_pawtrait_creator",
+        "image": "https://files.oaiusercontent.com/file-YdiwHH35WY3pfNnmUWCeil7g?se=2123-10-21T09%3A37%3A53Z&sp=r&sv=2021-08-06&sr=b&rscc=max-age%3D31536000%2C%20immutable&rscd=attachment%3B%20filename%3Dlogo.png&sig=5XMhernnJp0cGH7%2BHMFnROC/g7lZHiXjGjc2qZN8kdo%3D",
+        "name": {
+            "display": "Pawtrait Creator",
+            "sort": "pawtraitcreator"
+        },
+        "slug": "g-WYlcscE2T-pawtrait-creator",
+        "tags": [
+            "images",
+            "pet",
+            "animal",
+            "image manipulator"
+        ],
+        "updated": "2023-11-30T08:40:44.149542343Z"
+    },
+    {
+        "added": "2023-11-30T08:40:44.160597722Z",
+        "author": {
+            "name": "Naja Faysal",
+            "url": ""
+        },
+        "description": "Concise Step-by-Step Strategist",
+        "id": "gpt:g_XUgnMbahO_limitlessgpt",
+        "image": "https://files.oaiusercontent.com/file-kmJxKAgJIAxtDvKBoKtgCX0L?se=2123-10-18T02%3A09%3A01Z&sp=r&sv=2021-08-06&sr=b&rscc=max-age%3D31536000%2C%20immutable&rscd=attachment%3B%20filename%3DDALL%25C2%25B7E%25202023-11-10%252009.33.34%2520-%2520A%2520modern%252C%2520futuristic%252C%2520and%2520minimalistic%2520logo%2520for%2520%2527Limitless%252C%2527%2520a%2520productivity%2520and%2520life-planning%2520system.%2520The%2520logo%2520should%2520combine%2520symbols%2520of%2520a%2520brain%2520and%2520a.png&sig=fSSKOktPJSy0J67un1D5j8E711XhZGjqAuxmWBjC1Zo%3D",
+        "name": {
+            "display": "LimitlessGPT",
+            "sort": "limitlessgpt"
+        },
+        "slug": "g-XUgnMbahO-limitlessgpt",
+        "tags": [
+            "strategist",
+            "expert",
+            "conversation partner",
+            "business"
+        ],
+        "updated": "2023-11-30T08:40:44.160600795Z"
+    },
+    {
+        "added": "2023-11-30T08:40:44.168221725Z",
+        "author": {
+            "name": "activesolution.se",
+            "url": "https://activesolution.se"
+        },
+        "description": "Create second hand marketplace listings based on pictures. Start by uploading a picture.",
+        "id": "gpt:g_cTqsEOE4C_sellmethispen",
+        "image": "https://files.oaiusercontent.com/file-yALburFJq31FxM7lp7Sf4Shx?se=2123-10-17T07%3A39%3A01Z&sp=r&sv=2021-08-06&sr=b&rscc=max-age%3D31536000%2C%20immutable&rscd=attachment%3B%20filename%3DSellMeThisPen-03.png&sig=D1KJbovUZ%2B0IcuMqQJVno6ZwQVjFgmP8unlpDV39XdE%3D",
+        "name": {
+            "display": "SellMeThisPen",
+            "sort": "sellmethispen"
+        },
+        "slug": "g-cTqsEOE4C-sellmethispen",
+        "tags": [
+            "marketing",
+            "sales",
+            "images",
+            "text generator",
+            "business"
+        ],
+        "updated": "2023-11-30T08:40:44.168224925Z"
+    },
+    {
+        "added": "2023-11-30T08:40:44.162566786Z",
+        "author": {
+            "name": "Joel P Gouker",
+            "url": ""
+        },
+        "description": "I help you with Line 6 Helix sound design, focusing on custom patches and guitar tone\n\t\t\t\t\t\tguidance - V 0.3",
+        "id": "gpt:g_jKUagForu_l6_helix_sound_designer",
+        "image": "https://files.oaiusercontent.com/file-4PrjMaqZ9TlAdXxcThPyjr2S?se=2123-10-17T02%3A04%3A22Z&sp=r&sv=2021-08-06&sr=b&rscc=max-age%3D31536000%2C%20immutable&rscd=attachment%3B%20filename%3Dc0225314-3cf6-4bb5-99c3-7908329b6703.png&sig=HDQHyu6cNPKdGbo68fIVLIeWrKAk3Ske2dh80C0tl5s%3D",
+        "name": {
+            "display": "L6 Helix Sound Designer",
+            "sort": "l6helixsounddesigner"
+        },
+        "slug": "g-jKUagForu-l6-helix-sound-designer",
+        "tags": [
+            "audio",
+            "design",
+            "sound generator"
+        ],
+        "updated": "2023-11-30T08:40:44.162570276Z"
+    },
+    {
+        "added": "2023-11-30T08:40:44.170075041Z",
+        "author": {
+            "name": "Josh Brent N. Villocido",
+            "url": ""
+        },
+        "description": "AI Expert in Refining and Perfecting Prompts",
+        "id": "gpt:g_jeCEGsoNZ_prompt_perfector",
+        "image": "https://files.oaiusercontent.com/file-NvD5XxSfIDk2mgQfsZb2ghyc?se=2123-10-17T11%3A08%3A24Z&sp=r&sv=2021-08-06&sr=b&rscc=max-age%3D31536000%2C%20immutable&rscd=attachment%3B%20filename%3D911375b3-0aff-45a6-80d6-311c261a730d.png&sig=T%2Bq5srM19/BbkVvnXt4Lh6Nv9W380vKWGwEB1r5xV0s%3D",
+        "name": {
+            "display": "Prompt Perfector",
+            "sort": "promptperfector"
+        },
+        "slug": "g-jeCEGsoNZ-prompt-perfector",
+        "tags": [
+            "text generator",
+            "gpt",
+            "prompt engineering"
+        ],
+        "updated": "2023-11-30T08:40:44.170078358Z"
+    },
+    {
+        "added": "2023-11-30T08:40:44.173652629Z",
+        "author": {
+            "name": "Pietro Schirano",
+            "url": ""
+        },
+        "description": "The ultimate file converter for images, audio, video, documents and more. It handles\n\t\t\t\t\t\tindividual or batch uploads, supports ZIPs, and provides a download link.",
+        "id": "gpt:g_kMKw5tFmB_convertanything",
+        "image": "https://files.oaiusercontent.com/file-Gpws0QDcR4iL5URQQoxxvRET?se=2123-10-19T06%3A07%3A50Z&sp=r&sv=2021-08-06&sr=b&rscc=max-age%3D31536000%2C%20immutable&rscd=attachment%3B%20filename%3D8c64f203-9ea6-4c45-a339-d92f6545a2f7.png&sig=Zhlsp136YwCoXKLK%2BpCspdKokq%2BhQDrdimmAXvE4vME%3D",
+        "name": {
+            "display": "ConvertAnything",
+            "sort": "convertanything"
+        },
+        "slug": "g-kMKw5tFmB-convertanything",
+        "tags": [
+            "converter",
+            "files",
+            "images",
+            "sound",
+            "audio",
+            "video",
+            "text",
+            "documents"
+        ],
+        "updated": "2023-11-30T08:40:44.173655841Z"
+    },
+    {
+        "added": "2023-11-30T08:40:44.165414764Z",
+        "author": {
+            "name": "mindgoblinstudios.com",
+            "url": "https://mindgoblinstudios.com"
+        },
+        "description": "Coding Wizard: 100x Engineer. Create a website with a sentence. Built for a new era of\n\t\t\t\t\t\tcreativity: **************Prompt-gramming***************** 15+ Hotkeys for coding flows.\n\t\t\t\t\t\t19 starter projects. Prompt first creativity! Start with a picture or a quest? Type: K\n\t\t\t\t\t\tfor cmd Menu, or R for README v1.15",
+        "id": "gpt:g_n7Rs0IK86_grimoire",
+        "image": "https://files.oaiusercontent.com/file-MTr7WWRSSCbZjGIeEUVF3Bwh?se=2123-10-15T16%3A15%3A08Z&sp=r&sv=2021-08-06&sr=b&rscc=max-age%3D31536000%2C%20immutable&rscd=attachment%3B%20filename%3DDALL%25C2%25B7E%2520Code%2520Wizard%2520Illustration.png&sig=G2gs2Pxi21I6346XTyg6tN9BydGthgIhc3YZIuE/n8w%3D",
+        "name": {
+            "display": "Grimoire",
+            "sort": "grimoire"
+        },
+        "slug": "g-n7Rs0IK86-grimoire",
+        "tags": [
+            "conversation partner",
+            "programming",
+            "expert",
+            "web development",
+            "front end"
+        ],
+        "updated": "2023-11-30T08:40:44.165418385Z"
+    },
+    {
+        "added": "2023-11-30T08:40:44.161564744Z",
+        "author": {
+            "name": "TOM GALLY",
+            "url": ""
+        },
+        "description": "Thoughtful discussions with a knowledgeable partner",
+        "id": "gpt:g_o03gktdyW_your_socratic_buddy",
+        "image": "https://files.oaiusercontent.com/file-JfnzO7n2gPGaw9PHvFoBs1u4?se=2123-10-16T13%3A30%3A00Z&sp=r&sv=2021-08-06&sr=b&rscc=max-age%3D31536000%2C%20immutable&rscd=attachment%3B%20filename%3Da05973f9-1b0f-4ef1-adc4-ede0df30125f.png&sig=ZwwFiiVUh8DvJY18/NsePn09tOnS8ugPLvhgJ4d3cew%3D",
+        "name": {
+            "display": "Your Socratic Buddy",
+            "sort": "yoursocraticbuddy"
+        },
+        "slug": "g-o03gktdyW-your-socratic-buddy",
+        "tags": [
+            "conversation partner",
+            "philosophy"
+        ],
+        "updated": "2023-11-30T08:40:44.161567914Z"
+    },
+    {
+        "added": "2023-11-30T08:40:44.172738942Z",
+        "author": {
+            "name": "octaneai.com",
+            "url": "https://octaneai.com"
+        },
+        "description": "I turn photos into Simpsons-style art.",
+        "id": "gpt:g_tcmMldCYy_simpsonize_me",
+        "image": "https://files.oaiusercontent.com/file-17fHH5xrODVwm3MWDraASFA3?se=2123-10-14T18%3A36%3A02Z&sp=r&sv=2021-08-06&sr=b&rscc=max-age%3D31536000%2C%20immutable&rscd=attachment%3B%20filename%3Da722ea47-dbe5-48e9-8edb-18b06967b0a3.png&sig=1B5F0S7gRjMV2HmqIaIqmiSwoiePyILURO7nm3KDTIs%3D",
+        "name": {
+            "display": "Simpsonize Me",
+            "sort": "simpsonizeme"
+        },
+        "slug": "g-tcmMldCYy-simpsonize-me",
+        "tags": [
+            "images",
+            "image manipulator"
+        ],
+        "updated": "2023-11-30T08:40:44.172742260Z"
+    },
+    {
+        "added": "2023-11-30T08:40:44.150460427Z",
+        "author": {
+            "name": "benjamin ogden",
+            "url": ""
+        },
+        "description": "AI blog writer with SEO expertise and automatic AI image generation",
+        "id": "gpt:g_vCVZafMQ3_seo_goat",
+        "image": "https://files.oaiusercontent.com/file-0nJY9hPmCTEwNS4yLDQtDkSG?se=2123-10-16T10%3A38%3A23Z&sp=r&sv=2021-08-06&sr=b&rscc=max-age%3D31536000%2C%20immutable&rscd=attachment%3B%20filename%3Dd2b70ac6-3476-494a-ad85-fa0bb3701f78.png&sig=rt1ZULrH%2BVsHiIiuoGHLEabhUzrODZClRbRHVHDzS5s%3D",
+        "name": {
+            "display": "SEO GOAT",
+            "sort": "seogoat"
+        },
+        "slug": "g-vCVZafMQ3-seo-goat",
+        "tags": [
+            "text",
+            "documents",
+            "text generator"
+        ],
+        "updated": "2023-11-30T08:40:44.150464290Z"
+    },
+    {
+        "added": "2023-11-30T08:40:44.154325540Z",
+        "author": {
+            "name": "Anthony McLaughlin",
+            "url": ""
+        },
+        "description": "AI-Powered Permaculture: Instant Expertise in Your Hands!",
+        "id": "gpt:g_y8BV6typ7_permaculture_gpt",
+        "image": "https://files.oaiusercontent.com/file-Ng2oCJXLK8jvlwDDFO8I92hY?se=2123-10-17T12%3A32%3A44Z&sp=r&sv=2021-08-06&sr=b&rscc=max-age%3D31536000%2C%20immutable&rscd=attachment%3B%20filename%3Db67d4367-862c-40ca-bd5b-60996578acd7.png&sig=3/AjCFo6Wsfuj0cHlmPYi3%2BJnInPh5P3T2sJwWk4EX8%3D",
+        "name": {
+            "display": "Permaculture GPT",
+            "sort": "permaculturegpt"
+        },
+        "slug": "g-y8BV6typ7-permaculture-gpt",
+        "tags": [
+            "permaculture",
+            "gardening",
+            "agriculture",
+            "farming"
+        ],
+        "updated": "2023-11-30T08:40:44.154328645Z"
+    },
+    {
+        "added": "2023-11-30T08:40:44.171837174Z",
+        "author": {
+            "name": "prompt-dress.com",
+            "url": "https://prompt-dress.com"
+        },
+        "description": "I guide users for impactful Product Hunt launches.",
+        "id": "gpt:g_yZKIOxFhD_product_hunt_launch_advisor",
+        "image": "https://files.oaiusercontent.com/file-fF8451x9ee2dr2enNjTnymIs?se=2123-10-24T17%3A42%3A51Z&sp=r&sv=2021-08-06&sr=b&rscc=max-age%3D31536000%2C%20immutable&rscd=attachment%3B%20filename%3D7487a3ac-bbe7-4769-9718-09b25c9851f9.png&sig=5CN1SrKb3fF8hZbT9YRiLICfV014fZqlawZp7blHZjY%3D",
+        "name": {
+            "display": "Product Hunt Launch Advisor",
+            "sort": "producthuntlaunchadvisor"
+        },
+        "slug": "g-yZKIOxFhD-product-hunt-launch-advisor",
+        "tags": [
+            "product hunt",
+            "product",
+            "text generator",
+            "conversation partner"
+        ],
+        "updated": "2023-11-30T08:40:44.171840331Z"
+    },
+    {
+        "added": "2023-11-30T08:40:44.158606881Z",
+        "author": {
+            "name": "Joshua Bodnar",
+            "url": ""
+        },
+        "description": "You can create almost any image, making a masterpiece from thin air!",
+        "id": "gpt:g_z9mT0nYIk_imagine_anything",
+        "image": "https://files.oaiusercontent.com/file-LK85nAOSowLnp8XUC8gdvPRf?se=2123-10-22T23%3A56%3A55Z&sp=r&sv=2021-08-06&sr=b&rscc=max-age%3D31536000%2C%20immutable&rscd=attachment%3B%20filename%3D34.png&sig=Ug0eoGNweed8xhIkA3CYU2HXVltPBk0FHKEbXe/fXCg%3D",
+        "name": {
+            "display": "/Imagine Anything -",
+            "sort": "/imagineanything-"
+        },
+        "slug": "g-z9mT0nYIk-imagine-anything",
+        "tags": [
+            "images",
+            "art",
+            "image generator"
+        ],
+        "updated": "2023-11-30T08:40:44.158610382Z"
+    },
+    {
+        "added": "2023-11-30T08:40:44.148351826+00:00",
+        "author": {
+            "name": "editgpt.app",
+            "url": "https://editgpt.app"
+        },
+        "description": "Proofread, edit and track changes to your content. Works alongside the editGPT browser\n\t\t\t\t\t\textension.",
+        "id": "gpt:g_zpuYfzV7k_editgpt",
+        "image": "https://files.oaiusercontent.com/file-rtnaGVkL7cbKKvFKj4W3IIma?se=2123-10-19T16%3A47%3A43Z&sp=r&sv=2021-08-06&sr=b&rscc=max-age%3D31536000%2C%20immutable&rscd=attachment%3B%20filename%3Dandroid-chrome-192x192.png&sig=8IBMna9myk44fzf873z/OFp9oS8kflbVjN9T/xwRvw8%3D",
+        "name": {
+            "display": "editGPT",
+            "sort": "editgpt"
+        },
+        "slug": "g-zpuYfzV7k-editgpt",
+        "tags": [],
+        "updated": "2023-11-30T08:40:44.148372780+00:00"
+    }
+]
