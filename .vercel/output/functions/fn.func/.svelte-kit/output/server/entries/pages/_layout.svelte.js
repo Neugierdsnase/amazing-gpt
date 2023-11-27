@@ -1,4 +1,4 @@
-import { c as create_ssr_component, d as add_attribute, v as validate_component } from "../../chunks/ssr.js";
+import { c as create_ssr_component, a as add_attribute, v as validate_component } from "../../chunks/ssr.js";
 import "theme-change";
 const app = "";
 const Header = create_ssr_component(($$result, $$props, $$bindings, slots) => {

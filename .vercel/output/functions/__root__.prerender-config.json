@@ -1,9 +1,0 @@
-{
-	"expiration": 60,
-	"allowQuery": [
-		"__pathname",
-		"search"
-	],
-	"group": 1,
-	"passQuery": true
-}

@@ -11,21 +11,13 @@
 			"handle": "filesystem"
 		},
 		{
-			"src": "^/?$",
-			"dest": "/__root__?__pathname=/"
-		},
-		{
-			"src": "^/?/__data.json$",
-			"dest": "/__root__/__data.json?__pathname=/"
-		},
-		{
-			"src": "^/sitemap\\.xml/?(?:/__data.json)?$",
-			"dest": "/fn-1"
-		},
-		{
 			"src": "/.*",
 			"dest": "/fn"
 		}
 	],
-	"overrides": {}
+	"overrides": {
+		"index.html": {
+			"path": ""
+		}
+	}
 }
