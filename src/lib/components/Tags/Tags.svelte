@@ -6,6 +6,10 @@
 
 	export let maxTags: number | undefined = undefined;
 	export let tags: string[] = [];
+	// this is not to filter BY tags, but to filter tags themselves
+	export let includeTagsFilter: boolean = false;
+
+	let tagsFilter: string = '';
 
 	$: activeTags = $filterStore.tags;
 
@@ -20,7 +24,13 @@
 		});
 	};
 
-	$: combinedTags = _.uniq([...activeTags, ...tags]);
+	$: combinedTags = _.uniq([
+		...activeTags,
+		...tags.filter((tag) => {
+			return tagsFilter ? tag.includes(tagsFilter) : true;
+		})
+	]);
+
 	$: tagsToDisplay = maxTags ? combinedTags.slice(0, maxTags) : combinedTags;
 </script>
 
@@ -35,4 +45,14 @@
 				{tag}
 			</button>
 		</li>{/each}
+	{#if includeTagsFilter}
+		<li>
+			<input
+				type="text"
+				placeholder="filter tags"
+				bind:value={tagsFilter}
+				class="input input-primary input-xs text-center max-w-[8rem]"
+			/>
+		</li>
+	{/if}
 </ul>

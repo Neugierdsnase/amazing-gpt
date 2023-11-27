@@ -14,7 +14,7 @@
 	/>
 
 	<div class="flex justify-center grow gap-1 h-full bg-base-200 rounded-2xl py-[2px]">
-		<Tags {tags} />
+		<Tags {tags} includeTagsFilter />
 	</div>
 
 	<div class="flex gap-4">
