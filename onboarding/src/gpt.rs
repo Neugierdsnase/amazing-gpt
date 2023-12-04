@@ -1,6 +1,5 @@
 use chrono::Utc;
 use serde::Serialize;
-use surrealdb::sql::Thing;
 
 #[derive(Debug, Serialize)]
 pub struct Name {
@@ -16,7 +15,7 @@ pub struct Author {
 
 #[derive(Debug, Serialize)]
 pub struct GptRecord {
-    pub id: Thing,
+    pub id: String,
     pub name: Name,
     pub author: Author,
     pub description: String,
@@ -30,10 +29,7 @@ pub struct GptRecord {
 impl Default for GptRecord {
     fn default() -> Self {
         GptRecord {
-            id: Thing {
-                tb: String::from("gpt"),
-                id: String::new().into(),
-            },
+            id: String::new().into(),
             name: Name {
                 display: String::new(),
                 sort: String::new(),

@@ -1,1 +1,1 @@
-/home/konsti/Projects/amazing-gpt/onboarding/target/debug/onboarding: /home/konsti/Projects/amazing-gpt/onboarding/src/main.rs
+/home/konsti/Projects/amazing-gpt/onboarding/target/debug/onboarding: /home/konsti/Projects/amazing-gpt/onboarding/src/database.rs /home/konsti/Projects/amazing-gpt/onboarding/src/gpt.rs /home/konsti/Projects/amazing-gpt/onboarding/src/main.rs /home/konsti/Projects/amazing-gpt/onboarding/src/webparser.rs

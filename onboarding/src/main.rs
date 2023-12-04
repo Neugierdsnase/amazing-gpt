@@ -34,7 +34,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     let gpt_infos = webparser::parse(file_paths);
 
-    let db = connect().await.unwrap();
+    let db = connect().await?;
 
     // Create a GPT records in the database
     for gpt_ino in &gpt_infos {

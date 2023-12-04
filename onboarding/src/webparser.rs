@@ -1,7 +1,6 @@
 use crate::gpt::{Author, GptRecord, Name};
 use scraper::{Html, Selector};
 use std::fs;
-use surrealdb::sql::{Id, Thing};
 
 pub fn parse(file_paths: Vec<&str>) -> Vec<GptRecord> {
     let mut gpt_infos: Vec<GptRecord> = Vec::new();
@@ -31,10 +30,7 @@ pub fn parse(file_paths: Vec<&str>) -> Vec<GptRecord> {
                 .unwrap(),
         );
 
-        let id = Thing {
-            tb: String::from("gpt"),
-            id: Id::from(slug.replace("-", "_")),
-        };
+        let id = slug.replace("-", "_");
 
         // image
         let image_selector = Selector::parse(".gizmo-shadow-stroke > img").unwrap();
