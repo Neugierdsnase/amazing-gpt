@@ -1,10 +1,18 @@
 import os
+import sys
 import json
 import asyncio
 from datetime import datetime
 
+from dotenv import load_dotenv
 from bs4 import BeautifulSoup
 import asyncpg
+
+# load env from correct file based on command line arg
+if len(sys.argv) > 1 and sys.argv[1] == "prod":
+    load_dotenv(".env.production")
+else:
+    load_dotenv(".env.development")
 
 
 def get_file_paths(directory_path):
@@ -104,10 +112,11 @@ def parse(file_paths):
 async def connect():
     try:
         # Connect to the database
+        # Using env vars
         connection = await asyncpg.connect(
-            user="k8603427",
-            password="4HaLxXKrl1cI",
-            host="ep-still-union-32116685.eu-central-1.aws.neon.tech",
+            user=os.getenv("DB_USER"),
+            password=os.getenv("DB_PASSWORD"),
+            host=os.getenv("DB_HOST"),
             database="gpts",
             ssl="require",
         )

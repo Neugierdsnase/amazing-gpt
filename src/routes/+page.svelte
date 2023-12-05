@@ -7,13 +7,14 @@
 	import _ from 'lodash';
 	import { onMount } from 'svelte';
 	import type { GPTInfoType } from '../types/gpt';
+	import { getTagsFromGpts, getUniqueTags } from '$lib/util';
 
 	let scrollY = 0;
-	export let data: { gpts: [GPTInfoType[]] };
+	export let data: { gpts: GPTInfoType[] };
 
 	onMount(() => {
 		if (_.isEmpty($gptStore)) {
-			gptStore.set(data.gpts && data.gpts.length ? data.gpts[0] : []);
+			gptStore.set(data.gpts && data.gpts.length ? data.gpts : []);
 		}
 	});
 
@@ -39,7 +40,7 @@
 		return desc ? filteredStore.reverse() : filteredStore;
 	});
 
-	$: tags = _.uniq($gpts.map((gpt) => gpt.tags).flat());
+	$: tags = getUniqueTags(getTagsFromGpts($gpts));
 </script>
 
 <svelte:window bind:scrollY />

@@ -6,7 +6,8 @@
 
 	export let data: { gpt: [[GPTInfoType]] };
 	const { gpt } = data;
-	const { name, author, tags, description, image, slug } = gpt[0][0];
+	const { name, author, tags, description, image, slug } = gpt[0];
+	const tagsArray = tags.split(',').filter((tag) => tag !== '');
 </script>
 
 <div class="flex flex-col gap-8 min-h-screen items-stretch my-12 pb-12">
@@ -20,7 +21,7 @@
 		<div>
 			<h1 class="text-4xl font-bold">{name.display}</h1>
 			<AuthorSpan {author} />
-			<Tags size="sm" {tags} />
+			<Tags size="sm" tags={tagsArray} />
 		</div>
 	</div>
 
