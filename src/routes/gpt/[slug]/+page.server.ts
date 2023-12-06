@@ -1,6 +1,14 @@
 import sql from '../../../db';
 
-export async function load({ params }) {
+type ParamsType = {
+  slug: string;
+};
+
+type MetadataType = {
+  params: ParamsType;
+};
+
+export const load = async ({ params }: MetadataType) => {
   const { slug } = params;
   const idFromSlug = slug.replaceAll('-', '_');
 
@@ -10,4 +18,4 @@ export async function load({ params }) {
   return {
     gpt: { ...gpt, tags }
   };
-}
+};

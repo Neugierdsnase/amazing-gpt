@@ -7,10 +7,10 @@
 	import _ from 'lodash';
 	import { onMount } from 'svelte';
 	import type { GPTInfoType } from '../types/gpt';
-	import { getTagsFromGpts, getUniqueTags } from '$lib/util';
+	import { getUniqueTags } from '$lib/util';
 
 	let scrollY = 0;
-	export let data: { gpts: GPTInfoType[] };
+	export let data: { gpts: GPTInfoType[]; allTags: string[] };
 
 	onMount(() => {
 		if (_.isEmpty($gptStore)) {
@@ -40,7 +40,7 @@
 		return desc ? filteredStore.reverse() : filteredStore;
 	});
 
-	$: tags = getUniqueTags(getTagsFromGpts($gpts));
+	$: tags = getUniqueTags(data.allTags);
 </script>
 
 <svelte:window bind:scrollY />
@@ -53,6 +53,8 @@
 	A&nbsp;curated&nbsp;list <span>of</span> amazing custom&nbsp;GPTs
 </h1>
 
+<!-- TODO: The filter bar needs take an "on_filter_change" prop that is a function that gets the new, filtered result -->
+<!-- The search end point can be defined in sveltekit and will just return the filtered results. -->
 <FilterBar {tags} />
 <GptList items={$gpts} />
 
