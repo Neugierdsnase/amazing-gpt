@@ -1,9 +1,6 @@
 <script lang="ts">
-	import type { AuthorType } from '../../../types/gpt';
-
-	export let author: AuthorType;
-	const name = author?.name;
-	const url = author?.url;
+	export let authorname: string = '';
+	export let authorurl: string = '';
 
 	const removeHttp = (url: string): string => {
 		const regex = /^(https?:\/\/)/;
@@ -11,16 +8,16 @@
 	};
 </script>
 
-{#if !name && !url}
+{#if !authorname && !authorurl}
 	<span class="text-xs"></span>
-{:else if !name}
-	<a class="text-xs italic underline" href={url} rel="noopener" target="_blank"
-		>- by {removeHttp(url)} <i class="ph-bold ph-arrow-square-out" /></a
+{:else if !authorname}
+	<a class="text-xs italic underline" href={authorurl} rel="noopener" target="_blank"
+		>- by {removeHttp(authorurl)} <i class="ph-bold ph-arrow-square-out" /></a
 	>
-{:else if !url}
-	<span class="text-xs italic">- by {name}</span>
+{:else if !authorurl}
+	<span class="text-xs italic">- by {authorname}</span>
 {:else}
-	<a class="text-xs italic underline" href={url} rel="noopener" target="_blank"
-		>- by {name} <i class="ph-bold ph-arrow-square-out" /></a
+	<a class="text-xs italic underline" href={authorurl} rel="noopener" target="_blank"
+		>- by {authorname} <i class="ph-bold ph-arrow-square-out" /></a
 	>
 {/if}

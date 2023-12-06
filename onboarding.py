@@ -1,6 +1,7 @@
 import os
 import sys
 import json
+import re
 import asyncio
 from datetime import datetime
 
@@ -71,11 +72,12 @@ def parse(file_paths):
         url = soup.select_one(
             "a.flex.items-center.rounded-lg.bg-green-600.px-4.py-2.font-medium.text-white.transition"
         )
-        slug = url["href"].split("next=/g/")[-1]
+        slug = url["href"].split("next=/g/")[-1] if url else None
         gpt_id = slug.replace("-", "_")
         image = soup.select_one(".gizmo-shadow-stroke > img")["src"]
         display_name = soup.select_one("div.text-center.text-2xl.font-medium").text
-        sort_name = display_name.lower().strip().replace(" ", "_")
+        # remove all special characters and spaces
+        sort_name = re.sub(r"[^a-z0-9]", "", display_name.lower().strip())
         name = Name(display_name, sort_name)
         description = soup.select_one(
             "div.max-w-md.text-center.text-xl.font-normal.text-token-text-secondary"
@@ -155,6 +157,14 @@ async def create_gpt(connection, gpt: GptRecord):
     )
 
 
+async def gpt_exists(connection, gpt_id):
+    sql = """
+        SELECT EXISTS(SELECT 1 FROM gpt_entries WHERE id = $1);
+    """
+
+    return await connection.fetchval(sql, gpt_id)
+
+
 async def main():
     directory_path = "onboarding/content"
     file_paths = get_file_paths(directory_path)
@@ -163,6 +173,9 @@ async def main():
     connection = await connect()
 
     for gpt_info in gpt_infos:
+        if await gpt_exists(connection, gpt_info.gpt_id):
+            print(f"Skipping {gpt_info.name.display} by {gpt_info.author.name}")
+            continue
         await create_gpt(connection, gpt_info)
 
     await connection.close()

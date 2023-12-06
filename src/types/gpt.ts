@@ -1,18 +1,10 @@
 import type { UuidType } from './util';
 
-export type AuthorType = {
-	name: string;
-	url: string;
-};
-
-export type NameType = {
-	display: string;
-	sort: string;
-};
-
 export interface GPTInfoType {
-	name: NameType;
-	author: AuthorType;
+	displayname: string;
+	sortname: string;
+	authorname: string;
+	authorurl: string;
 	description: string;
 	tags: string[];
 	added: string;

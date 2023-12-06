@@ -1,20 +1,18 @@
 import postgres from "postgres";
-const {
-  VITE_PGHOST,
-  VITE_PGDATABASE,
-  VITE_PGUSER,
-  VITE_PGPASSWORD,
-  VITE_ENDPOINT_ID
-} = process.env;
+const host = "ep-still-union-32116685.eu-central-1.aws.neon.tech";
+const database = "gpts";
+const username = "reader";
+const password = "ZKcak6Fqh9RU";
+const endpointId = "ep-still-union-32116685";
 const sql = postgres({
-  host: VITE_PGHOST,
-  database: VITE_PGDATABASE,
-  username: VITE_PGUSER,
-  password: VITE_PGPASSWORD,
+  host,
+  database,
+  username,
+  password,
   port: 5432,
   ssl: "require",
   connection: {
-    options: `project=${VITE_ENDPOINT_ID}`
+    options: `project=${endpointId}`
   }
 });
 export {

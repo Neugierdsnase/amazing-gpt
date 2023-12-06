@@ -69,16 +69,17 @@ const Tags = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   })} ${includeTagsFilter ? `<li><input type="text" placeholder="filter tags" class="input input-primary input-xs rounded-xl text-center max-w-[8rem]"${add_attribute("value", tagsFilter, 0)}></li>` : ``}</ul>`;
 });
 const AuthorSpan = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  let { author } = $$props;
-  const name = author?.name;
-  const url = author?.url;
-  const removeHttp = (url2) => {
+  let { authorname = "" } = $$props;
+  let { authorurl = "" } = $$props;
+  const removeHttp = (url) => {
     const regex = /^(https?:\/\/)/;
-    return url2.replace(regex, "");
+    return url.replace(regex, "");
   };
-  if ($$props.author === void 0 && $$bindings.author && author !== void 0)
-    $$bindings.author(author);
-  return `${!name && !url ? `<span class="text-xs"></span>` : `${!name ? `<a class="text-xs italic underline"${add_attribute("href", url, 0)} rel="noopener" target="_blank">- by ${escape(removeHttp(url))} <i class="ph-bold ph-arrow-square-out"></i></a>` : `${!url ? `<span class="text-xs italic">- by ${escape(name)}</span>` : `<a class="text-xs italic underline"${add_attribute("href", url, 0)} rel="noopener" target="_blank">- by ${escape(name)} <i class="ph-bold ph-arrow-square-out"></i></a>`}`}`}`;
+  if ($$props.authorname === void 0 && $$bindings.authorname && authorname !== void 0)
+    $$bindings.authorname(authorname);
+  if ($$props.authorurl === void 0 && $$bindings.authorurl && authorurl !== void 0)
+    $$bindings.authorurl(authorurl);
+  return `${!authorname && !authorurl ? `<span class="text-xs"></span>` : `${!authorname ? `<a class="text-xs italic underline"${add_attribute("href", authorurl, 0)} rel="noopener" target="_blank">- by ${escape(removeHttp(authorurl))} <i class="ph-bold ph-arrow-square-out"></i></a>` : `${!authorurl ? `<span class="text-xs italic">- by ${escape(authorname)}</span>` : `<a class="text-xs italic underline"${add_attribute("href", authorurl, 0)} rel="noopener" target="_blank">- by ${escape(authorname)} <i class="ph-bold ph-arrow-square-out"></i></a>`}`}`}`;
 });
 const BASE_OPENAI_GPT_URL = "https://chat.openai.com/g/";
 const GPT_PATH = "gpt";

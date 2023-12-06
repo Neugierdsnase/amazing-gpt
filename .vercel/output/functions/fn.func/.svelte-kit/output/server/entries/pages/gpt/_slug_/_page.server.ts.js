@@ -1,11 +1,11 @@
 import { s as sql } from "../../../../chunks/index3.js";
 async function load({ params }) {
   const { slug } = params;
-  console.log("slug", slug);
   const idFromSlug = slug.replaceAll("-", "_");
-  const gpt = await sql`SELECT * FROM gpt:${idFromSlug}`;
+  const [gpt] = await sql`SELECT * FROM gpt_entries WHERE id = ${idFromSlug};`;
+  const tags = gpt.tags.split(",");
   return {
-    gpt
+    gpt: { ...gpt, tags }
   };
 }
 export {

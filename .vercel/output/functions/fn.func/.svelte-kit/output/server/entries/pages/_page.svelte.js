@@ -30,12 +30,13 @@ const FilterBar = create_ssr_component(($$result, $$props, $$bindings, slots) =>
 const GPTInfoCard = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { element = "article" } = $$props;
   let { gptInfo = void 0 } = $$props;
+  const { authorname, authorurl } = gptInfo ?? {};
   if ($$props.element === void 0 && $$bindings.element && element !== void 0)
     $$bindings.element(element);
   if ($$props.gptInfo === void 0 && $$bindings.gptInfo && gptInfo !== void 0)
     $$bindings.gptInfo(gptInfo);
   return `${gptInfo ? `${((tag) => {
-    return tag ? `<${element ?? "article"} class="grid grid-cols-6 grid-rows-3 bg-primary/10 gap-2 custom-glass rounded-xl p-4 shadow-xl backdrop-filter backdrop-blur-md">${is_void(tag) ? "" : `<div class="flex justify-center items-center col-start-1 p-4 row-start-1 col-span-2 row-span-3"><img${add_attribute("src", gptInfo.image, 0)}${add_attribute("alt", gptInfo.name?.display, 0)} class="mask mask-circle w-full"></div> <div class="row-start-1 row-span-1 col-start-3 col-span-4 text-xl"><h2 class="font-bold line-clamp-1 leading-1">${escape(gptInfo.name?.display)}</h2> ${validate_component(AuthorSpan, "AuthorSpan").$$render($$result, { author: gptInfo.author }, {}, {})}</div> <p class="row-start-2 row-span-1 col-start-3 col-span-4 pl-4 line-clamp-2 mt-2">${escape(gptInfo.description)}</p> <div class="overflow-hidden row-start-3 col-span-3 flex items-end col-start-3">${validate_component(Tags, "Tags").$$render(
+    return tag ? `<${element ?? "article"} class="grid grid-cols-6 grid-rows-3 bg-primary/10 gap-2 custom-glass rounded-xl p-4 shadow-xl backdrop-filter backdrop-blur-md">${is_void(tag) ? "" : `<div class="flex justify-center items-center col-start-1 p-4 row-start-1 col-span-2 row-span-3"><img${add_attribute("src", gptInfo.image, 0)}${add_attribute("alt", gptInfo.displayname, 0)} class="mask mask-circle w-full"></div> <div class="row-start-1 row-span-1 col-start-3 col-span-4 text-xl"><h2 class="font-bold line-clamp-1 leading-1">${escape(gptInfo.displayname)}</h2> ${validate_component(AuthorSpan, "AuthorSpan").$$render($$result, { authorname, authorurl }, {}, {})}</div> <p class="row-start-2 row-span-1 col-start-3 col-span-4 pl-4 line-clamp-2 mt-2">${escape(gptInfo.description)}</p> <div class="overflow-hidden row-start-3 col-span-3 flex items-end col-start-3">${validate_component(Tags, "Tags").$$render(
       $$result,
       {
         handleTagClick: filterStore.handleTagClick,
@@ -44,7 +45,7 @@ const GPTInfoCard = create_ssr_component(($$result, $$props, $$bindings, slots) 
       },
       {},
       {}
-    )}</div> <div class="col-start-6 row-start-3 align-baseline flex justify-end items-end"><a href="${escape(GPT_PATH, true) + "/" + escape(gptInfo.slug, true)}" class="btn btn-primary">Use <i class="ph-bold ph-arrow-square-out"></i></a></div>`}${is_void(tag) ? "" : `</${tag}>`}` : "";
+    )}</div> <div class="col-start-6 row-start-3 align-baseline flex justify-end items-end"><a href="${escape(GPT_PATH, true) + "/" + escape(gptInfo.slug, true)}" class="btn btn-primary">Check out</a></div>`}${is_void(tag) ? "" : `</${tag}>`}` : "";
   })(element ?? "article")}` : ``}`;
 });
 const GPTList = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -56,6 +57,17 @@ const GPTList = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   })}</ul></div>`;
 });
 const gptStore = writable([]);
+const getTagsFromGpts = (gpts) => {
+  const tags = gpts.map((gpt) => gpt.tags).flat();
+  return tags;
+};
+const getUniqueTags = (tags) => {
+  const filteredTags = tags?.filter(Boolean) ?? [];
+  if (!filteredTags || filteredTags.length === 0) {
+    return [];
+  }
+  return _.uniq(filteredTags);
+};
 const _page_svelte_svelte_type_style_lang = "";
 const css = {
   code: `h1.svelte-1fg7w3u.svelte-1fg7w3u{position:relative;--tw-bg-opacity:1;background-color:var(--fallback-s,oklch(var(--s)/var(--tw-bg-opacity)));-webkit-background-clip:text;background-clip:text;color:transparent;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 28' width='56' height='28'%3E%3Cpath fill='%23fcfce7' d='M56 26v2h-7.75c2.3-1.27 4.94-2 7.75-2zm-26 2a2 2 0 1 0-4 0h-4.09A25.98 25.98 0 0 0 0 16v-2c.67 0 1.34.02 2 .07V14a2 2 0 0 0-2-2v-2a4 4 0 0 1 3.98 3.6 28.09 28.09 0 0 1 2.8-3.86A8 8 0 0 0 0 6V4a9.99 9.99 0 0 1 8.17 4.23c.94-.95 1.96-1.83 3.03-2.63A13.98 13.98 0 0 0 0 0h7.75c2 1.1 3.73 2.63 5.1 4.45 1.12-.72 2.3-1.37 3.53-1.93A20.1 20.1 0 0 0 14.28 0h2.7c.45.56.88 1.14 1.29 1.74 1.3-.48 2.63-.87 4-1.15-.11-.2-.23-.4-.36-.59H26v.07a28.4 28.4 0 0 1 4 0V0h4.09l-.37.59c1.38.28 2.72.67 4.01 1.15.4-.6.84-1.18 1.3-1.74h2.69a20.1 20.1 0 0 0-2.1 2.52c1.23.56 2.41 1.2 3.54 1.93A16.08 16.08 0 0 1 48.25 0H56c-4.58 0-8.65 2.2-11.2 5.6 1.07.8 2.09 1.68 3.03 2.63A9.99 9.99 0 0 1 56 4v2a8 8 0 0 0-6.77 3.74c1.03 1.2 1.97 2.5 2.79 3.86A4 4 0 0 1 56 10v2a2 2 0 0 0-2 2.07 28.4 28.4 0 0 1 2-.07v2c-9.2 0-17.3 4.78-21.91 12H30zM7.75 28H0v-2c2.81 0 5.46.73 7.75 2zM56 20v2c-5.6 0-10.65 2.3-14.28 6h-2.7c4.04-4.89 10.15-8 16.98-8zm-39.03 8h-2.69C10.65 24.3 5.6 22 0 22v-2c6.83 0 12.94 3.11 16.97 8zm15.01-.4a28.09 28.09 0 0 1 2.8-3.86 8 8 0 0 0-13.55 0c1.03 1.2 1.97 2.5 2.79 3.86a4 4 0 0 1 7.96 0zm14.29-11.86c1.3-.48 2.63-.87 4-1.15a25.99 25.99 0 0 0-44.55 0c1.38.28 2.72.67 4.01 1.15a21.98 21.98 0 0 1 36.54 0zm-5.43 2.71c1.13-.72 2.3-1.37 3.54-1.93a19.98 19.98 0 0 0-32.76 0c1.23.56 2.41 1.2 3.54 1.93a15.98 15.98 0 0 1 25.68 0zm-4.67 3.78c.94-.95 1.96-1.83 3.03-2.63a13.98 13.98 0 0 0-22.4 0c1.07.8 2.09 1.68 3.03 2.63a9.99 9.99 0 0 1 16.34 0z'%3E%3C/path%3E%3C/svg%3E");font-size:clamp(2rem, 10vw, 9rem)}h1.svelte-1fg7w3u>span.svelte-1fg7w3u{display:block}@media(min-width: 768px){h1.svelte-1fg7w3u>span.svelte-1fg7w3u{margin-bottom:-1rem}}@media(min-width: 1024px){h1.svelte-1fg7w3u>span.svelte-1fg7w3u{margin-top:0.25rem}}h1.svelte-1fg7w3u>span.svelte-1fg7w3u{font-size:clamp(1rem, 5vw, 4rem)}`,
@@ -83,12 +95,12 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       });
     }
     if (query) {
-      filteredStore = filteredStore.filter((gpt) => gpt.name.sort.toLowerCase().includes(query.toLowerCase()));
+      filteredStore = filteredStore.filter((gpt) => gpt.sortname.toLowerCase().includes(query.toLowerCase()));
     }
     filteredStore = _.sortBy(filteredStore, sort);
     return desc ? filteredStore.reverse() : filteredStore;
   }));
-  tags = _.uniq($gpts.map((gpt) => gpt.tags).flat());
+  tags = getUniqueTags(getTagsFromGpts($gpts));
   $$unsubscribe_gpts();
   $$unsubscribe_gptStore();
   return ` <h1 class="text-9xl font-extrabold mx-auto px-8 text-center py-8 svelte-1fg7w3u"${add_attribute(

@@ -31,7 +31,7 @@
 
 		if (query) {
 			filteredStore = filteredStore.filter((gpt) =>
-				gpt.name.sort.toLowerCase().includes(query.toLowerCase())
+				gpt.sortname.toLowerCase().includes(query.toLowerCase())
 			);
 		}
 
@@ -52,6 +52,7 @@
 >
 	A&nbsp;curated&nbsp;list <span>of</span> amazing custom&nbsp;GPTs
 </h1>
+
 <FilterBar {tags} />
 <GptList items={$gpts} />
 

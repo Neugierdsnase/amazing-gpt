@@ -4,10 +4,9 @@
 	import Tags from '../../../lib/components/Tags/Tags.svelte';
 	import { BASE_OPENAI_GPT_URL } from '../../../constants';
 
-	export let data: { gpt: [[GPTInfoType]] };
+	export let data: { gpt: GPTInfoType };
 	const { gpt } = data;
-	const { name, author, tags, description, image, slug } = gpt[0];
-	const tagsArray = tags.split(',').filter((tag) => tag !== '');
+	const { displayname, authorname, authorurl, tags, description, image, slug } = gpt;
 </script>
 
 <div class="flex flex-col gap-8 min-h-screen items-stretch my-12 pb-12">
@@ -15,13 +14,13 @@
 		class="p-4 md:p-12 flex flex-wrap gap-4 items-center flex-col md:flex-row-reverse justify-between rounded-xl bg-base-300"
 	>
 		<div class="flex justify-center items-center h-44 w-44">
-			<img src={image} alt={name?.display} class="mask mask-circle w-full" />
+			<img src={image} alt={displayname} class="mask mask-circle w-full" />
 		</div>
 
 		<div>
-			<h1 class="text-4xl font-bold">{name.display}</h1>
-			<AuthorSpan {author} />
-			<Tags size="sm" tags={tagsArray} />
+			<h1 class="text-4xl font-bold">{displayname}</h1>
+			<AuthorSpan {authorname} {authorurl} />
+			<Tags size="sm" {tags} />
 		</div>
 	</div>
 
