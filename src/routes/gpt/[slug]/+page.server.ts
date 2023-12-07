@@ -1,14 +1,7 @@
 import sql from '../../../db';
+import type { RouteMetadataType } from '../../../types/server';
 
-type ParamsType = {
-  slug: string;
-};
-
-type MetadataType = {
-  params: ParamsType;
-};
-
-export const load = async ({ params }: MetadataType) => {
+export const load = async ({ params }: RouteMetadataType) => {
   const { slug } = params;
   const idFromSlug = slug.replaceAll('-', '_');
 
