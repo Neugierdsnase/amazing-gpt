@@ -25,7 +25,7 @@
 	</div>
 
 	<a
-		href="{BASE_OPENAI_GPT_URL}/{slug}"
+		href="{BASE_OPENAI_GPT_URL}{slug}"
 		class="btn btn-secondary md:w-1/3 btn-lg self-center"
 		target="_blank"
 		rel="noopener noreferrer"
