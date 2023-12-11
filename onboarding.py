@@ -94,7 +94,9 @@ def parse(file_paths):
                 3:
             ].strip()
             author_name = author_text[3:].strip()
-            author = Author(author_name, None)
+            fallback_url_element = soup.select_one("span#author-url")
+            fallback_url = fallback_url_element.text if fallback_url_element else None
+            author = Author(author_name, fallback_url)
 
         tags = []
         added = datetime.now()
