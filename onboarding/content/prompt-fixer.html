@@ -23,1123 +23,49 @@
       } catch (e) { }
     })();
   </script>
-  <div class="relative z-0 flex h-full w-full overflow-hidden">
-    <div class="dark flex-shrink-0 overflow-x-hidden bg-black" style="width: 260px">
-      <div class="h-full w-[260px]">
-        <div class="flex h-full min-h-0 flex-col">
-          <div class="flex h-full min-h-0 flex-col transition-opacity opacity-100">
-            <div class="scrollbar-trigger relative h-full w-full flex-1 items-start border-white/20">
-              <h2 style="
-									position: absolute;
-									border: 0px;
-									width: 1px;
-									height: 1px;
-									padding: 0px;
-									margin: -1px;
-									overflow: hidden;
-									clip: rect(0px, 0px, 0px, 0px);
-									white-space: nowrap;
-									overflow-wrap: normal;
-								">
-                Chat history
-              </h2>
-              <nav class="flex h-full w-full flex-col px-3 pb-3.5" aria-label="Chat history">
-                <div class="absolute left-0 top-0 z-20 overflow-hidden transition-all duration-500 invisible max-h-0">
-                  <div class="px-3 py-3.5">
-                    <div class="pb-0.5 last:pb-0" tabindex="0">
-                      <a class="group flex h-10 items-center gap-2 rounded-lg px-2 font-medium hover:bg-token-surface-primary"
-                        href="/">
-                        <div class="h-7 w-7 flex-shrink-0">
-                          <div
-                            class="gizmo-shadow-stroke relative flex h-full items-center justify-center rounded-full bg-white text-black">
-                            <svg width="41" height="41" viewBox="0 0 41 41" fill="none"
-                              xmlns="http://www.w3.org/2000/svg" class="h-2/3 w-2/3" role="img">
-                              <text x="-9999" y="-9999">ChatGPT</text>
-                              <path
-                                d="M37.5324 16.8707C37.9808 15.5241 38.1363 14.0974 37.9886 12.6859C37.8409 11.2744 37.3934 9.91076 36.676 8.68622C35.6126 6.83404 33.9882 5.3676 32.0373 4.4985C30.0864 3.62941 27.9098 3.40259 25.8215 3.85078C24.8796 2.7893 23.7219 1.94125 22.4257 1.36341C21.1295 0.785575 19.7249 0.491269 18.3058 0.500197C16.1708 0.495044 14.0893 1.16803 12.3614 2.42214C10.6335 3.67624 9.34853 5.44666 8.6917 7.47815C7.30085 7.76286 5.98686 8.3414 4.8377 9.17505C3.68854 10.0087 2.73073 11.0782 2.02839 12.312C0.956464 14.1591 0.498905 16.2988 0.721698 18.4228C0.944492 20.5467 1.83612 22.5449 3.268 24.1293C2.81966 25.4759 2.66413 26.9026 2.81182 28.3141C2.95951 29.7256 3.40701 31.0892 4.12437 32.3138C5.18791 34.1659 6.8123 35.6322 8.76321 36.5013C10.7141 37.3704 12.8907 37.5973 14.9789 37.1492C15.9208 38.2107 17.0786 39.0587 18.3747 39.6366C19.6709 40.2144 21.0755 40.5087 22.4946 40.4998C24.6307 40.5054 26.7133 39.8321 28.4418 38.5772C30.1704 37.3223 31.4556 35.5506 32.1119 33.5179C33.5027 33.2332 34.8167 32.6547 35.9659 31.821C37.115 30.9874 38.0728 29.9178 38.7752 28.684C39.8458 26.8371 40.3023 24.6979 40.0789 22.5748C39.8556 20.4517 38.9639 18.4544 37.5324 16.8707ZM22.4978 37.8849C20.7443 37.8874 19.0459 37.2733 17.6994 36.1501C17.7601 36.117 17.8666 36.0586 17.936 36.0161L25.9004 31.4156C26.1003 31.3019 26.2663 31.137 26.3813 30.9378C26.4964 30.7386 26.5563 30.5124 26.5549 30.2825V19.0542L29.9213 20.998C29.9389 21.0068 29.9541 21.0198 29.9656 21.0359C29.977 21.052 29.9842 21.0707 29.9867 21.0902V30.3889C29.9842 32.375 29.1946 34.2791 27.7909 35.6841C26.3872 37.0892 24.4838 37.8806 22.4978 37.8849ZM6.39227 31.0064C5.51397 29.4888 5.19742 27.7107 5.49804 25.9832C5.55718 26.0187 5.66048 26.0818 5.73461 26.1244L13.699 30.7248C13.8975 30.8408 14.1233 30.902 14.3532 30.902C14.583 30.902 14.8088 30.8408 15.0073 30.7248L24.731 25.1103V28.9979C24.7321 29.0177 24.7283 29.0376 24.7199 29.0556C24.7115 29.0736 24.6988 29.0893 24.6829 29.1012L16.6317 33.7497C14.9096 34.7416 12.8643 35.0097 10.9447 34.4954C9.02506 33.9811 7.38785 32.7263 6.39227 31.0064ZM4.29707 13.6194C5.17156 12.0998 6.55279 10.9364 8.19885 10.3327C8.19885 10.4013 8.19491 10.5228 8.19491 10.6071V19.808C8.19351 20.0378 8.25334 20.2638 8.36823 20.4629C8.48312 20.6619 8.64893 20.8267 8.84863 20.9404L18.5723 26.5542L15.206 28.4979C15.1894 28.5089 15.1703 28.5155 15.1505 28.5173C15.1307 28.5191 15.1107 28.516 15.0924 28.5082L7.04046 23.8557C5.32135 22.8601 4.06716 21.2235 3.55289 19.3046C3.03862 17.3858 3.30624 15.3413 4.29707 13.6194ZM31.955 20.0556L22.2312 14.4411L25.5976 12.4981C25.6142 12.4872 25.6333 12.4805 25.6531 12.4787C25.6729 12.4769 25.6928 12.4801 25.7111 12.4879L33.7631 17.1364C34.9967 17.849 36.0017 18.8982 36.6606 20.1613C37.3194 21.4244 37.6047 22.849 37.4832 24.2684C37.3617 25.6878 36.8382 27.0432 35.9743 28.1759C35.1103 29.3086 33.9415 30.1717 32.6047 30.6641C32.6047 30.5947 32.6047 30.4733 32.6047 30.3889V21.188C32.6066 20.9586 32.5474 20.7328 32.4332 20.5338C32.319 20.3348 32.154 20.1698 31.955 20.0556ZM35.3055 15.0128C35.2464 14.9765 35.1431 14.9142 35.069 14.8717L27.1045 10.2712C26.906 10.1554 26.6803 10.0943 26.4504 10.0943C26.2206 10.0943 25.9948 10.1554 25.7963 10.2712L16.0726 15.8858V11.9982C16.0715 11.9783 16.0753 11.9585 16.0837 11.9405C16.0921 11.9225 16.1048 11.9068 16.1207 11.8949L24.1719 7.25025C25.4053 6.53903 26.8158 6.19376 28.2383 6.25482C29.6608 6.31589 31.0364 6.78077 32.2044 7.59508C33.3723 8.40939 34.2842 9.53945 34.8334 10.8531C35.3826 12.1667 35.5464 13.6095 35.3055 15.0128ZM14.2424 21.9419L10.8752 19.9981C10.8576 19.9893 10.8423 19.9763 10.8309 19.9602C10.8195 19.9441 10.8122 19.9254 10.8098 19.9058V10.6071C10.8107 9.18295 11.2173 7.78848 11.9819 6.58696C12.7466 5.38544 13.8377 4.42659 15.1275 3.82264C16.4173 3.21869 17.8524 2.99464 19.2649 3.1767C20.6775 3.35876 22.0089 3.93941 23.1034 4.85067C23.0427 4.88379 22.937 4.94215 22.8668 4.98473L14.9024 9.58517C14.7025 9.69878 14.5366 9.86356 14.4215 10.0626C14.3065 10.2616 14.2466 10.4877 14.2479 10.7175L14.2424 21.9419ZM16.071 17.9991L20.4018 15.4978L24.7325 17.9975V22.9985L20.4018 25.4983L16.071 22.9985V17.9991Z"
-                                fill="currentColor"></path>
-                            </svg>
-                          </div>
-                        </div>
-                        <div
-                          class="grow overflow-hidden text-ellipsis whitespace-nowrap text-sm text-token-text-primary">
-                          Clear chat
-                        </div>
-                        <div class="flex gap-3">
-                          <span class="flex items-center" data-state="closed"><button
-                              class="invisible text-token-text-tertiary hover:text-token-text-secondary group-hover:visible">
-                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg" class="icon-md">
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                  d="M4.5 2.5C5.05228 2.5 5.5 2.94772 5.5 3.5V5.07196C7.19872 3.47759 9.48483 2.5 12 2.5C17.2467 2.5 21.5 6.75329 21.5 12C21.5 17.2467 17.2467 21.5 12 21.5C7.1307 21.5 3.11828 17.8375 2.565 13.1164C2.50071 12.5679 2.89327 12.0711 3.4418 12.0068C3.99033 11.9425 4.48712 12.3351 4.5514 12.8836C4.98798 16.6089 8.15708 19.5 12 19.5C16.1421 19.5 19.5 16.1421 19.5 12C19.5 7.85786 16.1421 4.5 12 4.5C9.7796 4.5 7.7836 5.46469 6.40954 7H9C9.55228 7 10 7.44772 10 8C10 8.55228 9.55228 9 9 9H4.5C3.96064 9 3.52101 8.57299 3.50073 8.03859C3.49983 8.01771 3.49958 7.99677 3.5 7.9758V3.5C3.5 2.94772 3.94771 2.5 4.5 2.5Z"
-                                  fill="currentColor"></path>
-                              </svg></button></span>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="bg-gray-900 px-4 py-3">
-                    <div class="p-1 text-sm text-gray-100">
-                      Chat History is off for this browser.
-                    </div>
-                    <div class="p-1 text-xs text-gray-500">
-                      When history is turned off, new chats on this browser won't appear in your
-                      history on any of your devices, be used to train our models, or stored for
-                      longer than 30 days.
-                      <strong>This setting does not sync across browsers or devices.</strong>
-                      <a href="https://help.openai.com/en/articles/7730893" target="_blank" class="underline"
-                        rel="noreferrer">Learn more</a>
-                    </div>
-                    <button class="btn relative btn-primary mt-4 w-full">
-                      <div class="flex w-full gap-2 items-center justify-center">
-                        <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24"
-                          stroke-linecap="round" stroke-linejoin="round" class="icon-sm" height="1em" width="1em"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M18.36 6.64a9 9 0 1 1-12.73 0"></path>
-                          <line x1="12" y1="2" x2="12" y2="12"></line>
-                        </svg>Enable chat history
-                      </div>
-                    </button>
-                  </div>
-                  <div class="h-24 bg-gradient-to-t from-gray-900/0 to-gray-900"></div>
-                </div>
-                <div class="flex-col flex-1 transition-opacity duration-500 -mr-2 pr-2 overflow-y-auto">
-                  <div class="pt-3.5">
-                    <div class="pb-0.5 last:pb-0" tabindex="0">
-                      <a class="group flex h-10 items-center gap-2 rounded-lg px-2 font-medium hover:bg-token-surface-primary"
-                        href="/">
-                        <div class="h-7 w-7 flex-shrink-0">
-                          <div
-                            class="gizmo-shadow-stroke relative flex h-full items-center justify-center rounded-full bg-white text-black">
-                            <svg width="41" height="41" viewBox="0 0 41 41" fill="none"
-                              xmlns="http://www.w3.org/2000/svg" class="h-2/3 w-2/3" role="img">
-                              <text x="-9999" y="-9999">ChatGPT</text>
-                              <path
-                                d="M37.5324 16.8707C37.9808 15.5241 38.1363 14.0974 37.9886 12.6859C37.8409 11.2744 37.3934 9.91076 36.676 8.68622C35.6126 6.83404 33.9882 5.3676 32.0373 4.4985C30.0864 3.62941 27.9098 3.40259 25.8215 3.85078C24.8796 2.7893 23.7219 1.94125 22.4257 1.36341C21.1295 0.785575 19.7249 0.491269 18.3058 0.500197C16.1708 0.495044 14.0893 1.16803 12.3614 2.42214C10.6335 3.67624 9.34853 5.44666 8.6917 7.47815C7.30085 7.76286 5.98686 8.3414 4.8377 9.17505C3.68854 10.0087 2.73073 11.0782 2.02839 12.312C0.956464 14.1591 0.498905 16.2988 0.721698 18.4228C0.944492 20.5467 1.83612 22.5449 3.268 24.1293C2.81966 25.4759 2.66413 26.9026 2.81182 28.3141C2.95951 29.7256 3.40701 31.0892 4.12437 32.3138C5.18791 34.1659 6.8123 35.6322 8.76321 36.5013C10.7141 37.3704 12.8907 37.5973 14.9789 37.1492C15.9208 38.2107 17.0786 39.0587 18.3747 39.6366C19.6709 40.2144 21.0755 40.5087 22.4946 40.4998C24.6307 40.5054 26.7133 39.8321 28.4418 38.5772C30.1704 37.3223 31.4556 35.5506 32.1119 33.5179C33.5027 33.2332 34.8167 32.6547 35.9659 31.821C37.115 30.9874 38.0728 29.9178 38.7752 28.684C39.8458 26.8371 40.3023 24.6979 40.0789 22.5748C39.8556 20.4517 38.9639 18.4544 37.5324 16.8707ZM22.4978 37.8849C20.7443 37.8874 19.0459 37.2733 17.6994 36.1501C17.7601 36.117 17.8666 36.0586 17.936 36.0161L25.9004 31.4156C26.1003 31.3019 26.2663 31.137 26.3813 30.9378C26.4964 30.7386 26.5563 30.5124 26.5549 30.2825V19.0542L29.9213 20.998C29.9389 21.0068 29.9541 21.0198 29.9656 21.0359C29.977 21.052 29.9842 21.0707 29.9867 21.0902V30.3889C29.9842 32.375 29.1946 34.2791 27.7909 35.6841C26.3872 37.0892 24.4838 37.8806 22.4978 37.8849ZM6.39227 31.0064C5.51397 29.4888 5.19742 27.7107 5.49804 25.9832C5.55718 26.0187 5.66048 26.0818 5.73461 26.1244L13.699 30.7248C13.8975 30.8408 14.1233 30.902 14.3532 30.902C14.583 30.902 14.8088 30.8408 15.0073 30.7248L24.731 25.1103V28.9979C24.7321 29.0177 24.7283 29.0376 24.7199 29.0556C24.7115 29.0736 24.6988 29.0893 24.6829 29.1012L16.6317 33.7497C14.9096 34.7416 12.8643 35.0097 10.9447 34.4954C9.02506 33.9811 7.38785 32.7263 6.39227 31.0064ZM4.29707 13.6194C5.17156 12.0998 6.55279 10.9364 8.19885 10.3327C8.19885 10.4013 8.19491 10.5228 8.19491 10.6071V19.808C8.19351 20.0378 8.25334 20.2638 8.36823 20.4629C8.48312 20.6619 8.64893 20.8267 8.84863 20.9404L18.5723 26.5542L15.206 28.4979C15.1894 28.5089 15.1703 28.5155 15.1505 28.5173C15.1307 28.5191 15.1107 28.516 15.0924 28.5082L7.04046 23.8557C5.32135 22.8601 4.06716 21.2235 3.55289 19.3046C3.03862 17.3858 3.30624 15.3413 4.29707 13.6194ZM31.955 20.0556L22.2312 14.4411L25.5976 12.4981C25.6142 12.4872 25.6333 12.4805 25.6531 12.4787C25.6729 12.4769 25.6928 12.4801 25.7111 12.4879L33.7631 17.1364C34.9967 17.849 36.0017 18.8982 36.6606 20.1613C37.3194 21.4244 37.6047 22.849 37.4832 24.2684C37.3617 25.6878 36.8382 27.0432 35.9743 28.1759C35.1103 29.3086 33.9415 30.1717 32.6047 30.6641C32.6047 30.5947 32.6047 30.4733 32.6047 30.3889V21.188C32.6066 20.9586 32.5474 20.7328 32.4332 20.5338C32.319 20.3348 32.154 20.1698 31.955 20.0556ZM35.3055 15.0128C35.2464 14.9765 35.1431 14.9142 35.069 14.8717L27.1045 10.2712C26.906 10.1554 26.6803 10.0943 26.4504 10.0943C26.2206 10.0943 25.9948 10.1554 25.7963 10.2712L16.0726 15.8858V11.9982C16.0715 11.9783 16.0753 11.9585 16.0837 11.9405C16.0921 11.9225 16.1048 11.9068 16.1207 11.8949L24.1719 7.25025C25.4053 6.53903 26.8158 6.19376 28.2383 6.25482C29.6608 6.31589 31.0364 6.78077 32.2044 7.59508C33.3723 8.40939 34.2842 9.53945 34.8334 10.8531C35.3826 12.1667 35.5464 13.6095 35.3055 15.0128ZM14.2424 21.9419L10.8752 19.9981C10.8576 19.9893 10.8423 19.9763 10.8309 19.9602C10.8195 19.9441 10.8122 19.9254 10.8098 19.9058V10.6071C10.8107 9.18295 11.2173 7.78848 11.9819 6.58696C12.7466 5.38544 13.8377 4.42659 15.1275 3.82264C16.4173 3.21869 17.8524 2.99464 19.2649 3.1767C20.6775 3.35876 22.0089 3.93941 23.1034 4.85067C23.0427 4.88379 22.937 4.94215 22.8668 4.98473L14.9024 9.58517C14.7025 9.69878 14.5366 9.86356 14.4215 10.0626C14.3065 10.2616 14.2466 10.4877 14.2479 10.7175L14.2424 21.9419ZM16.071 17.9991L20.4018 15.4978L24.7325 17.9975V22.9985L20.4018 25.4983L16.071 22.9985V17.9991Z"
-                                fill="currentColor"></path>
-                            </svg>
-                          </div>
-                        </div>
-                        <div
-                          class="grow overflow-hidden text-ellipsis whitespace-nowrap text-sm text-token-text-primary">
-                          New chat
-                        </div>
-                        <div class="flex gap-3">
-                          <span class="flex items-center" data-state="closed"><button
-                              class="invisible text-token-text-tertiary hover:text-token-text-secondary group-hover:visible">
-                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg" class="icon-md">
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                  d="M16.7929 2.79289C18.0118 1.57394 19.9882 1.57394 21.2071 2.79289C22.4261 4.01184 22.4261 5.98815 21.2071 7.20711L12.7071 15.7071C12.5196 15.8946 12.2652 16 12 16H9C8.44772 16 8 15.5523 8 15V12C8 11.7348 8.10536 11.4804 8.29289 11.2929L16.7929 2.79289ZM19.7929 4.20711C19.355 3.7692 18.645 3.7692 18.2071 4.2071L10 12.4142V14H11.5858L19.7929 5.79289C20.2308 5.35499 20.2308 4.64501 19.7929 4.20711ZM6 5C5.44772 5 5 5.44771 5 6V18C5 18.5523 5.44772 19 6 19H18C18.5523 19 19 18.5523 19 18V14C19 13.4477 19.4477 13 20 13C20.5523 13 21 13.4477 21 14V18C21 19.6569 19.6569 21 18 21H6C4.34315 21 3 19.6569 3 18V6C3 4.34314 4.34315 3 6 3H10C10.5523 3 11 3.44771 11 4C11 4.55228 10.5523 5 10 5H6Z"
-                                  fill="currentColor"></path>
-                              </svg></button></span>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="flex flex-col gap-2 pb-2 dark:text-gray-100 text-gray-800 text-sm">
-                    <div>
-                      <span>
-                        <div class="relative mt-5" style="height: auto; opacity: 1" data-projection-id="1">
-                          <div data-projection-id="2" style="opacity: 1">
-                            <h3
-                              class="h-9 pb-2 pt-3 px-2 text-xs font-medium text-ellipsis overflow-hidden break-all bg-white dark:bg-black text-gizmo-gray-600">
-                              Today
-                            </h3>
-                          </div>
-                          <ol>
-                            <li class="relative z-[15]" style="opacity: 1; height: auto" data-projection-id="3">
-                              <div class="group relative active:opacity-90">
-                                <a href="/c/5d4e10a9-1893-4842-b8ec-6f70f0609c88"
-                                  class="flex items-center gap-2 rounded-lg p-2 hover:bg-token-surface-primary">
-                                  <div class="relative grow overflow-hidden whitespace-nowrap">
-                                    Alter Table, Copy Data
-                                    <div
-                                      class="absolute bottom-0 right-0 top-0 w-8 bg-gradient-to-l to-transparent from-token-surface-primary group-hover:from-token-surface-primary dark:from-black">
-                                    </div>
-                                  </div>
-                                </a>
-                              </div>
-                            </li>
-                            <li class="relative" style="opacity: 1; height: auto" data-projection-id="4">
-                              <div class="group relative active:opacity-90">
-                                <a href="/g/g-2Eo3NxuS7-designergpt/c/bb236d0e-7024-4270-8ab4-c1b7004e5840"
-                                  class="flex items-center gap-2 rounded-lg p-2 hover:bg-token-surface-primary">
-                                  <div class="relative grow overflow-hidden whitespace-nowrap">
-                                    Tech Startup Homepage Creation
-                                    <div
-                                      class="absolute bottom-0 right-0 top-0 w-8 bg-gradient-to-l to-transparent from-token-surface-primary group-hover:from-token-surface-primary dark:from-black">
-                                    </div>
-                                  </div>
-                                </a>
-                              </div>
-                            </li>
-                            <li class="relative" style="opacity: 1; height: auto" data-projection-id="5">
-                              <div class="group relative active:opacity-90">
-                                <a href="/g/g-o03gktdyW-your-socratic-buddy/c/5ccf9005-65a0-4933-b3d5-4b22afb283b2"
-                                  class="flex items-center gap-2 rounded-lg p-2 hover:bg-token-surface-primary">
-                                  <div class="relative grow overflow-hidden whitespace-nowrap">
-                                    New chat
-                                    <div
-                                      class="absolute bottom-0 right-0 top-0 w-8 bg-gradient-to-l to-transparent from-token-surface-primary group-hover:from-token-surface-primary dark:from-black">
-                                    </div>
-                                  </div>
-                                </a>
-                              </div>
-                            </li>
-                            <li class="relative" style="opacity: 1; height: auto" data-projection-id="6">
-                              <div class="group relative active:opacity-90">
-                                <a href="/g/g-XUgnMbahO-limitlessgpt/c/eded134e-3cbf-427d-ac45-a745f85cef21"
-                                  class="flex items-center gap-2 rounded-lg p-2 hover:bg-token-surface-primary">
-                                  <div class="relative grow overflow-hidden whitespace-nowrap">
-                                    Discovering Life's Purpose
-                                    <div
-                                      class="absolute bottom-0 right-0 top-0 w-8 bg-gradient-to-l to-transparent from-token-surface-primary group-hover:from-token-surface-primary dark:from-black">
-                                    </div>
-                                  </div>
-                                </a>
-                              </div>
-                            </li>
-                            <li class="relative" style="opacity: 1; height: auto" data-projection-id="7">
-                              <div class="group relative active:opacity-90">
-                                <a href="/c/bcfeb5f7-8776-4449-ab1b-72424b266750"
-                                  class="flex items-center gap-2 rounded-lg p-2 hover:bg-token-surface-primary">
-                                  <div class="relative grow overflow-hidden whitespace-nowrap">
-                                    Add 'image generator' tag.
-                                    <div
-                                      class="absolute bottom-0 right-0 top-0 w-8 bg-gradient-to-l to-transparent from-token-surface-primary group-hover:from-token-surface-primary dark:from-black">
-                                    </div>
-                                  </div>
-                                </a>
-                              </div>
-                            </li>
-                            <li class="relative" style="opacity: 1; height: auto" data-projection-id="8">
-                              <div class="group relative active:opacity-90">
-                                <a href="/c/52790e3f-a1bd-4879-9e15-0d9069faa840"
-                                  class="flex items-center gap-2 rounded-lg p-2 hover:bg-token-surface-primary">
-                                  <div class="relative grow overflow-hidden whitespace-nowrap">
-                                    Write to file in Python
-                                    <div
-                                      class="absolute bottom-0 right-0 top-0 w-8 bg-gradient-to-l to-transparent from-token-surface-primary group-hover:from-token-surface-primary dark:from-black">
-                                    </div>
-                                  </div>
-                                </a>
-                              </div>
-                            </li>
-                          </ol>
-                        </div>
-                        <div class="relative mt-5" style="height: auto; opacity: 1" data-projection-id="9">
-                          <div data-projection-id="10" style="opacity: 1">
-                            <h3
-                              class="h-9 pb-2 pt-3 px-2 text-xs font-medium text-ellipsis overflow-hidden break-all bg-white dark:bg-black text-gizmo-gray-600">
-                              Yesterday
-                            </h3>
-                          </div>
-                          <ol>
-                            <li class="relative" style="opacity: 1; height: auto" data-projection-id="11">
-                              <div class="group relative active:opacity-90">
-                                <a href="/c/19ce9f6a-99a3-4a2e-8cbd-4d2c315d3911"
-                                  class="flex items-center gap-2 rounded-lg p-2 hover:bg-token-surface-primary">
-                                  <div class="relative grow overflow-hidden whitespace-nowrap">
-                                    Corrección de SQL incorrecto
-                                    <div
-                                      class="absolute bottom-0 right-0 top-0 w-8 bg-gradient-to-l to-transparent from-token-surface-primary group-hover:from-token-surface-primary dark:from-black">
-                                    </div>
-                                  </div>
-                                </a>
-                              </div>
-                            </li>
-                            <li class="relative" style="opacity: 1; height: auto" data-projection-id="12">
-                              <div class="group relative active:opacity-90">
-                                <a href="/c/5c73e5bc-8827-467b-95b9-e2d0dad1d3d3"
-                                  class="flex items-center gap-2 rounded-lg p-2 hover:bg-token-surface-primary">
-                                  <div class="relative grow overflow-hidden whitespace-nowrap">
-                                    Rust to Python Porting
-                                    <div
-                                      class="absolute bottom-0 right-0 top-0 w-8 bg-gradient-to-l to-transparent from-token-surface-primary group-hover:from-token-surface-primary dark:from-black">
-                                    </div>
-                                  </div>
-                                </a>
-                              </div>
-                            </li>
-                            <li class="relative" style="opacity: 1; height: auto" data-projection-id="13">
-                              <div class="group relative active:opacity-90">
-                                <a href="/c/b3e5ec4a-7619-47c9-91a4-89b3305db0d6"
-                                  class="flex items-center gap-2 rounded-lg p-2 hover:bg-token-surface-primary">
-                                  <div class="relative grow overflow-hidden whitespace-nowrap">
-                                    Database TLS Encryption
-                                    <div
-                                      class="absolute bottom-0 right-0 top-0 w-8 bg-gradient-to-l to-transparent from-token-surface-primary group-hover:from-token-surface-primary dark:from-black">
-                                    </div>
-                                  </div>
-                                </a>
-                              </div>
-                            </li>
-                          </ol>
-                        </div>
-                        <div class="relative mt-5" style="height: auto; opacity: 1" data-projection-id="14">
-                          <div data-projection-id="15" style="opacity: 1">
-                            <h3
-                              class="h-9 pb-2 pt-3 px-2 text-xs font-medium text-ellipsis overflow-hidden break-all bg-white dark:bg-black text-gizmo-gray-600">
-                              Previous 7 Days
-                            </h3>
-                          </div>
-                          <ol>
-                            <li class="relative" style="opacity: 1; height: auto" data-projection-id="16">
-                              <div class="group relative active:opacity-90">
-                                <a href="/c/327f72a5-6c70-4463-80de-cd1a3c06ba2b"
-                                  class="flex items-center gap-2 rounded-lg p-2 hover:bg-token-surface-primary">
-                                  <div class="relative grow overflow-hidden whitespace-nowrap">
-                                    Migrate SurrealDB to PostgreSQL
-                                    <div
-                                      class="absolute bottom-0 right-0 top-0 w-8 bg-gradient-to-l to-transparent from-token-surface-primary group-hover:from-token-surface-primary dark:from-black">
-                                    </div>
-                                  </div>
-                                </a>
-                              </div>
-                            </li>
-                            <li class="relative" style="opacity: 1; height: auto" data-projection-id="17">
-                              <div class="group relative active:opacity-90">
-                                <a href="/c/fa6f443e-b528-42d9-a202-bdec129c541b"
-                                  class="flex items-center gap-2 rounded-lg p-2 hover:bg-token-surface-primary">
-                                  <div class="relative grow overflow-hidden whitespace-nowrap">
-                                    DevOps Starter Project Ideas
-                                    <div
-                                      class="absolute bottom-0 right-0 top-0 w-8 bg-gradient-to-l to-transparent from-token-surface-primary group-hover:from-token-surface-primary dark:from-black">
-                                    </div>
-                                  </div>
-                                </a>
-                              </div>
-                            </li>
-                            <li class="relative" style="opacity: 1; height: auto" data-projection-id="18">
-                              <div class="group relative active:opacity-90">
-                                <a href="/c/07ca18ed-a2fd-4796-83df-ba32ad97c09c"
-                                  class="flex items-center gap-2 rounded-lg p-2 hover:bg-token-surface-primary">
-                                  <div class="relative grow overflow-hidden whitespace-nowrap">
-                                    Majestic Crusader in Armor
-                                    <div
-                                      class="absolute bottom-0 right-0 top-0 w-8 bg-gradient-to-l to-transparent from-token-surface-primary group-hover:from-token-surface-primary dark:from-black">
-                                    </div>
-                                  </div>
-                                </a>
-                              </div>
-                            </li>
-                            <li class="relative" style="opacity: 1; height: auto" data-projection-id="19">
-                              <div class="group relative active:opacity-90">
-                                <a href="/c/ae7d3d31-67bb-477e-847d-b2771a8d91a5"
-                                  class="flex items-center gap-2 rounded-lg p-2 hover:bg-token-surface-primary">
-                                  <div class="relative grow overflow-hidden whitespace-nowrap">
-                                    Unicorn in magical forest
-                                    <div
-                                      class="absolute bottom-0 right-0 top-0 w-8 bg-gradient-to-l to-transparent from-token-surface-primary group-hover:from-token-surface-primary dark:from-black">
-                                    </div>
-                                  </div>
-                                </a>
-                              </div>
-                            </li>
-                            <li class="relative" style="opacity: 1; height: auto" data-projection-id="20">
-                              <div class="group relative active:opacity-90">
-                                <a href="/c/89261a0d-cd27-47a5-bac2-34037e3a1cf4"
-                                  class="flex items-center gap-2 rounded-lg p-2 hover:bg-token-surface-primary">
-                                  <div class="relative grow overflow-hidden whitespace-nowrap">
-                                    AWS Kubernetes Cluster Configuration
-                                    <div
-                                      class="absolute bottom-0 right-0 top-0 w-8 bg-gradient-to-l to-transparent from-token-surface-primary group-hover:from-token-surface-primary dark:from-black">
-                                    </div>
-                                  </div>
-                                </a>
-                              </div>
-                            </li>
-                            <li class="relative" style="opacity: 1; height: auto" data-projection-id="21">
-                              <div class="group relative active:opacity-90">
-                                <a href="/c/bd686f66-fe3b-4a70-ba64-be3aefe5d3d2"
-                                  class="flex items-center gap-2 rounded-lg p-2 hover:bg-token-surface-primary">
-                                  <div class="relative grow overflow-hidden whitespace-nowrap">
-                                    New chat
-                                    <div
-                                      class="absolute bottom-0 right-0 top-0 w-8 bg-gradient-to-l to-transparent from-token-surface-primary group-hover:from-token-surface-primary dark:from-black">
-                                    </div>
-                                  </div>
-                                </a>
-                              </div>
-                            </li>
-                            <li class="relative" style="opacity: 1; height: auto" data-projection-id="22">
-                              <div class="group relative active:opacity-90">
-                                <a href="/c/89441306-221f-4af7-82ac-7d3f87665b1f"
-                                  class="flex items-center gap-2 rounded-lg p-2 hover:bg-token-surface-primary">
-                                  <div class="relative grow overflow-hidden whitespace-nowrap">
-                                    Create Two DALL-E Images
-                                    <div
-                                      class="absolute bottom-0 right-0 top-0 w-8 bg-gradient-to-l to-transparent from-token-surface-primary group-hover:from-token-surface-primary dark:from-black">
-                                    </div>
-                                  </div>
-                                </a>
-                              </div>
-                            </li>
-                            <li class="relative" style="opacity: 1; height: auto" data-projection-id="23">
-                              <div class="group relative active:opacity-90">
-                                <a href="/c/4801e883-b679-4f93-a76f-370f6c200b3a"
-                                  class="flex items-center gap-2 rounded-lg p-2 hover:bg-token-surface-primary">
-                                  <div class="relative grow overflow-hidden whitespace-nowrap">
-                                    Testing Response: READ
-                                    <div
-                                      class="absolute bottom-0 right-0 top-0 w-8 bg-gradient-to-l to-transparent from-token-surface-primary group-hover:from-token-surface-primary dark:from-black">
-                                    </div>
-                                  </div>
-                                </a>
-                              </div>
-                            </li>
-                            <li class="relative" style="opacity: 1; height: auto" data-projection-id="24">
-                              <div class="group relative active:opacity-90">
-                                <a href="/c/048addfe-7199-4d58-8f19-d6f8054ba48e"
-                                  class="flex items-center gap-2 rounded-lg p-2 hover:bg-token-surface-primary">
-                                  <div class="relative grow overflow-hidden whitespace-nowrap">
-                                    Testing Request: Just READ
-                                    <div
-                                      class="absolute bottom-0 right-0 top-0 w-8 bg-gradient-to-l to-transparent from-token-surface-primary group-hover:from-token-surface-primary dark:from-black">
-                                    </div>
-                                  </div>
-                                </a>
-                              </div>
-                            </li>
-                            <li class="relative" style="opacity: 1; height: auto" data-projection-id="25">
-                              <div class="group relative active:opacity-90">
-                                <a href="/c/fd117d3d-2ca0-4e35-ba77-2b64869b5c1c"
-                                  class="flex items-center gap-2 rounded-lg p-2 hover:bg-token-surface-primary">
-                                  <div class="relative grow overflow-hidden whitespace-nowrap">
-                                    Rust: Get Directory File Paths
-                                    <div
-                                      class="absolute bottom-0 right-0 top-0 w-8 bg-gradient-to-l to-transparent from-token-surface-primary group-hover:from-token-surface-primary dark:from-black">
-                                    </div>
-                                  </div>
-                                </a>
-                              </div>
-                            </li>
-                            <li class="relative" style="opacity: 1; height: auto" data-projection-id="26">
-                              <div class="group relative active:opacity-90">
-                                <a href="/c/b7c33594-6aa9-4d72-97a0-9ac31521c653"
-                                  class="flex items-center gap-2 rounded-lg p-2 hover:bg-token-surface-primary">
-                                  <div class="relative grow overflow-hidden whitespace-nowrap">
-                                    Rust Ownership and Borrowing
-                                    <div
-                                      class="absolute bottom-0 right-0 top-0 w-8 bg-gradient-to-l to-transparent from-token-surface-primary group-hover:from-token-surface-primary dark:from-black">
-                                    </div>
-                                  </div>
-                                </a>
-                              </div>
-                            </li>
-                            <li class="relative" style="opacity: 1; height: auto" data-projection-id="27">
-                              <div class="group relative active:opacity-90">
-                                <a href="/c/1b5e84e8-b7f3-4ad5-8bb5-00e4633a7701"
-                                  class="flex items-center gap-2 rounded-lg p-2 hover:bg-token-surface-primary">
-                                  <div class="relative grow overflow-hidden whitespace-nowrap">
-                                    Rust Function Fix
-                                    <div
-                                      class="absolute bottom-0 right-0 top-0 w-8 bg-gradient-to-l to-transparent from-token-surface-primary group-hover:from-token-surface-primary dark:from-black">
-                                    </div>
-                                  </div>
-                                </a>
-                              </div>
-                            </li>
-                          </ol>
-                        </div>
-                        <div class="relative mt-5" style="height: auto; opacity: 1" data-projection-id="28">
-                          <div data-projection-id="29" style="opacity: 1">
-                            <h3
-                              class="h-9 pb-2 pt-3 px-2 text-xs font-medium text-ellipsis overflow-hidden break-all bg-white dark:bg-black text-gizmo-gray-600">
-                              Previous 30 Days
-                            </h3>
-                          </div>
-                          <ol>
-                            <li class="relative" style="opacity: 1; height: auto" data-projection-id="30">
-                              <div class="group relative active:opacity-90">
-                                <a href="/c/7c4b2e0b-08ff-4b72-91bc-b16e6671afd3"
-                                  class="flex items-center gap-2 rounded-lg p-2 hover:bg-token-surface-primary">
-                                  <div class="relative grow overflow-hidden whitespace-nowrap">
-                                    Fairy-Themed Techno Festival Website
-                                    <div
-                                      class="absolute bottom-0 right-0 top-0 w-8 bg-gradient-to-l to-transparent from-token-surface-primary group-hover:from-token-surface-primary dark:from-black">
-                                    </div>
-                                  </div>
-                                </a>
-                              </div>
-                            </li>
-                            <li class="relative" style="opacity: 1; height: auto" data-projection-id="31">
-                              <div class="group relative active:opacity-90">
-                                <a href="/g/g-7CKojumSX-the-glibatree-art-designer/c/33002f22-745b-49bd-ad14-778e385396f9"
-                                  class="flex items-center gap-2 rounded-lg p-2 hover:bg-token-surface-primary">
-                                  <div class="relative grow overflow-hidden whitespace-nowrap">
-                                    Fairy Festival Hero Images
-                                    <div
-                                      class="absolute bottom-0 right-0 top-0 w-8 bg-gradient-to-l to-transparent from-token-surface-primary group-hover:from-token-surface-primary dark:from-black">
-                                    </div>
-                                  </div>
-                                </a>
-                              </div>
-                            </li>
-                            <li class="relative" style="opacity: 1; height: auto" data-projection-id="32">
-                              <div class="group relative active:opacity-90">
-                                <a href="/g/g-7CKojumSX-the-glibatree-art-designer/c/e2253506-9883-4045-b182-c3a06f92994b"
-                                  class="flex items-center gap-2 rounded-lg p-2 hover:bg-token-surface-primary">
-                                  <div class="relative grow overflow-hidden whitespace-nowrap">
-                                    Abstract Stag Painting
-                                    <div
-                                      class="absolute bottom-0 right-0 top-0 w-8 bg-gradient-to-l to-transparent from-token-surface-primary group-hover:from-token-surface-primary dark:from-black">
-                                    </div>
-                                  </div>
-                                </a>
-                              </div>
-                            </li>
-                            <li class="relative" style="opacity: 1; height: auto" data-projection-id="33">
-                              <div class="group relative active:opacity-90">
-                                <a href="/g/g-7CKojumSX-the-glibatree-art-designer/c/868832b2-22b4-4f86-8f4b-fe356c8e074b"
-                                  class="flex items-center gap-2 rounded-lg p-2 hover:bg-token-surface-primary">
-                                  <div class="relative grow overflow-hidden whitespace-nowrap">
-                                    Abstract Technology Art Ideas
-                                    <div
-                                      class="absolute bottom-0 right-0 top-0 w-8 bg-gradient-to-l to-transparent from-token-surface-primary group-hover:from-token-surface-primary dark:from-black">
-                                    </div>
-                                  </div>
-                                </a>
-                              </div>
-                            </li>
-                            <li class="relative" style="opacity: 1; height: auto" data-projection-id="34">
-                              <div class="group relative active:opacity-90">
-                                <a href="/g/g-7CKojumSX-the-glibatree-art-designer/c/8db238eb-56d2-44bb-846d-65d7ef5f61ee"
-                                  class="flex items-center gap-2 rounded-lg p-2 hover:bg-token-surface-primary">
-                                  <div class="relative grow overflow-hidden whitespace-nowrap">
-                                    Beaver King Rococo Painting
-                                    <div
-                                      class="absolute bottom-0 right-0 top-0 w-8 bg-gradient-to-l to-transparent from-token-surface-primary group-hover:from-token-surface-primary dark:from-black">
-                                    </div>
-                                  </div>
-                                </a>
-                              </div>
-                            </li>
-                            <li class="relative" style="opacity: 1; height: auto" data-projection-id="35">
-                              <div class="group relative active:opacity-90">
-                                <a href="/c/84ab7797-8d80-40be-9ee5-30a8af9ecee7"
-                                  class="flex items-center gap-2 rounded-lg p-2 hover:bg-token-surface-primary">
-                                  <div class="relative grow overflow-hidden whitespace-nowrap">
-                                    Rust HTML Parsing Library
-                                    <div
-                                      class="absolute bottom-0 right-0 top-0 w-8 bg-gradient-to-l to-transparent from-token-surface-primary group-hover:from-token-surface-primary dark:from-black">
-                                    </div>
-                                  </div>
-                                </a>
-                              </div>
-                            </li>
-                            <li class="relative" style="opacity: 1; height: auto" data-projection-id="36">
-                              <div class="group relative active:opacity-90">
-                                <a href="/g/g-7CKojumSX-the-glibatree-art-designer/c/06a5299e-8f98-421a-a4e3-0f1827b69c22"
-                                  class="flex items-center gap-2 rounded-lg p-2 hover:bg-token-surface-primary">
-                                  <div class="relative grow overflow-hidden whitespace-nowrap">
-                                    New chat
-                                    <div
-                                      class="absolute bottom-0 right-0 top-0 w-8 bg-gradient-to-l to-transparent from-token-surface-primary group-hover:from-token-surface-primary dark:from-black">
-                                    </div>
-                                  </div>
-                                </a>
-                              </div>
-                            </li>
-                            <li class="relative" style="opacity: 1; height: auto; overflow: hidden"
-                              data-projection-id="37">
-                              <div class="group relative active:opacity-90">
-                                <a href="/c/6db2c678-a567-42e4-aadb-b3f7de957fc3"
-                                  class="flex items-center gap-2 rounded-lg p-2 hover:bg-token-surface-primary">
-                                  <div class="relative grow overflow-hidden whitespace-nowrap">
-                                    Image Generation Issues
-                                    <div
-                                      class="absolute bottom-0 right-0 top-0 w-8 bg-gradient-to-l to-transparent from-token-surface-primary group-hover:from-token-surface-primary dark:from-black">
-                                    </div>
-                                  </div>
-                                </a>
-                              </div>
-                            </li>
-                            <li class="relative" style="opacity: 1; height: auto; overflow: hidden"
-                              data-projection-id="38">
-                              <div class="group relative active:opacity-90">
-                                <a href="/g/g-7CKojumSX-the-glibatree-art-designer/c/046ea33e-8e8d-4771-b826-528979aa227e"
-                                  class="flex items-center gap-2 rounded-lg p-2 hover:bg-token-surface-primary">
-                                  <div class="relative grow overflow-hidden whitespace-nowrap">
-                                    New chat
-                                    <div
-                                      class="absolute bottom-0 right-0 top-0 w-8 bg-gradient-to-l to-transparent from-token-surface-primary group-hover:from-token-surface-primary dark:from-black">
-                                    </div>
-                                  </div>
-                                </a>
-                              </div>
-                            </li>
-                            <li class="relative" style="opacity: 1; height: auto; overflow: hidden"
-                              data-projection-id="39">
-                              <div class="group relative active:opacity-90">
-                                <a href="/c/738c56a3-b752-4e77-bb94-90eab971fb5e"
-                                  class="flex items-center gap-2 rounded-lg p-2 hover:bg-token-surface-primary">
-                                  <div class="relative grow overflow-hidden whitespace-nowrap">
-                                    Pulsating Purple Gradient Effect
-                                    <div
-                                      class="absolute bottom-0 right-0 top-0 w-8 bg-gradient-to-l to-transparent from-token-surface-primary group-hover:from-token-surface-primary dark:from-black">
-                                    </div>
-                                  </div>
-                                </a>
-                              </div>
-                            </li>
-                            <li class="relative" style="opacity: 1; height: auto; overflow: hidden"
-                              data-projection-id="40">
-                              <div class="group relative active:opacity-90">
-                                <a href="/g/g-7CKojumSX-the-glibatree-art-designer/c/221d40f2-e6eb-4337-910f-132ed2f586c8"
-                                  class="flex items-center gap-2 rounded-lg p-2 hover:bg-token-surface-primary">
-                                  <div class="relative grow overflow-hidden whitespace-nowrap">
-                                    Stencil Art Laptop &amp; More
-                                    <div
-                                      class="absolute bottom-0 right-0 top-0 w-8 bg-gradient-to-l to-transparent from-token-surface-primary group-hover:from-token-surface-primary dark:from-black">
-                                    </div>
-                                  </div>
-                                </a>
-                              </div>
-                            </li>
-                            <li class="relative" style="opacity: 1; height: auto; overflow: hidden"
-                              data-projection-id="41">
-                              <div class="group relative active:opacity-90">
-                                <a href="/g/g-7CKojumSX-the-glibatree-art-designer/c/b96e3515-ae01-4384-809a-9d0e4e6fd970"
-                                  class="flex items-center gap-2 rounded-lg p-2 hover:bg-token-surface-primary">
-                                  <div class="relative grow overflow-hidden whitespace-nowrap">
-                                    Pastel Programmer Portraits
-                                    <div
-                                      class="absolute bottom-0 right-0 top-0 w-8 bg-gradient-to-l to-transparent from-token-surface-primary group-hover:from-token-surface-primary dark:from-black">
-                                    </div>
-                                  </div>
-                                </a>
-                              </div>
-                            </li>
-                            <li class="relative" style="opacity: 1; height: auto; overflow: hidden"
-                              data-projection-id="42">
-                              <div class="group relative active:opacity-90">
-                                <a href="/c/07ffa180-5019-4196-8ff1-6775259297c9"
-                                  class="flex items-center gap-2 rounded-lg p-2 hover:bg-token-surface-primary">
-                                  <div class="relative grow overflow-hidden whitespace-nowrap">
-                                    Fix "export" Syntax Error
-                                    <div
-                                      class="absolute bottom-0 right-0 top-0 w-8 bg-gradient-to-l to-transparent from-token-surface-primary group-hover:from-token-surface-primary dark:from-black">
-                                    </div>
-                                  </div>
-                                </a>
-                              </div>
-                            </li>
-                            <li class="relative" style="opacity: 1; height: auto; overflow: hidden"
-                              data-projection-id="43">
-                              <div class="group relative active:opacity-90">
-                                <a href="/g/g-7CKojumSX-the-glibatree-art-designer/c/731077cd-0457-48f1-9dc9-6a1d9d18df2e"
-                                  class="flex items-center gap-2 rounded-lg p-2 hover:bg-token-surface-primary">
-                                  <div class="relative grow overflow-hidden whitespace-nowrap">
-                                    Cyberpunk Prom Dress Creations
-                                    <div
-                                      class="absolute bottom-0 right-0 top-0 w-8 bg-gradient-to-l to-transparent from-token-surface-primary group-hover:from-token-surface-primary dark:from-black">
-                                    </div>
-                                  </div>
-                                </a>
-                              </div>
-                            </li>
-                            <li class="relative" style="opacity: 1; height: auto; overflow: hidden"
-                              data-projection-id="44">
-                              <div class="group relative active:opacity-90">
-                                <a href="/g/g-7CKojumSX-the-glibatree-art-designer/c/c4e3e6b7-5068-47ff-a827-1ae0fc4c4b5d"
-                                  class="flex items-center gap-2 rounded-lg p-2 hover:bg-token-surface-primary">
-                                  <div class="relative grow overflow-hidden whitespace-nowrap">
-                                    Artistic Portrait Creations
-                                    <div
-                                      class="absolute bottom-0 right-0 top-0 w-8 bg-gradient-to-l to-transparent from-token-surface-primary group-hover:from-token-surface-primary dark:from-black">
-                                    </div>
-                                  </div>
-                                </a>
-                              </div>
-                            </li>
-                            <li class="relative" style="opacity: 1; height: auto; overflow: hidden"
-                              data-projection-id="45">
-                              <div class="group relative active:opacity-90">
-                                <a href="/c/090c47e3-ab8f-48e2-a813-2bd0a2e3029f"
-                                  class="flex items-center gap-2 rounded-lg p-2 hover:bg-token-surface-primary">
-                                  <div class="relative grow overflow-hidden whitespace-nowrap">
-                                    Pastel Portrait of Young Man
-                                    <div
-                                      class="absolute bottom-0 right-0 top-0 w-8 bg-gradient-to-l to-transparent from-token-surface-primary group-hover:from-token-surface-primary dark:from-black">
-                                    </div>
-                                  </div>
-                                </a>
-                              </div>
-                            </li>
-                            <li class="relative" style="opacity: 1; height: auto; overflow: hidden"
-                              data-projection-id="46">
-                              <div class="group relative active:opacity-90">
-                                <a href="/g/g-2fkFE8rbu-dall-e/c/5ae90992-35a4-4fe0-ab73-865a370efc41"
-                                  class="flex items-center gap-2 rounded-lg p-2 hover:bg-token-surface-primary">
-                                  <div class="relative grow overflow-hidden whitespace-nowrap">
-                                    Sepia Vintage Café Illustration
-                                    <div
-                                      class="absolute bottom-0 right-0 top-0 w-8 bg-gradient-to-l to-transparent from-token-surface-primary group-hover:from-token-surface-primary dark:from-black">
-                                    </div>
-                                  </div>
-                                </a>
-                              </div>
-                            </li>
-                            <li class="relative" style="opacity: 1; height: auto; overflow: hidden"
-                              data-projection-id="47">
-                              <div class="group relative active:opacity-90">
-                                <a href="/g/g-2fkFE8rbu-dall-e/c/72baa831-119d-4fec-8f0e-6036105c6bf7"
-                                  class="flex items-center gap-2 rounded-lg p-2 hover:bg-token-surface-primary">
-                                  <div class="relative grow overflow-hidden whitespace-nowrap">
-                                    Sepia Vienna Park Illustration
-                                    <div
-                                      class="absolute bottom-0 right-0 top-0 w-8 bg-gradient-to-l to-transparent from-token-surface-primary group-hover:from-token-surface-primary dark:from-black">
-                                    </div>
-                                  </div>
-                                </a>
-                              </div>
-                            </li>
-                            <li class="relative" style="opacity: 1; height: auto; overflow: hidden"
-                              data-projection-id="48">
-                              <div class="group relative active:opacity-90">
-                                <a href="/g/g-2fkFE8rbu-dall-e/c/816aec4e-5a07-41da-bab5-38c2ae71c5e5"
-                                  class="flex items-center gap-2 rounded-lg p-2 hover:bg-token-surface-primary">
-                                  <div class="relative grow overflow-hidden whitespace-nowrap">
-                                    Vintage Sepia Illustration of Park
-                                    <div
-                                      class="absolute bottom-0 right-0 top-0 w-8 bg-gradient-to-l to-transparent from-token-surface-primary group-hover:from-token-surface-primary dark:from-black">
-                                    </div>
-                                  </div>
-                                </a>
-                              </div>
-                            </li>
-                            <li class="relative" style="opacity: 1; height: auto; overflow: hidden"
-                              data-projection-id="49">
-                              <div class="group relative active:opacity-90">
-                                <a href="/c/b09dc651-844f-4e03-8fbe-2b8b53cd9880"
-                                  class="flex items-center gap-2 rounded-lg p-2 hover:bg-token-surface-primary">
-                                  <div class="relative grow overflow-hidden whitespace-nowrap">
-                                    Vintage Sepia Illustration Style
-                                    <div
-                                      class="absolute bottom-0 right-0 top-0 w-8 bg-gradient-to-l to-transparent from-token-surface-primary group-hover:from-token-surface-primary dark:from-black">
-                                    </div>
-                                  </div>
-                                </a>
-                              </div>
-                            </li>
-                            <li class="relative" style="opacity: 1; height: auto; overflow: hidden"
-                              data-projection-id="50">
-                              <div class="group relative active:opacity-90">
-                                <a href="/g/g-2fkFE8rbu-dall-e/c/6e18533a-d229-404e-839a-97f2381d3095"
-                                  class="flex items-center gap-2 rounded-lg p-2 hover:bg-token-surface-primary">
-                                  <div class="relative grow overflow-hidden whitespace-nowrap">
-                                    Coffee Shop Calligraphy Art
-                                    <div
-                                      class="absolute bottom-0 right-0 top-0 w-8 bg-gradient-to-l to-transparent from-token-surface-primary group-hover:from-token-surface-primary dark:from-black">
-                                    </div>
-                                  </div>
-                                </a>
-                              </div>
-                            </li>
-                            <li class="relative" style="opacity: 1; height: auto; overflow: hidden"
-                              data-projection-id="51">
-                              <div class="group relative active:opacity-90">
-                                <a href="/g/g-2fkFE8rbu-dall-e/c/e8348961-492a-4aa9-8e81-8cd1b5eb66bb"
-                                  class="flex items-center gap-2 rounded-lg p-2 hover:bg-token-surface-primary">
-                                  <div class="relative grow overflow-hidden whitespace-nowrap">
-                                    Coffee Shop Calligraphy Art
-                                    <div
-                                      class="absolute bottom-0 right-0 top-0 w-8 bg-gradient-to-l to-transparent from-token-surface-primary group-hover:from-token-surface-primary dark:from-black">
-                                    </div>
-                                  </div>
-                                </a>
-                              </div>
-                            </li>
-                            <li class="relative" style="opacity: 1; height: auto; overflow: hidden"
-                              data-projection-id="52">
-                              <div class="group relative active:opacity-90">
-                                <a href="/g/g-7CKojumSX-the-glibatree-art-designer/c/5f596c86-5120-48cd-aac1-2129d46f61c7"
-                                  class="flex items-center gap-2 rounded-lg p-2 hover:bg-token-surface-primary">
-                                  <div class="relative grow overflow-hidden whitespace-nowrap">
-                                    Coffee Shop Creative Ideas
-                                    <div
-                                      class="absolute bottom-0 right-0 top-0 w-8 bg-gradient-to-l to-transparent from-token-surface-primary group-hover:from-token-surface-primary dark:from-black">
-                                    </div>
-                                  </div>
-                                </a>
-                              </div>
-                            </li>
-                            <li class="relative" style="opacity: 1; height: auto; overflow: hidden"
-                              data-projection-id="53">
-                              <div class="group relative active:opacity-90">
-                                <a href="/g/g-7CKojumSX-the-glibatree-art-designer/c/cc2cfde1-6bee-4e27-a4ac-3fee6f0370ac"
-                                  class="flex items-center gap-2 rounded-lg p-2 hover:bg-token-surface-primary">
-                                  <div class="relative grow overflow-hidden whitespace-nowrap">
-                                    Cactus Art Ideas
-                                    <div
-                                      class="absolute bottom-0 right-0 top-0 w-8 bg-gradient-to-l to-transparent from-token-surface-primary group-hover:from-token-surface-primary dark:from-black">
-                                    </div>
-                                  </div>
-                                </a>
-                              </div>
-                            </li>
-                            <li class="relative" style="opacity: 1; height: auto; overflow: hidden"
-                              data-projection-id="54">
-                              <div class="group relative active:opacity-90">
-                                <a href="/g/g-7CKojumSX-the-glibatree-art-designer/c/3db02b32-12a3-415c-9c94-bc7c349f2911"
-                                  class="flex items-center gap-2 rounded-lg p-2 hover:bg-token-surface-primary">
-                                  <div class="relative grow overflow-hidden whitespace-nowrap">
-                                    German Brewery Folklore Art
-                                    <div
-                                      class="absolute bottom-0 right-0 top-0 w-8 bg-gradient-to-l to-transparent from-token-surface-primary group-hover:from-token-surface-primary dark:from-black">
-                                    </div>
-                                  </div>
-                                </a>
-                              </div>
-                            </li>
-                            <li class="relative" style="opacity: 1; height: auto; overflow: hidden"
-                              data-projection-id="55">
-                              <div class="group relative active:opacity-90">
-                                <a href="/g/g-7CKojumSX-the-glibatree-art-designer/c/8cc7c3aa-047c-41e5-b415-ee515116ccba"
-                                  class="flex items-center gap-2 rounded-lg p-2 hover:bg-token-surface-primary">
-                                  <div class="relative grow overflow-hidden whitespace-nowrap">
-                                    Kawaii Owl Christmas Chaos
-                                    <div
-                                      class="absolute bottom-0 right-0 top-0 w-8 bg-gradient-to-l to-transparent from-token-surface-primary group-hover:from-token-surface-primary dark:from-black">
-                                    </div>
-                                  </div>
-                                </a>
-                              </div>
-                            </li>
-                            <li class="relative" style="opacity: 1; height: auto; overflow: hidden"
-                              data-projection-id="56">
-                              <div class="group relative active:opacity-90">
-                                <a href="/c/da65ede2-3d35-4a40-8f81-bd29d9dea7e5"
-                                  class="flex items-center gap-2 rounded-lg p-2 hover:bg-token-surface-primary">
-                                  <div class="relative grow overflow-hidden whitespace-nowrap">
-                                    Bevy Tower Defense Guide
-                                    <div
-                                      class="absolute bottom-0 right-0 top-0 w-8 bg-gradient-to-l to-transparent from-token-surface-primary group-hover:from-token-surface-primary dark:from-black">
-                                    </div>
-                                  </div>
-                                </a>
-                              </div>
-                            </li>
-                            <li class="relative" style="opacity: 1; height: auto; overflow: hidden"
-                              data-projection-id="57">
-                              <div class="group relative active:opacity-90">
-                                <a href="/g/g-n7Rs0IK86-grimoire/c/99ad31ae-d939-4ce9-90ed-59548b9e0bc3"
-                                  class="flex items-center gap-2 rounded-lg p-2 hover:bg-token-surface-primary">
-                                  <div class="relative grow overflow-hidden whitespace-nowrap">
-                                    Grimoire AI Coding Assistant
-                                    <div
-                                      class="absolute bottom-0 right-0 top-0 w-8 bg-gradient-to-l to-transparent from-token-surface-primary group-hover:from-token-surface-primary dark:from-black">
-                                    </div>
-                                  </div>
-                                </a>
-                              </div>
-                            </li>
-                            <li class="relative" style="opacity: 1; height: auto; overflow: hidden"
-                              data-projection-id="58">
-                              <div class="group relative active:opacity-90">
-                                <a href="/g/g-BVAcMP7wX-portrait-cartoonator/c/815ab48c-5b74-4c16-8e1d-d210cd1d827b"
-                                  class="flex items-center gap-2 rounded-lg p-2 hover:bg-token-surface-primary">
-                                  <div class="relative grow overflow-hidden whitespace-nowrap">
-                                    Disney Pixar-style Portrait Request
-                                    <div
-                                      class="absolute bottom-0 right-0 top-0 w-8 bg-gradient-to-l to-transparent from-token-surface-primary group-hover:from-token-surface-primary dark:from-black">
-                                    </div>
-                                  </div>
-                                </a>
-                              </div>
-                            </li>
-                            <li class="relative" style="opacity: 1; height: auto; overflow: hidden"
-                              data-projection-id="59">
-                              <div class="group relative active:opacity-90">
-                                <a href="/g/g-BVAcMP7wX-portrait-cartoonator/c/c7e3d35d-f60e-4e7a-a81b-5752e494ef62"
-                                  class="flex items-center gap-2 rounded-lg p-2 hover:bg-token-surface-primary">
-                                  <div class="relative grow overflow-hidden whitespace-nowrap">
-                                    Cartoon Portrait in 3D
-                                    <div
-                                      class="absolute bottom-0 right-0 top-0 w-8 bg-gradient-to-l to-transparent from-token-surface-primary group-hover:from-token-surface-primary dark:from-black">
-                                    </div>
-                                  </div>
-                                </a>
-                              </div>
-                            </li>
-                            <li class="relative" style="opacity: 1; height: auto; overflow: hidden"
-                              data-projection-id="60">
-                              <div class="group relative active:opacity-90">
-                                <a href="/c/1aa5980a-f98f-4a4c-afe3-2a022afbe3db"
-                                  class="flex items-center gap-2 rounded-lg p-2 hover:bg-token-surface-primary">
-                                  <div class="relative grow overflow-hidden whitespace-nowrap">
-                                    TS Shorthand, Filter Sort
-                                    <div
-                                      class="absolute bottom-0 right-0 top-0 w-8 bg-gradient-to-l to-transparent from-token-surface-primary group-hover:from-token-surface-primary dark:from-black">
-                                    </div>
-                                  </div>
-                                </a>
-                              </div>
-                            </li>
-                            <li class="relative" style="opacity: 1; height: auto; overflow: hidden"
-                              data-projection-id="61">
-                              <div class="group relative active:opacity-90">
-                                <a href="/c/72df3455-dade-4e5d-9fad-a0aebb3465ca"
-                                  class="flex items-center gap-2 rounded-lg p-2 hover:bg-token-surface-primary">
-                                  <div class="relative grow overflow-hidden whitespace-nowrap">
-                                    Remove URL Prefix
-                                    <div
-                                      class="absolute bottom-0 right-0 top-0 w-8 bg-gradient-to-l to-transparent from-token-surface-primary group-hover:from-token-surface-primary dark:from-black">
-                                    </div>
-                                  </div>
-                                </a>
-                              </div>
-                            </li>
-                            <li class="relative" style="opacity: 1; height: auto; overflow: hidden"
-                              data-projection-id="62">
-                              <div class="group relative active:opacity-90">
-                                <a href="/c/b28a31cf-c1b6-4f5b-9c59-625916d2ab66"
-                                  class="flex items-center gap-2 rounded-lg p-2 hover:bg-token-surface-primary">
-                                  <div class="relative grow overflow-hidden whitespace-nowrap">
-                                    Script Sharpening &amp; Humor
-                                    <div
-                                      class="absolute bottom-0 right-0 top-0 w-8 bg-gradient-to-l to-transparent from-token-surface-primary group-hover:from-token-surface-primary dark:from-black">
-                                    </div>
-                                  </div>
-                                </a>
-                              </div>
-                            </li>
-                            <li class="relative" style="opacity: 1; height: auto; overflow: hidden"
-                              data-projection-id="63">
-                              <div class="group relative active:opacity-90">
-                                <a href="/g/g-QqvewXqPt-seo-mentor/c/ec24e798-fa28-4baa-b640-2f3cada81e54"
-                                  class="flex items-center gap-2 rounded-lg p-2 hover:bg-token-surface-primary">
-                                  <div class="relative grow overflow-hidden whitespace-nowrap">
-                                    Optimize Meta Tags for SEO
-                                    <div
-                                      class="absolute bottom-0 right-0 top-0 w-8 bg-gradient-to-l to-transparent from-token-surface-primary group-hover:from-token-surface-primary dark:from-black">
-                                    </div>
-                                  </div>
-                                </a>
-                              </div>
-                            </li>
-                            <li class="relative" style="opacity: 1; height: auto; overflow: hidden"
-                              data-projection-id="64">
-                              <div class="group relative active:opacity-90">
-                                <a href="/c/4572ab24-cc3c-4414-8d58-9853afe207fa"
-                                  class="flex items-center gap-2 rounded-lg p-2 hover:bg-token-surface-primary">
-                                  <div class="relative grow overflow-hidden whitespace-nowrap">
-                                    Technical SEO Guidance
-                                    <div
-                                      class="absolute bottom-0 right-0 top-0 w-8 bg-gradient-to-l to-transparent from-token-surface-primary group-hover:from-token-surface-primary dark:from-black">
-                                    </div>
-                                  </div>
-                                </a>
-                              </div>
-                            </li>
-                          </ol>
-                        </div>
-                      </span><span></span><span></span>
-                    </div>
-                  </div>
-                </div>
-                <div class="flex flex-col pt-2 empty:hidden dark:border-white/20">
-                  <a
-                    class="flex min-h-[44px] py-1 items-center gap-3 dark:text-white cursor-pointer text-sm dark:hover:bg-token-surface-primary hover:bg-token-surface-primary rounded-lg px-2"><span
-                      class="flex w-full flex-row flex-wrap-reverse justify-between">
-                      <div class="flex items-center gap-2">
-                        <span
-                          class="flex h-7 w-7 items-center justify-center rounded-full border border-token-border-light bg-black"><svg
-                            width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
-                            class="icon-sm shrink-0">
-                            <path
-                              d="M8.78158 8.60266L9.8188 5.49098C10.037 4.83634 10.963 4.83634 11.1812 5.49098L12.2184 8.60266C12.7187 10.1035 13.8965 11.2813 15.3973 11.7816L18.509 12.8188C19.1637 13.037 19.1637 13.963 18.509 14.1812L15.3973 15.2184C13.8965 15.7187 12.7187 16.8965 12.2184 18.3973L11.1812 21.509C10.963 22.1637 10.037 22.1637 9.8188 21.509L8.78158 18.3973C8.28128 16.8965 7.10354 15.7187 5.60266 15.2184L2.49098 14.1812C1.83634 13.963 1.83634 13.037 2.49098 12.8188L5.60266 11.7816C7.10354 11.2813 8.28128 10.1035 8.78158 8.60266Z"
-                              fill="currentColor"></path>
-                            <path
-                              d="M17.1913 3.69537L17.6794 2.23105C17.7821 1.92298 18.2179 1.92298 18.3206 2.23105L18.8087 3.69537C19.0441 4.40167 19.5983 4.9559 20.3046 5.19133L21.769 5.67944C22.077 5.78213 22.077 6.21787 21.769 6.32056L20.3046 6.80867C19.5983 7.0441 19.0441 7.59833 18.8087 8.30463L18.3206 9.76895C18.2179 10.077 17.7821 10.077 17.6794 9.76895L17.1913 8.30463C16.9559 7.59833 16.4017 7.0441 15.6954 6.80867L14.231 6.32056C13.923 6.21787 13.923 5.78213 14.231 5.67944L15.6954 5.19133C16.4017 4.9559 16.9559 4.40167 17.1913 3.69537Z"
-                              fill="currentColor"></path>
-                          </svg></span>
-                        <div class="flex flex-col">
-                          <span class="font-semibold">Upgrade</span><span
-                            class="text-xs text-token-text-secondary line-clamp-1">Get GPT-4, DALL·E, and more</span>
-                        </div>
-                      </div>
-                      <span
-                        class="rounded-md bg-yellow-200 px-2 py-0.5 text-xs font-medium uppercase text-gray-800">NEW</span>
-                    </span></a>
-                  <div class="flex w-full items-center">
-                    <div class="grow">
-                      <div class="group relative" data-headlessui-state="">
-                        <button
-                          class="flex w-full items-center gap-2 rounded-lg p-2 text-sm hover:bg-gray-100 hover:bg-token-surface-primary group-ui-open:bg-gray-100 group-ui-open:bg-token-surface-primary dark:hover:bg-token-surface-primary dark:group-ui-open:bg-gray-800 dark:group-ui-open:bg-token-surface-primary"
-                          id="headlessui-menu-button-:rf:" type="button" aria-haspopup="true" aria-expanded="false"
-                          data-headlessui-state="">
-                          <div class="flex-shrink-0">
-                            <div class="flex items-center justify-center overflow-hidden rounded-full">
-                              <div class="relative flex">
-                                <img alt="User" loading="lazy" width="32" height="32" decoding="async" data-nimg="1"
-                                  class="rounded-sm" style="color: transparent"
-                                  src="https://lh3.googleusercontent.com/a/AEdFTp7g63NoFhjBHYmbnTK9Yz6FCk7NXiCDOpYxobRLVw=s96-c" />
-                              </div>
-                            </div>
-                          </div>
-                          <div
-                            class="relative -top-px grow -space-y-px overflow-hidden text-ellipsis whitespace-nowrap text-left text-gray-700 dark:text-white">
-                            <div class="font-semibold">Konstantin Kovar</div>
-                          </div>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </nav>
+  <div class="flex h-full flex-col">
+    <div class="flex items-center justify-between px-7 py-4">
+      <a href="/"><svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg"
+          class="h-8 w-8" role="img">
+          <text x="-9999" y="-9999">ChatGPT</text>
+          <path
+            d="M37.5324 16.8707C37.9808 15.5241 38.1363 14.0974 37.9886 12.6859C37.8409 11.2744 37.3934 9.91076 36.676 8.68622C35.6126 6.83404 33.9882 5.3676 32.0373 4.4985C30.0864 3.62941 27.9098 3.40259 25.8215 3.85078C24.8796 2.7893 23.7219 1.94125 22.4257 1.36341C21.1295 0.785575 19.7249 0.491269 18.3058 0.500197C16.1708 0.495044 14.0893 1.16803 12.3614 2.42214C10.6335 3.67624 9.34853 5.44666 8.6917 7.47815C7.30085 7.76286 5.98686 8.3414 4.8377 9.17505C3.68854 10.0087 2.73073 11.0782 2.02839 12.312C0.956464 14.1591 0.498905 16.2988 0.721698 18.4228C0.944492 20.5467 1.83612 22.5449 3.268 24.1293C2.81966 25.4759 2.66413 26.9026 2.81182 28.3141C2.95951 29.7256 3.40701 31.0892 4.12437 32.3138C5.18791 34.1659 6.8123 35.6322 8.76321 36.5013C10.7141 37.3704 12.8907 37.5973 14.9789 37.1492C15.9208 38.2107 17.0786 39.0587 18.3747 39.6366C19.6709 40.2144 21.0755 40.5087 22.4946 40.4998C24.6307 40.5054 26.7133 39.8321 28.4418 38.5772C30.1704 37.3223 31.4556 35.5506 32.1119 33.5179C33.5027 33.2332 34.8167 32.6547 35.9659 31.821C37.115 30.9874 38.0728 29.9178 38.7752 28.684C39.8458 26.8371 40.3023 24.6979 40.0789 22.5748C39.8556 20.4517 38.9639 18.4544 37.5324 16.8707ZM22.4978 37.8849C20.7443 37.8874 19.0459 37.2733 17.6994 36.1501C17.7601 36.117 17.8666 36.0586 17.936 36.0161L25.9004 31.4156C26.1003 31.3019 26.2663 31.137 26.3813 30.9378C26.4964 30.7386 26.5563 30.5124 26.5549 30.2825V19.0542L29.9213 20.998C29.9389 21.0068 29.9541 21.0198 29.9656 21.0359C29.977 21.052 29.9842 21.0707 29.9867 21.0902V30.3889C29.9842 32.375 29.1946 34.2791 27.7909 35.6841C26.3872 37.0892 24.4838 37.8806 22.4978 37.8849ZM6.39227 31.0064C5.51397 29.4888 5.19742 27.7107 5.49804 25.9832C5.55718 26.0187 5.66048 26.0818 5.73461 26.1244L13.699 30.7248C13.8975 30.8408 14.1233 30.902 14.3532 30.902C14.583 30.902 14.8088 30.8408 15.0073 30.7248L24.731 25.1103V28.9979C24.7321 29.0177 24.7283 29.0376 24.7199 29.0556C24.7115 29.0736 24.6988 29.0893 24.6829 29.1012L16.6317 33.7497C14.9096 34.7416 12.8643 35.0097 10.9447 34.4954C9.02506 33.9811 7.38785 32.7263 6.39227 31.0064ZM4.29707 13.6194C5.17156 12.0998 6.55279 10.9364 8.19885 10.3327C8.19885 10.4013 8.19491 10.5228 8.19491 10.6071V19.808C8.19351 20.0378 8.25334 20.2638 8.36823 20.4629C8.48312 20.6619 8.64893 20.8267 8.84863 20.9404L18.5723 26.5542L15.206 28.4979C15.1894 28.5089 15.1703 28.5155 15.1505 28.5173C15.1307 28.5191 15.1107 28.516 15.0924 28.5082L7.04046 23.8557C5.32135 22.8601 4.06716 21.2235 3.55289 19.3046C3.03862 17.3858 3.30624 15.3413 4.29707 13.6194ZM31.955 20.0556L22.2312 14.4411L25.5976 12.4981C25.6142 12.4872 25.6333 12.4805 25.6531 12.4787C25.6729 12.4769 25.6928 12.4801 25.7111 12.4879L33.7631 17.1364C34.9967 17.849 36.0017 18.8982 36.6606 20.1613C37.3194 21.4244 37.6047 22.849 37.4832 24.2684C37.3617 25.6878 36.8382 27.0432 35.9743 28.1759C35.1103 29.3086 33.9415 30.1717 32.6047 30.6641C32.6047 30.5947 32.6047 30.4733 32.6047 30.3889V21.188C32.6066 20.9586 32.5474 20.7328 32.4332 20.5338C32.319 20.3348 32.154 20.1698 31.955 20.0556ZM35.3055 15.0128C35.2464 14.9765 35.1431 14.9142 35.069 14.8717L27.1045 10.2712C26.906 10.1554 26.6803 10.0943 26.4504 10.0943C26.2206 10.0943 25.9948 10.1554 25.7963 10.2712L16.0726 15.8858V11.9982C16.0715 11.9783 16.0753 11.9585 16.0837 11.9405C16.0921 11.9225 16.1048 11.9068 16.1207 11.8949L24.1719 7.25025C25.4053 6.53903 26.8158 6.19376 28.2383 6.25482C29.6608 6.31589 31.0364 6.78077 32.2044 7.59508C33.3723 8.40939 34.2842 9.53945 34.8334 10.8531C35.3826 12.1667 35.5464 13.6095 35.3055 15.0128ZM14.2424 21.9419L10.8752 19.9981C10.8576 19.9893 10.8423 19.9763 10.8309 19.9602C10.8195 19.9441 10.8122 19.9254 10.8098 19.9058V10.6071C10.8107 9.18295 11.2173 7.78848 11.9819 6.58696C12.7466 5.38544 13.8377 4.42659 15.1275 3.82264C16.4173 3.21869 17.8524 2.99464 19.2649 3.1767C20.6775 3.35876 22.0089 3.93941 23.1034 4.85067C23.0427 4.88379 22.937 4.94215 22.8668 4.98473L14.9024 9.58517C14.7025 9.69878 14.5366 9.86356 14.4215 10.0626C14.3065 10.2616 14.2466 10.4877 14.2479 10.7175L14.2424 21.9419ZM16.071 17.9991L20.4018 15.4978L24.7325 17.9975V22.9985L20.4018 25.4983L16.071 22.9985V17.9991Z"
+            fill="currentColor"></path>
+        </svg></a><a
+        class="flex items-center rounded-lg bg-green-600 px-4 py-2 font-medium text-white transition hover:opacity-70"
+        href="/auth/login?next=/g/g-SfiFVTYij-gpt-prompt-fixer">Sign up</a>
+    </div>
+    <div class="flex grow flex-col items-center justify-center p-2">
+      <div class="flex h-full flex-col items-center justify-center">
+        <div class="relative">
+          <div class="mb-3 h-[72px] w-[72px]">
+            <div class="gizmo-shadow-stroke overflow-hidden rounded-full">
+              <img
+                src="https://files.oaiusercontent.com/file-EtRE82eRw5YksGIIDVMv4duX?se=2123-11-06T19%3A37%3A41Z&amp;sp=r&amp;sv=2021-08-06&amp;sr=b&amp;rscc=max-age%3D31536000%2C%20immutable&amp;rscd=attachment%3B%20filename%3DDALL%25C2%25B7E%25202023-11-30%252014.34.17%2520-%2520A%2520minimalist%2520image%2520with%2520a%2520white%2520background%252C%2520featuring%2520a%2520black%2520lowercase%2520letter%2520%2527a%2527%2520in%2520the%2520center.%2520A%2520red%2520scratch%2520marking%2520is%2520on%2520the%2520top%2520of%2520the%2520letter%2520%2527a.png&amp;sig=JqVTUQlhBgW1046U4Tgvd1q2cCcxUpJj2NvG9Z5K5RA%3D"
+                class="h-full w-full bg-token-surface-secondary dark:bg-token-surface-tertiary" alt="GPT" width="80"
+                height="80" />
             </div>
           </div>
+        </div>
+        <div class="flex flex-col items-center gap-0 p-2">
+          <div class="text-center text-2xl font-medium">GPT Prompt Fixer</div>
+          <div class="max-w-md text-center text-xl font-normal text-token-text-secondary">
+            Refines custom GPT instructions for better AI comprehension. Start by writing your
+            desired outcome.
+          </div>
+          <div class="mt-1 flex items-center gap-1 text-token-text-tertiary">
+            <div class="text-sm text-token-text-tertiary">
+              By
+              <!-- -->Wes Frank
+            </div>
+          </div>
+        </div>
+        <div class="mt-7 flex flex-col gap-4">
+          <a class="flex items-center gap-2 rounded-xl bg-green-600 px-5 py-3.5 font-medium text-white transition hover:opacity-70"
+            href="/auth/login?next=/g/g-SfiFVTYij-gpt-prompt-fixer">Sign up to chat</a>
+          <div class="text-sm text-token-text-tertiary">Requires ChatGPT Plus</div>
         </div>
       </div>
-    </div>
-    <div class="relative flex h-full max-w-full flex-1 flex-col overflow-hidden">
-      <main class="relative h-full w-full flex-1 overflow-auto transition-width">
-        <div class="fixed left-0 top-1/2 z-40"
-          style="transform: translateX(260px) translateY(-50%) rotate(0deg) translateZ(0px)">
-          <button>
-            <span class="" data-state="closed">
-              <div class="flex h-[72px] w-8 items-center justify-center" style="opacity: 0.25">
-                <div class="flex h-6 w-6 flex-col items-center">
-                  <div class="h-3 w-1 rounded-full bg-token-text-primary"
-                    style="transform: translateY(0.15rem) rotate(0deg) translateZ(0px)"></div>
-                  <div class="h-3 w-1 rounded-full bg-token-text-primary"
-                    style="transform: translateY(-0.15rem) rotate(0deg) translateZ(0px)"></div>
-                </div>
-              </div>
-              <span style="
-									position: absolute;
-									border: 0px;
-									width: 1px;
-									height: 1px;
-									padding: 0px;
-									margin: -1px;
-									overflow: hidden;
-									clip: rect(0px, 0px, 0px, 0px);
-									white-space: nowrap;
-									overflow-wrap: normal;
-								">Close sidebar</span>
-            </span>
-          </button>
-        </div>
-        <div role="presentation" class="flex h-full flex-col" tabindex="0">
-          <div class="flex-1 overflow-hidden">
-            <div class="relative h-full">
-              <div class="absolute left-0 right-0">
-                <div
-                  class="sticky top-0 mb-1.5 flex items-center justify-between z-10 h-14 bg-white/95 p-2 font-semibold dark:bg-gray-800/90">
-                  <div class="flex items-center gap-2">
-                    <div
-                      class="group flex cursor-pointer items-center gap-1 rounded-xl py-2 px-3 text-lg font-medium hover:bg-gray-50 radix-state-open:bg-gray-50 dark:hover:bg-black/10 dark:radix-state-open:bg-black/20"
-                      type="button" id="radix-:rg:" aria-haspopup="menu" aria-expanded="false" data-state="closed">
-                      GPT Prompt Fixer<svg width="16" height="17" viewBox="0 0 16 17" fill="none"
-                        class="text-token-text-tertiary">
-                        <path d="M11.3346 7.83203L8.00131 11.1654L4.66797 7.83203" stroke="currentColor"
-                          stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                      </svg>
-                    </div>
-                  </div>
-                  <div class="flex gap-2 pr-1"></div>
-                </div>
-              </div>
-              <div class="flex h-full flex-col items-center justify-center">
-                <div class="relative">
-                  <div class="mb-3 h-[72px] w-[72px]">
-                    <div class="gizmo-shadow-stroke overflow-hidden rounded-full">
-                      <img
-                        src="https://files.oaiusercontent.com/file-EtRE82eRw5YksGIIDVMv4duX?se=2123-11-06T19%3A37%3A41Z&amp;sp=r&amp;sv=2021-08-06&amp;sr=b&amp;rscc=max-age%3D31536000%2C%20immutable&amp;rscd=attachment%3B%20filename%3DDALL%25C2%25B7E%25202023-11-30%252014.34.17%2520-%2520A%2520minimalist%2520image%2520with%2520a%2520white%2520background%252C%2520featuring%2520a%2520black%2520lowercase%2520letter%2520%2527a%2527%2520in%2520the%2520center.%2520A%2520red%2520scratch%2520marking%2520is%2520on%2520the%2520top%2520of%2520the%2520letter%2520%2527a.png&amp;sig=JqVTUQlhBgW1046U4Tgvd1q2cCcxUpJj2NvG9Z5K5RA%3D"
-                        class="h-full w-full bg-token-surface-secondary dark:bg-token-surface-tertiary" alt="GPT"
-                        width="80" height="80" />
-                    </div>
-                  </div>
-                </div>
-                <div class="flex flex-col items-center gap-0 p-2">
-                  <div class="text-center text-2xl font-medium">GPT Prompt Fixer</div>
-                  <div class="max-w-md text-center text-xl font-normal text-token-text-secondary">
-                    Refines custom GPT instructions for better AI comprehension. Start by writing
-                    your desired outcome.
-                  </div>
-                  <div class="mt-1 flex items-center gap-1 text-token-text-tertiary">
-                    <div class="text-sm text-token-text-tertiary">By Wes Frank</div>
-                    <span class="pt-[1px]" data-state="closed"><svg width="24" height="24" viewBox="0 0 24 24"
-                        fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-xs">
-                        <path
-                          d="M13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12V16C11 16.5523 11.4477 17 12 17C12.5523 17 13 16.5523 13 16V12Z"
-                          fill="currentColor"></path>
-                        <path
-                          d="M12 9.5C12.6904 9.5 13.25 8.94036 13.25 8.25C13.25 7.55964 12.6904 7 12 7C11.3096 7 10.75 7.55964 10.75 8.25C10.75 8.94036 11.3096 9.5 12 9.5Z"
-                          fill="currentColor"></path>
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                          d="M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2ZM4 12C4 7.58172 7.58172 4 12 4C16.4183 4 20 7.58172 20 12C20 16.4183 16.4183 20 12 20C7.58172 20 4 16.4183 4 12Z"
-                          fill="currentColor"></path>
-                      </svg></span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="w-full pt-2 md:pt-0 dark:border-white/20 md:border-transparent md:dark:border-transparent md:w-[calc(100%-.5rem)]">
-            <form
-              class="stretch mx-2 flex flex-row gap-3 last:mb-2 md:mx-4 md:last:mb-6 lg:mx-auto lg:max-w-2xl xl:max-w-3xl">
-              <div class="relative flex h-full flex-1 items-stretch md:flex-col">
-                <div class="flex w-full items-center">
-                  <div
-                    class="overflow-hidden [&amp;:has(textarea:focus)]:border-token-border-xheavy [&amp;:has(textarea:focus)]:shadow-[0_2px_6px_rgba(0,0,0,.05)] flex flex-col w-full dark:border-token-border-heavy flex-grow relative border border-token-border-heavy dark:text-white rounded-2xl bg-white dark:bg-gray-800 shadow-[0_0_0_2px_rgba(255,255,255,0.95)] dark:shadow-[0_0_0_2px_rgba(52,53,65,0.95)]">
-                    <grammarly-extension data-grammarly-shadow-root="true"
-                      style="position: absolute; top: -1px; left: -1px; pointer-events: none"
-                      class="dnXmp"></grammarly-extension><grammarly-extension data-grammarly-shadow-root="true"
-                      style="position: absolute; top: -1px; left: -1px; pointer-events: none"
-                      class="dnXmp"></grammarly-extension><textarea id="prompt-textarea" tabindex="0" data-id="root"
-                      style="max-height: 200px; height: 52px; overflow-y: hidden" rows="1"
-                      placeholder="Message GPT Prompt Fixer…"
-                      class="m-0 w-full resize-none border-0 bg-transparent py-[10px] pr-10 focus:ring-0 focus-visible:ring-0 dark:bg-transparent md:py-3.5 md:pr-12 placeholder-black/50 dark:placeholder-white/50 pl-10 md:pl-[55px]"
-                      spellcheck="false"></textarea>
-                    <div class="absolute bottom-2 md:bottom-3 left-2 md:left-4">
-                      <div class="flex">
-                        <button class="btn relative p-0 text-black dark:text-white" aria-label="Attach files">
-                          <div class="flex w-full gap-2 items-center justify-center">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M9 7C9 4.23858 11.2386 2 14 2C16.7614 2 19 4.23858 19 7V15C19 18.866 15.866 22 12 22C8.13401 22 5 18.866 5 15V9C5 8.44772 5.44772 8 6 8C6.55228 8 7 8.44772 7 9V15C7 17.7614 9.23858 20 12 20C14.7614 20 17 17.7614 17 15V7C17 5.34315 15.6569 4 14 4C12.3431 4 11 5.34315 11 7V15C11 15.5523 11.4477 16 12 16C12.5523 16 13 15.5523 13 15V9C13 8.44772 13.4477 8 14 8C14.5523 8 15 8.44772 15 9V15C15 16.6569 13.6569 18 12 18C10.3431 18 9 16.6569 9 15V7Z"
-                                fill="currentColor"></path>
-                            </svg>
-                          </div>
-                        </button><input multiple="" type="file" style="display: none" tabindex="-1" class="hidden" />
-                      </div>
-                    </div>
-                    <button disabled=""
-                      class="absolute md:bottom-3 md:right-3 dark:hover:bg-gray-900 dark:disabled:hover:bg-transparent right-2 dark:disabled:bg-white disabled:bg-black disabled:opacity-10 disabled:text-gray-400 enabled:bg-black text-white p-0.5 border border-black rounded-lg dark:border-white dark:bg-white bottom-1.5 transition-colors"
-                      data-testid="send-button">
-                      <span class="" data-state="closed"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                          class="text-white dark:text-black">
-                          <path d="M7 11L12 6L17 11M12 18V7" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round"></path>
-                        </svg></span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </form>
-            <div class="relative px-2 py-2 text-center text-xs text-gray-600 dark:text-gray-300 md:px-[60px]">
-              <span>ChatGPT can make mistakes. Consider checking important information.</span>
-            </div>
-          </div>
-        </div>
-        <div class="group fixed bottom-3 right-3 z-10 hidden gap-1 lg:flex">
-          <div class="group relative" data-headlessui-state="">
-            <button
-              class="flex items-center justify-center rounded-full border border-gray-200 bg-gray-50 text-gray-600 dark:border-white/10 dark:bg-white/10 dark:text-gray-200"
-              id="headlessui-menu-button-:rb:" type="button" aria-haspopup="true" aria-expanded="false"
-              data-headlessui-state="">
-              <div class="flex h-6 w-6 items-center justify-center text-xs">?</div>
-            </button>
-          </div>
-        </div>
-      </main>
     </div>
   </div>
   <div class="absolute left-0 right-0 top-0 z-[2]"></div>
@@ -1148,7 +74,7 @@
 	{
 		"props": {
 			"pageProps": {
-				"kind": "chat_page",
+				"kind": "anon_gizmo",
 				"gizmo": {
 					"gizmo": {
 						"id": "g-SfiFVTYij",
@@ -1192,65 +118,83 @@
 						"attachments": {
 							"type": "retrieval",
 							"accepted_mime_types": [
-								"text/x-csharp",
-								"text/javascript",
+								"text/x-c",
 								"text/x-typescript",
+								"text/x-ruby",
+								"application/x-latext",
+								"text/x-sh",
 								"application/json",
 								"text/x-php",
-								"text/x-sh",
-								"text/markdown",
-								"text/html",
-								"text/x-ruby",
-								"text/x-java",
-								"text/x-script.python",
-								"application/msword",
 								"text/x-c++",
 								"application/pdf",
-								"text/plain",
-								"text/x-c",
+								"text/html",
+								"text/javascript",
 								"text/x-tex",
+								"text/plain",
+								"application/msword",
+								"text/x-csharp",
 								"application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+								"text/x-java",
+								"text/markdown",
 								"application/vnd.openxmlformats-officedocument.presentationml.presentation",
-								"application/x-latext"
+								"text/x-script.python"
 							],
-							"image_mime_types": ["image/gif", "image/png", "image/webp", "image/jpeg"],
+							"image_mime_types": ["image/jpeg", "image/gif", "image/png", "image/webp"],
 							"can_accept_all_mime_types": true
 						}
 					}
-				},
-				"user": {
-					"id": "user-z8fhNsf6ee5lATGA3ahCgPqb",
-					"name": "Konstantin Kovar",
-					"email": "whitemuffinstudio@gmail.com",
-					"image": "https://lh3.googleusercontent.com/a/ACg8ocLxVnMSBdXx8HebuyY4YdjC3UjNBom-YPj5gj5kOzYlzEU=s96-c",
-					"picture": "https://lh3.googleusercontent.com/a/ACg8ocLxVnMSBdXx8HebuyY4YdjC3UjNBom-YPj5gj5kOzYlzEU=s96-c",
-					"idp": "google-oauth2",
-					"iat": 1694433036,
-					"mfa": false,
-					"groups": [],
-					"intercom_hash": "84d1c836dcfe3a900028a2137d6d7e3438be4192734c0ebebf81a977d9cc8ef2"
-				},
-				"serviceStatus": {},
-				"userCountry": "AT",
-				"serviceAnnouncement": { "paid": {}, "public": {} },
-				"serverPrimedAllowBrowserStorageValue": true,
-				"canManageBrowserStorage": false,
-				"ageVerificationDeadline": null,
-				"showCookieConsentBanner": false,
-				"cfConnectingIp": "2a02:8388:6301:d280:1592:e9c5:ad74:fd6a"
+				}
 			},
 			"__N_SSP": true
 		},
 		"page": "/g/[gizmoId]",
 		"query": { "gizmoId": "g-SfiFVTYij-gpt-prompt-fixer" },
-		"buildId": "Eufc_-pht9yf7FblCF0Eo",
+		"buildId": "HTQfzVfgj_Z-r-tYxi4me",
 		"assetPrefix": "https://cdn.oaistatic.com",
 		"isFallback": false,
 		"gssp": true,
 		"scriptLoader": []
 	}
 </script>
-<next-route-announcer>
+<script>
+  (function () {
+    var js =
+      "window['__CF$cv$params']={r:'834d26d3af815aad',t:'MTcwMjQ1OTQ0MS41NTAwMDA='};_cpo=document.createElement('script');_cpo.nonce='',_cpo.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js',document.getElementsByTagName('head')[0].appendChild(_cpo);";
+    var _0xh = document.createElement('iframe');
+    _0xh.height = 1;
+    _0xh.width = 1;
+    _0xh.style.position = 'absolute';
+    _0xh.style.top = 0;
+    _0xh.style.left = 0;
+    _0xh.style.border = 'none';
+    _0xh.style.visibility = 'hidden';
+    document.body.appendChild(_0xh);
+    function handler() {
+      var _0xi = _0xh.contentDocument || _0xh.contentWindow.document;
+      if (_0xi) {
+        var _0xj = _0xi.createElement('script');
+        _0xj.innerHTML = js;
+        _0xi.getElementsByTagName('head')[0].appendChild(_0xj);
+      }
+    }
+    if (document.readyState !== 'loading') {
+      handler();
+    } else if (window.addEventListener) {
+      document.addEventListener('DOMContentLoaded', handler);
+    } else {
+      var prev = document.onreadystatechange || function () { };
+      document.onreadystatechange = function (e) {
+        prev(e);
+        if (document.readyState !== 'loading') {
+          document.onreadystatechange = prev;
+          handler();
+        }
+      };
+    }
+  })();
+</script>
+<iframe height="1" width="1"
+  style="position: absolute; top: 0px; left: 0px; border: medium; visibility: hidden"></iframe><next-route-announcer>
   <p aria-live="assertive" id="__next-route-announcer__" role="alert" style="
 			border: 0px;
 			clip: rect(0px, 0px, 0px, 0px);
@@ -1269,3 +213,5 @@
   <span
     class="pointer-events-none fixed inset-0 z-[60] mx-auto my-2 flex max-w-[560px] flex-col items-stretch justify-start md:pb-5"></span>
 </div>
+<span id="author-url">https://www.youtube.com/@WesGPT</span>
+<span id="gpt-tags">prompt engineering,text generator</span>

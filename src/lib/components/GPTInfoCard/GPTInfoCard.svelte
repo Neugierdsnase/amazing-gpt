@@ -16,7 +16,12 @@
 		class="grid grid-cols-6 grid-rows-3 bg-primary/10 gap-2 custom-glass rounded-xl p-4 shadow-xl backdrop-filter backdrop-blur-md"
 	>
 		<div class="flex justify-center items-center col-start-1 p-4 row-start-1 col-span-2 row-span-3">
-			<img src={gptInfo.image} alt={gptInfo.displayname} class="mask mask-circle w-full" />
+			<img
+				src={gptInfo.image}
+				alt={gptInfo.displayname}
+				class="mask mask-circle w-full"
+				loading="lazy"
+			/>
 		</div>
 
 		<div class="row-start-1 row-span-1 col-start-3 col-span-4 text-xl">

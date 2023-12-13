@@ -64,6 +64,7 @@ def parse(file_paths):
     gpt_infos = []
 
     for file_path in file_paths:
+        print(f"Parsing {file_path}...")
         with open(file_path, "r", encoding="utf-8") as file:
             html = file.read()
 
@@ -98,7 +99,8 @@ def parse(file_paths):
             fallback_url = fallback_url_element.text if fallback_url_element else None
             author = Author(author_name, fallback_url)
 
-        tags = []
+        tags_element = soup.select_one("span#gpt-tags")
+        tags = tags_element.text.split(",") if tags_element else []
         added = datetime.now()
         updated = datetime.now()
 
@@ -138,7 +140,7 @@ async def connect():
 
 async def create_gpt(connection, gpt: GptRecord):
     sql = """
-        INSERT INTO gpt_entries (id, author, name, description, tags, added, updated, slug, image) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9);
+        INSERT INTO gpt_entries (id, description, tags, added, updated, slug, image, authorname, authorurl, displayname, sortname) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11);
     """
 
     # Serialize author and name objects to JSON
@@ -148,14 +150,16 @@ async def create_gpt(connection, gpt: GptRecord):
     await connection.execute(
         sql,
         gpt.gpt_id,
-        author,
-        name,
         gpt.description,
         ",".join(gpt.tags),
         gpt.added,
         gpt.updated,
         gpt.slug,
         gpt.image,
+        gpt.author.name,
+        gpt.author.url,
+        gpt.name.display,
+        gpt.name.sort,
     )
 
 

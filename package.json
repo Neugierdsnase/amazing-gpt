@@ -7,7 +7,6 @@
     "build": "vite build --mode development",
     "build:prod": "vite build --mode production",
     "preview": "vite preview",
-    "onboard": "source venv/bin/activate.fish && python3 onboarding.py && deactivate",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
     "test": "vitest",
