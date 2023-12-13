@@ -49,7 +49,7 @@ export const generateItemListSchema = (gpts: GPTInfoType[]) => {
 		};
 	});
 
-	return {
+	return serializeSchema({
 		'@context': 'http://schema.org',
 		'@type': 'ItemList',
 		name: 'Custom GPTs',
@@ -57,5 +57,5 @@ export const generateItemListSchema = (gpts: GPTInfoType[]) => {
 		url: 'https://amazing-gpt.com',
 		numberOfItems: list.length,
 		itemListElement: list
-	};
+	} as Schema);
 };
