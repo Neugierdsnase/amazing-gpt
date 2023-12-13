@@ -3,7 +3,7 @@
 		<div class="navbar-start">
 			<a href="/" class="h-16 flex gap-4 items-center ml-6">
 				<img src="/logo256.png" alt="logo" class="h-full" />
-				<span class="hidden md:block font-bold text-xl">Awesome GPT</span>
+				<span class="hidden md:block font-bold text-xl">Amazing GPT</span>
 			</a>
 		</div>
 

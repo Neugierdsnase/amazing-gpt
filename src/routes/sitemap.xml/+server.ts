@@ -1,4 +1,20 @@
-export async function GET() {
+import dayjs from 'dayjs';
+import type { GPTInfoType } from '../../types/gpt';
+import sql from '../../db';
+
+const generateUrlElement = ({ slug, updated }: GPTInfoType) => `
+	<url>
+		<loc>https://amazing-gpt.com/gpt/${slug}</loc>
+		<lastmod>${dayjs(updated).format('YYYY-MM-DD')}</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+`;
+
+export const GET = async () => {
+	const gpts =
+		(await sql`SELECT id, displayname, sortname, authorname, authorurl, description, image, slug, tags FROM gpt_entries`) as GPTInfoType[];
+
 	return new Response(
 		`
 		<?xml version="1.0" encoding="UTF-8" ?>
@@ -10,7 +26,7 @@ export async function GET() {
 			xmlns:image="https://www.google.com/schemas/sitemap-image/1.1"
 			xmlns:video="https://www.google.com/schemas/sitemap-video/1.1"
 		>
-			<!-- <url> elements go here -->
+			${gpts.map(generateUrlElement)}
 		</urlset>`.trim(),
 		{
 			headers: {
@@ -18,4 +34,4 @@ export async function GET() {
 			}
 		}
 	);
-}
+};
