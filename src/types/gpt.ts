@@ -12,4 +12,5 @@ export interface GPTInfoType {
 	id: UuidType;
 	slug: string;
 	image: string;
+	applicationCategory?: string;
 }

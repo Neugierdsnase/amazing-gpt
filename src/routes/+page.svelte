@@ -8,6 +8,7 @@
 	import { onMount } from 'svelte';
 	import type { GPTInfoType } from '../types/gpt';
 	import { getUniqueTags } from '$lib/util';
+	import LdTag from '$lib/components/LDTag.svelte';
 
 	let scrollY = 0;
 	export let data: { gpts: GPTInfoType[]; allTags: string[] };
@@ -53,6 +54,8 @@
 	A&nbsp;curated&nbsp;list <span>of</span> amazing custom&nbsp;GPTs
 </h1>
 
+<!-- This should not be reactive data, but rather a static list of all the GPTs. -->
+<LdTag gpts={data.gpts} />
 <!-- TODO: The filter bar needs take an "on_filter_change" prop that is a function that gets the new, filtered result -->
 <!-- The search end point can be defined in sveltekit and will just return the filtered results. -->
 <FilterBar {tags} />
