@@ -13,4 +13,7 @@ export interface GPTInfoType {
 	slug: string;
 	image: string;
 	applicationCategory?: string;
+	curatorsNotes?: string;
+	ytShortUrl?: string;
+	humanPickedAlternatives?: string[];
 }

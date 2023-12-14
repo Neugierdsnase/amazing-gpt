@@ -32,11 +32,18 @@ const sortDirectionPart = (sortDirection: string) => {
 	return sortDirection === 'desc' ? sql` DESC` : sql` ASC`;
 };
 
+const limitPart = (limit: string | undefined) => {
+	if (!limit) return sql``;
+
+	return sql`LIMIT ${limit}`;
+};
+
 export const GET = async ({ url }: RouteMetadataType) => {
 	const { searchParams } = url;
 	const searchQuery = searchParams.get('query');
 	const paramTags = searchParams.get('tags')?.split(',');
 	const sort = searchParams.get('sort');
+	const limit = searchParams.get('limit');
 	const sortDirection = searchParams.get('sortDirection');
 
 	const gpts = await sql`
@@ -46,6 +53,7 @@ ${searchQueryPart(searchQuery)}
 ${tagsPart(paramTags)}
 ${sortPart(sort)}
 ${sortDirectionPart(sortDirection)}
+${limitPart(limit)}
   ;`;
 
 	const rawTags = await sql`SELECT DISTINCT tags FROM gpt_entries;`;
