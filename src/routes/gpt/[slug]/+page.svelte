@@ -24,17 +24,20 @@
 	} = gpt;
 
 	const getMachingPickedAlternatives = async () =>
-		await fetch(`/api/v1/alternatives-to/${slug}?omit=${humanPickedAlternativeIds}`).then((res) =>
-			res.json()
-		);
+		(
+			await fetch(`/api/v1/alternatives-to/${slug}?omit=${humanPickedAlternativeIds}`).then((res) =>
+				res.json()
+			)
+		).gpts;
 
 	const getHumanPickedAlternatives = async () =>
-		await fetch(`/api/v1/gpt?ids=${humanPickedAlternativeIds}`).then((res) => res.json());
+		(await fetch(`/api/v1/gpts/${humanPickedAlternativeIds}`).then((res) => res.json())).gpts;
 
 	onMount(async () => {
 		machinePickedAlternatives = await getMachingPickedAlternatives();
 		humanPickedAlternatives = await getHumanPickedAlternatives();
 	});
+	$: console.log({ machinePickedAlternatives, humanPickedAlternatives });
 </script>
 
 <div class="grid grid-cols-1 md:grid-cols-4 gap-8 p-8">
@@ -68,7 +71,8 @@
 		<i class="ph-bold ph-arrow-square-out" />
 	</a>
 
-	<div class="col-span-1 row-span-3">YouTube Short Placeholder</div>
+	<!--  TODO: YouTube Short Placeholder -->
+	<div class="col-span-1 row-span-3" />
 
 	<div class="md:col-span-3 flex flex-col p-8 rounded-xl bg-base-300">
 		<div>
