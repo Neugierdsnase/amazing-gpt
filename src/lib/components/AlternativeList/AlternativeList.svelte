@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { GPTInfoType } from '../../../types/gpt';
 	import PreviewCard from './PreviewCard.svelte';
+	import InsteadOfAlternativeGpts from '../GoogleAds/InsteadOfAlternativeGpts.svelte';
 
 	export let humanPickedAlternativesPromise: Promise<GPTInfoType[] | undefined>;
 	export let machinePickedAlternativesPromise: Promise<GPTInfoType[] | undefined>;
@@ -22,10 +23,14 @@
 				</ul>
 			</div>
 		{:else}
-			<!-- TODO: Show ad if no alternatives -->
+			<div class="grow">
+				<InsteadOfAlternativeGpts />
+			</div>
 		{/if}
 	{:catch}
-		<!-- TODO: Show ad if no alternatives -->
+		<div class="grow">
+			<InsteadOfAlternativeGpts />
+		</div>
 	{/await}
 
 	{#await machinePickedAlternativesPromise}
@@ -43,9 +48,13 @@
 				</ul>
 			</div>
 		{:else}
-			<!-- TODO: Show ad if no alternatives -->
+			<div class="grow">
+				<InsteadOfAlternativeGpts />
+			</div>
 		{/if}
 	{:catch}
-		<!-- TODO: Show ad if no alternatives -->
+		<div class="grow">
+			<InsteadOfAlternativeGpts />
+		</div>
 	{/await}
 </div>
