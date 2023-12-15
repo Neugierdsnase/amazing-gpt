@@ -18,12 +18,17 @@
 		</div>
 
 		<div class="navbar-end">
-			<label class="swap swap-rotate pr-4">
-				<!-- this hidden checkbox controls the state -->
-				<input type="checkbox" data-toggle-theme="darker,lighter" data-act-class="ACTIVECLASS" />
-				<i class="ph-fill ph-sun swap-off text-3xl" />
-				<i class="ph-fill ph-moon swap-on text-3xl" />
-			</label>
+			<div class="flex gap-4 items-center">
+				<a class="btn btn-outline btn-secondary btn-xs" href="mailto:prompt-dress@vomkonstant.in"
+					>Submit a GPT</a
+				>
+				<label class="swap swap-rotate pr-4">
+					<!-- this hidden checkbox controls the state -->
+					<input type="checkbox" data-toggle-theme="darker,lighter" data-act-class="ACTIVECLASS" />
+					<i class="ph-fill ph-sun swap-off text-3xl" />
+					<i class="ph-fill ph-moon swap-on text-3xl" />
+				</label>
+			</div>
 		</div>
 	</div>
 </header>

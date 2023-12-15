@@ -5,6 +5,7 @@
 	import { BASE_OPENAI_GPT_URL } from '../../../constants';
 	import { onMount } from 'svelte';
 	import AlternativeList from '$lib/components/AlternativeList/AlternativeList.svelte';
+	import Rating from '$lib/components/CuratorsRating/CuratorsRating.svelte';
 
 	export let data: { gpt: GPTInfoType };
 	let gpt: GPTInfoType = data.gpt;
@@ -73,12 +74,18 @@
 			<h2 class="text-xl font-bold">Description</h2>
 			<p>{gpt.description}</p>
 		</div>
-		{#if gpt.curatorsNotes}
+		{#if gpt.curatorsnotes}
 			<div class="divider" />
 			<div>
-				<h2 class="text-xl font-bold">Curator's notes</h2>
+				<div class="flex justify-between">
+					<h2 class="text-xl font-bold">Curator's notes</h2>
+					{#if gpt.curatorsrating}
+						<Rating rating={gpt.curatorsrating} />
+					{/if}
+				</div>
+
 				<!-- eslint-disable-next-line svelte/no-at-html-tags -->
-				<p>{@html gpt.curatorsNotes}</p>
+				<p>{@html gpt.curatorsnotes}</p>
 			</div>
 		{/if}
 	</div>
