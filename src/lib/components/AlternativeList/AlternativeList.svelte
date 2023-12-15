@@ -22,10 +22,10 @@
 				</ul>
 			</div>
 		{:else}
-			TODO: Show ad if no alternatives
+			<!-- TODO: Show ad if no alternatives -->
 		{/if}
 	{:catch}
-		TODO: Show ad if no alternatives
+		<!-- TODO: Show ad if no alternatives -->
 	{/await}
 
 	{#await machinePickedAlternativesPromise}
@@ -43,9 +43,9 @@
 				</ul>
 			</div>
 		{:else}
-			TODO: Show ad if no alternatives
+			<!-- TODO: Show ad if no alternatives -->
 		{/if}
 	{:catch}
-		TODO: Show ad if no alternatives
+		<!-- TODO: Show ad if no alternatives -->
 	{/await}
 </div>
