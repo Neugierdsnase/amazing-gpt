@@ -7,37 +7,31 @@
 	import AlternativeList from '$lib/components/AlternativeList/AlternativeList.svelte';
 
 	export let data: { gpt: GPTInfoType };
-	const { gpt } = data;
+	let gpt: GPTInfoType = data.gpt;
 
-	let machinePickedAlternatives: GPTInfoType[] = [];
-	let humanPickedAlternatives: GPTInfoType[] = [];
-	const {
-		displayname,
-		authorname,
-		authorurl,
-		tags,
-		description,
-		image,
-		slug,
-		humanPickedAlternatives: humanPickedAlternativeIds,
-		curatorsNotes
-	} = gpt;
+	let machinePickedAlternativesPromise: Promise<GPTInfoType[] | undefined>;
+	let humanPickedAlternativesPromise: Promise<GPTInfoType[] | undefined>;
 
-	const getMachingPickedAlternatives = async () =>
+	const getMachingPickedAlternatives = async (gpt: GPTInfoType) =>
 		(
-			await fetch(`/api/v1/alternatives-to/${slug}?omit=${humanPickedAlternativeIds}`).then((res) =>
-				res.json()
+			await fetch(`/api/v1/alternatives-to/${gpt.slug}?omit=${gpt.humanPickedAlternatives}`).then(
+				(res) => res.json()
 			)
 		).gpts;
 
-	const getHumanPickedAlternatives = async () =>
-		(await fetch(`/api/v1/gpts/${humanPickedAlternativeIds}`).then((res) => res.json())).gpts;
+	const getHumanPickedAlternatives = async (gpt: GPTInfoType) =>
+		(await fetch(`/api/v1/gpts/${gpt.humanPickedAlternatives}`).then((res) => res.json())).gpts;
 
-	onMount(async () => {
-		machinePickedAlternatives = await getMachingPickedAlternatives();
-		humanPickedAlternatives = await getHumanPickedAlternatives();
+	onMount(() => {
+		machinePickedAlternativesPromise = getMachingPickedAlternatives(gpt);
+		humanPickedAlternativesPromise = getHumanPickedAlternatives(gpt);
 	});
-	$: console.log({ machinePickedAlternatives, humanPickedAlternatives });
+
+	$: {
+		gpt = data.gpt;
+		machinePickedAlternativesPromise = getMachingPickedAlternatives(gpt);
+		humanPickedAlternativesPromise = getHumanPickedAlternatives(gpt);
+	}
 </script>
 
 <div class="grid grid-cols-1 md:grid-cols-4 gap-8 p-8">
@@ -45,29 +39,29 @@
 		class="md:col-span-4 p-8 rounded-xl bg-base-300 flex flex-col gap-2 md:flex-row-reverse items-center md:justify-between"
 	>
 		<div class="flex justify-center items-center h-44 w-44">
-			<img src={image} alt={displayname} class="mask mask-circle w-full" />
+			<img src={gpt.image} alt={gpt.displayname} class="mask mask-circle w-full" />
 		</div>
 
 		<div class="flex flex-col justify-between">
 			<div>
-				<h1 class="text-4xl font-bold">{displayname}</h1>
-				<AuthorSpan {authorname} {authorurl} />
+				<h1 class="text-4xl font-bold">{gpt.displayname}</h1>
+				<AuthorSpan authorname={gpt.authorname} authorurl={gpt.authorurl} />
 			</div>
 			<div class="mt-2 md:max-w-fit">
-				{#if tags && tags.length > 0}
-					<Tags size="sm" {tags} />
+				{#if gpt.tags && gpt.tags.length > 0}
+					<Tags size="sm" tags={gpt.tags} />
 				{/if}
 			</div>
 		</div>
 	</div>
 
 	<a
-		href="{BASE_OPENAI_GPT_URL}{slug}"
+		href="{BASE_OPENAI_GPT_URL}{gpt.slug}"
 		class="btn btn-secondary md:col-span-3 btn-lg self-center"
 		target="_blank"
 		rel="noopener noreferrer"
 	>
-		Use {displayname}
+		Use {gpt.displayname}
 		<i class="ph-bold ph-arrow-square-out" />
 	</a>
 
@@ -77,19 +71,19 @@
 	<div class="md:col-span-3 flex flex-col p-8 rounded-xl bg-base-300">
 		<div>
 			<h2 class="text-xl font-bold">Description</h2>
-			<p>{description}</p>
+			<p>{gpt.description}</p>
 		</div>
-		{#if curatorsNotes}
+		{#if gpt.curatorsNotes}
 			<div class="divider" />
 			<div>
 				<h2 class="text-xl font-bold">Curator's notes</h2>
 				<!-- eslint-disable-next-line svelte/no-at-html-tags -->
-				<p>{@html curatorsNotes}</p>
+				<p>{@html gpt.curatorsNotes}</p>
 			</div>
 		{/if}
 	</div>
 
-	<AlternativeList {humanPickedAlternatives} {machinePickedAlternatives} />
+	<AlternativeList {humanPickedAlternativesPromise} {machinePickedAlternativesPromise} />
 
 	<div class="md:col-span-4 flex gap-2 justify-end w-full">
 		<a

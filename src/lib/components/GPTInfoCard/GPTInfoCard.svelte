@@ -25,16 +25,19 @@
 		</div>
 
 		<div class="row-start-1 row-span-1 col-start-3 col-span-4 text-xl">
-			<h2 class="font-bold line-clamp-1 leading-1">
-				{gptInfo.displayname}
-			</h2>
+			<a href="{GPT_PATH}/{gptInfo.slug}" class="font-bold line-clamp-1 leading-1">
+				<h2 class="font-bold line-clamp-1 leading-1">
+					{gptInfo.displayname}
+				</h2>
+			</a>
 			<AuthorSpan {authorname} {authorurl} />
 		</div>
+
 		<p class="row-start-2 row-span-1 col-start-3 col-span-4 pl-4 line-clamp-2 mt-2">
 			{gptInfo.description}
 		</p>
 
-		<div class="overflow-hidden row-start-3 col-span-3 flex items-end col-start-3">
+		<div class="overflow-hidden row-start-3 col-span-3 hidden md:flex items-end col-start-3">
 			<Tags handleTagClick={filterStore.handleTagClick} maxTags={2} tags={gptInfo.tags} />
 		</div>
 
