@@ -43,7 +43,19 @@ class Name:
 
 class GptRecord:
     def __init__(
-        self, gpt_id, author, name, description, tags, added, updated, slug, image
+        self,
+        gpt_id,
+        author,
+        name,
+        description,
+        tags,
+        added,
+        updated,
+        slug,
+        image,
+        curatorsnotes,
+        curatorsrating,
+        force_update,
     ):
         self.gpt_id = gpt_id
         self.author = (
@@ -58,6 +70,9 @@ class GptRecord:
         self.updated = updated
         self.slug = slug
         self.image = image
+        self.curatorsnotes = curatorsnotes
+        self.curatorsrating = curatorsrating
+        self.force_update = force_update
 
 
 def parse(file_paths):
@@ -104,11 +119,36 @@ def parse(file_paths):
         added = datetime.now()
         updated = datetime.now()
 
+        curatorsnotes_element = soup.select_one("div#curators-note")
+        curatorsnotes = (
+            "".join(str(child) for child in curatorsnotes_element.children)
+            if curatorsnotes_element
+            else None
+        )
+        curatorsrating_element = soup.select_one("input#curators-rating")
+        curatorsrating = (
+            curatorsrating_element["value"] if curatorsrating_element else None
+        )
+        # parse for forcing update
+        force_update_element = soup.select_one("div#force-update")
+        force_update = bool(force_update_element)
+
         print(f"Parsed {display_name} from {author.name}.\n")
 
         gpt_infos.append(
             GptRecord(
-                gpt_id, author, name, description, tags, added, updated, slug, image
+                gpt_id,
+                author,
+                name,
+                description,
+                tags,
+                added,
+                updated,
+                slug,
+                image,
+                curatorsnotes,
+                curatorsrating,
+                force_update,
             )
         )
 
@@ -140,12 +180,8 @@ async def connect():
 
 async def create_gpt(connection, gpt: GptRecord):
     sql = """
-        INSERT INTO gpt_entries (id, description, tags, added, updated, slug, image, authorname, authorurl, displayname, sortname) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11);
+        INSERT INTO gpt_entries (id, description, tags, added, updated, slug, image, authorname, authorurl, displayname, sortname, curatorsnotes, curatorsrating) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13);
     """
-
-    # Serialize author and name objects to JSON
-    author = json.dumps({"name": gpt.author.name, "url": gpt.author.url})
-    name = json.dumps({"display": gpt.name.display, "sort": gpt.name.sort})
 
     await connection.execute(
         sql,
@@ -160,6 +196,26 @@ async def create_gpt(connection, gpt: GptRecord):
         gpt.author.url,
         gpt.name.display,
         gpt.name.sort,
+        gpt.curatorsnotes,
+        gpt.curatorsrating,
+    )
+
+
+async def update_gpt(connection, gpt: GptRecord):
+    sql = """
+    UPDATE gpt_entries SET description = $2, authorname = $3, authorurl = $4, displayname = $5, sortname = $6, curatorsnotes = $7, curatorsrating = $8 WHERE id = $1;
+    """
+
+    await connection.execute(
+        sql,
+        gpt.gpt_id,
+        gpt.description,
+        gpt.author.name,
+        gpt.author.url,
+        gpt.name.display,
+        gpt.name.sort,
+        gpt.curatorsnotes,
+        gpt.curatorsrating,
     )
 
 
@@ -180,7 +236,11 @@ async def main():
 
     for gpt_info in gpt_infos:
         if await gpt_exists(connection, gpt_info.gpt_id):
-            print(f"Skipping {gpt_info.name.display} by {gpt_info.author.name}")
+            if gpt_info.force_update:
+                print(f"Updating {gpt_info.name.display} by {gpt_info.author.name}")
+                await update_gpt(connection, gpt_info)
+            else:
+                print(f"Skipping {gpt_info.name.display} by {gpt_info.author.name}")
             continue
         await create_gpt(connection, gpt_info)
 
