@@ -119,7 +119,7 @@ def parse(file_paths):
         added = datetime.now()
         updated = datetime.now()
 
-        curatorsnotes_element = soup.select_one("div#curators-note")
+        curatorsnotes_element = soup.select_one("div#curators-notes")
         curatorsnotes = (
             "".join(str(child) for child in curatorsnotes_element.children)
             if curatorsnotes_element
