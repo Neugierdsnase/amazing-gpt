@@ -56,6 +56,7 @@ class GptRecord:
         curatorsnotes,
         curatorsrating,
         force_update,
+        ytshorturl,
     ):
         self.gpt_id = gpt_id
         self.author = (
@@ -73,6 +74,7 @@ class GptRecord:
         self.curatorsnotes = curatorsnotes
         self.curatorsrating = curatorsrating
         self.force_update = force_update
+        self.ytshorturl = ytshorturl
 
 
 def parse(file_paths):
@@ -129,7 +131,10 @@ def parse(file_paths):
         curatorsrating = (
             curatorsrating_element["value"] if curatorsrating_element else None
         )
-        # parse for forcing update
+
+        ytshorturl_element = soup.select_one("span#ytshorturl")
+        ytshorturl = ytshorturl_element.text if ytshorturl_element else None
+
         force_update_element = soup.select_one("div#force-update")
         force_update = bool(force_update_element)
 
@@ -149,6 +154,7 @@ def parse(file_paths):
                 curatorsnotes,
                 curatorsrating,
                 force_update,
+                ytshorturl,
             )
         )
 
@@ -180,7 +186,7 @@ async def connect():
 
 async def create_gpt(connection, gpt: GptRecord):
     sql = """
-        INSERT INTO gpt_entries (id, description, tags, added, updated, slug, image, authorname, authorurl, displayname, sortname, curatorsnotes, curatorsrating) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13);
+        INSERT INTO gpt_entries (id, description, tags, added, updated, slug, image, authorname, authorurl, displayname, sortname, curatorsnotes, curatorsrating, ytshorturl) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14);
     """
 
     await connection.execute(
@@ -198,12 +204,13 @@ async def create_gpt(connection, gpt: GptRecord):
         gpt.name.sort,
         gpt.curatorsnotes,
         gpt.curatorsrating,
+        gpt.ytshorturl,
     )
 
 
 async def update_gpt(connection, gpt: GptRecord):
     sql = """
-    UPDATE gpt_entries SET description = $2, authorname = $3, authorurl = $4, displayname = $5, sortname = $6, curatorsnotes = $7, curatorsrating = $8 WHERE id = $1;
+    UPDATE gpt_entries SET description = $2, authorname = $3, authorurl = $4, displayname = $5, sortname = $6, curatorsnotes = $7, curatorsrating = $8, ytshorturl = $9 WHERE id = $1;
     """
 
     await connection.execute(
@@ -216,6 +223,7 @@ async def update_gpt(connection, gpt: GptRecord):
         gpt.name.sort,
         gpt.curatorsnotes,
         gpt.curatorsrating,
+        gpt.ytshorturl,
     )
 
 

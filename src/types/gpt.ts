@@ -15,6 +15,6 @@ export interface GPTInfoType {
 	applicationCategory?: string;
 	curatorsnotes?: string;
 	curatorsrating?: number;
-	ytShortUrl?: string;
+	ytshorturl?: string;
 	humanPickedAlternatives?: string[];
 }

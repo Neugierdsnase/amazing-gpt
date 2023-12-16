@@ -66,8 +66,19 @@
 		<i class="ph-bold ph-arrow-square-out" />
 	</a>
 
-	<!--  TODO: YouTube Short Placeholder -->
-	<div class="col-span-1 row-span-3" />
+	<div class="col-span-1 row-span-3 flex justify-center items-center">
+		{#if gpt.ytshorturl}
+			<iframe
+				width="315"
+				height="560"
+				src={gpt.ytshorturl.replace('/shorts/', '/embed/')}
+				title="{gpt.displayname} video review"
+				frameborder="0"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+				allowfullscreen
+			></iframe>
+		{/if}
+	</div>
 
 	<div class="md:col-span-3 flex flex-col p-8 rounded-xl bg-base-300">
 		<div>
