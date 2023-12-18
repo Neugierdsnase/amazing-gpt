@@ -1,7 +1,6 @@
 <script lang="ts">
 	import type { GPTInfoType } from '../../../types/gpt';
 	import PreviewCard from './PreviewCard.svelte';
-	import InsteadOfAlternativeGpts from '../GoogleAds/InsteadOfAlternativeGpts.svelte';
 
 	export let humanPickedAlternativesPromise: Promise<GPTInfoType[] | undefined>;
 	export let machinePickedAlternativesPromise: Promise<GPTInfoType[] | undefined>;
@@ -9,7 +8,8 @@
 
 <div class="md:col-span-3 join join-vertical md:join-horizontal p-4 bg-base-300">
 	{#await humanPickedAlternativesPromise}
-		<p>Loading...</p>
+		<!-- TODO: Loading Spinner-->
+		<div />
 	{:then humanPickedAlternatives}
 		{#if humanPickedAlternatives && humanPickedAlternatives.length}
 			<div class="grow">
@@ -24,17 +24,18 @@
 			</div>
 		{:else}
 			<div class="grow">
-				<InsteadOfAlternativeGpts />
+				<!-- TODO: KO-FI here under the right circumstances -->
 			</div>
 		{/if}
 	{:catch}
 		<div class="grow">
-			<InsteadOfAlternativeGpts />
+			<!-- TODO: KO-FI here under the right circumstances -->
 		</div>
 	{/await}
 
 	{#await machinePickedAlternativesPromise}
-		<p>Loading...</p>
+		<!-- TODO: Loading Spinner-->
+		<div />
 	{:then machinePickedAlternatives}
 		{#if machinePickedAlternatives && machinePickedAlternatives.length}
 			<div class="grow">
@@ -49,12 +50,12 @@
 			</div>
 		{:else}
 			<div class="grow">
-				<InsteadOfAlternativeGpts />
+				<!-- TODO: KO-FI here under the right circumstances -->
 			</div>
 		{/if}
 	{:catch}
 		<div class="grow">
-			<InsteadOfAlternativeGpts />
+			<!-- TODO: KO-FI here under the right circumstances -->
 		</div>
 	{/await}
 </div>

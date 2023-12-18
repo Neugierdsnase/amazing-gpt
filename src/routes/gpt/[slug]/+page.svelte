@@ -35,7 +35,11 @@
 	}
 </script>
 
-<div class="grid grid-cols-1 md:grid-cols-4 gap-8 p-8">
+<svelte:head>
+	<title>{gpt.displayname} | Amazing GPT</title>
+</svelte:head>
+
+<div class="grid grid-cols-1 md:custom-grid-cols gap-8 p-8">
 	<div
 		class="md:col-span-4 p-8 rounded-xl bg-base-300 flex flex-col gap-2 md:flex-row-reverse items-center md:justify-between"
 	>
@@ -66,7 +70,9 @@
 		<i class="ph-bold ph-arrow-square-out" />
 	</a>
 
-	<div class="col-span-1 row-span-3 flex justify-center items-center">
+	<div
+		class="col-span-1 row-span-3 flex justify-center items-center self-start rounded-xl overflow-hidden"
+	>
 		{#if gpt.ytshorturl}
 			<iframe
 				width="315"
@@ -111,3 +117,9 @@
 		>
 	</div>
 </div>
+
+<style lang="postcss">
+	.custom-grid-cols {
+		grid-template-columns: repeat(3, minmax(300px, 1fr), 315px);
+	}
+</style>
