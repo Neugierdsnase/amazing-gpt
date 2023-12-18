@@ -103,15 +103,15 @@ def parse(file_paths):
         author = soup.select_one("a.underline")
 
         if author:
-            author_text = (author.text)[3:].strip()
-            author_name = author_text[3:].strip()
+            # author_text = (author.text)[3:].strip()
+            author_name = author.text.strip()
             author_url = author["href"]
             author = Author(author_name, author_url)
         else:
             author_text = (soup.select_one(".text-sm.text-token-text-tertiary").text)[
-                3:
+                :3
             ].strip()
-            author_name = author_text[3:].strip()
+            author_name = None
             fallback_url_element = soup.select_one("span#author-url")
             fallback_url = fallback_url_element.text if fallback_url_element else None
             author = Author(author_name, fallback_url)
@@ -245,7 +245,7 @@ async def main():
     for gpt_info in gpt_infos:
         if await gpt_exists(connection, gpt_info.gpt_id):
             if gpt_info.force_update:
-                print(f"Updating {gpt_info.name.display} by {gpt_info.author.name}")
+                print(f"! > Updating {gpt_info.name.display} by {gpt_info.author.name}")
                 await update_gpt(connection, gpt_info)
             else:
                 print(f"Skipping {gpt_info.name.display} by {gpt_info.author.name}")
