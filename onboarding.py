@@ -111,7 +111,7 @@ def parse(file_paths):
             author_text = (soup.select_one(".text-sm.text-token-text-tertiary").text)[
                 :3
             ].strip()
-            author_name = None
+            author_name = author_text
             fallback_url_element = soup.select_one("span#author-url")
             fallback_url = fallback_url_element.text if fallback_url_element else None
             author = Author(author_name, fallback_url)

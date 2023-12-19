@@ -12,8 +12,6 @@
 	<aside>
 		<img src="/prompt_dress_logo.png" alt="logo" class="h-24" />
 		<a href="https://prompt-dress.com">A project by The Prompt Tailor</a>
-		It's creation was documented on
-		<a href="https://www.youtube.com/channel/UCgE_-5ZfUR_UruSn1XrpXtw">YouTube</a>
 	</aside>
 	<nav>
 		<header class="footer-title">Social</header>
