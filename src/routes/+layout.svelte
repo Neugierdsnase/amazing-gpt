@@ -6,6 +6,7 @@
 	import '@phosphor-icons/web/fill';
 	import { onMount } from 'svelte';
 	import { themeChange } from 'theme-change';
+	import DeprecationNotice from '$lib/components/DeprecationNotice.svelte';
 
 	onMount(() => {
 		themeChange(false);
@@ -36,6 +37,7 @@
 	<meta name="twitter:title" content="Curated list of custom GPTs" />
 </svelte:head>
 
+<DeprecationNotice />
 <Header />
 
 <main class="container mx-auto">
